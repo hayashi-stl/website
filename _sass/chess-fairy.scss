@@ -1,0 +1,10 @@
+.chess-flexbox {
+    display: flex;
+    flex: 1fr;
+}
+
+.chessboard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
