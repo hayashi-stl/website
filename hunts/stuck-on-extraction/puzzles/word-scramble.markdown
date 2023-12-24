@@ -52,7 +52,7 @@ title: Word Scramble
 * Large unit of area
 * Mostly liquid dish in a bowl
 * Opposite of won
-* Shape described by the equation $z^2 = x^2 + y^2$, or rather, half of it
+* Shape described by the equation $$z^2 = x^2 + y^2$$, or rather, half of it
 * Shapes of donuts
 * Snowman from Disney's *Frozen*
 * Spanish for "table"

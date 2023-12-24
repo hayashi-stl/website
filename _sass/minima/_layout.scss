@@ -187,6 +187,7 @@
 
 .page-heading {
   @include relative-font-size(2);
+  text-align: center;
 }
 
 .post-list-heading {
@@ -225,6 +226,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  text-align: center;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -263,6 +265,11 @@
   text-align: center;
 }
 
+.puzzle-author {
+  text-align: center;
+  font-style: italic;
+}
+
 .hunt-title {
   text-align: center;
 }
@@ -275,4 +282,36 @@
   font-style: italic;
   color: #088;
   text-align: center;
+}
+
+.errata {
+  text-align: center;
+  color: #f00;
+}
+
+.answer-check {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: calc($spacing-unit / 2);
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    display: flex;
+    flex-direction: row;
+
+    .text-box {
+      flex: 1;
+    }
+
+    .check-button {
+      flex: 0 60px;
+    }
+  }
+
+  .verdict {
+    font-weight: bold;
+    text-align: center;
+  }
 }

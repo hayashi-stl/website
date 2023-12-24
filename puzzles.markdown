@@ -15,7 +15,7 @@ the appropriate puzzles.
 <ul>
 {% for page in hunts %}
     <li>
-        <h4><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h4>
+        <h4><a href="{{ page.url | relative_url }}">{{ page.title }}</a> ({{ page.hunt-date }})</h4>
     </li>
 {% endfor %}
 </ul>

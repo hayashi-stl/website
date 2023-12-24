@@ -3,12 +3,30 @@ layout: default
 ---
 <article class="post">
 
+  <div class="puzzle-back">
+    {% assign hunt = site.pages | where_exp: "item", "item.page-type == 'hunt' and item.title == page.hunt" | first %}
+    <a href="{{ hunt.url | relative_url }}">{{ page.hunt | escape }}: All puzzles</a>
+  </div>
+
   <header class="post-header">
     <h1 class="post-title puzzle-title">{{ page.title | escape }}</h1>
   </header>
 
+  {% if page.author %}
+  <h3 class="puzzle-author">(Author: {{ page.author | escape }})</h3>
+  {% endif %}
+
+  <div class="answer-check">
+    <div class="input">
+      <input id="answer-check-text" type="text" class="text-box"/>
+      <input id="answer-check-button" type="button" class="check-button" value="Check"/>
+    </div>
+    <div class="verdict">TEST</div>
+  </div>
+
   <div class="post-content">
     {{ content }}
   </div>
+
 
 </article>
