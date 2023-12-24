@@ -261,6 +261,21 @@
   }
 }
 
+.puzzle-header {
+  display: flex;
+  flex-direction: row;
+
+  .puzzle-back {
+    text-align: left;
+    flex: 1;
+  }
+
+  .puzzle-solution-toggle {
+    text-align: right;
+    flex: 1;
+  }
+}
+
 .puzzle-title {
   text-align: center;
 }

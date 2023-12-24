@@ -9,9 +9,9 @@ layout: default
       <a href="{{ hunt.url | relative_url }}">{{ page.hunt | escape }}: All puzzles</a>
     </div>
     <div class="puzzle-solution-toggle">
-      {% assign sol = site.pages | where_exp: "item", "item.page-type == 'hunt-solution' and
+      {% assign sol = site.pages | where_exp: "item", "item.page-type == 'hunt-puzzle' and
         item.title == page.title and item.hunt == page.hunt" | first %}
-      <a href="{{ sol.url | relative_url }}">Solution</a>
+      <a href="{{ sol.url | relative_url }}">Back to puzzle</a>
     </div>
   </div>
 
@@ -22,16 +22,6 @@ layout: default
   {% if page.author %}
   <h3 class="puzzle-author">(Author: {{ page.author | escape }})</h3>
   {% endif %}
-
-  <div class="answer-check">
-    <div class="input">
-      <input id="answer-check-text" type="text" class="text-box"/>
-      <input id="answer-check-button" type="button" class="check-button" value="Check"/>
-    </div>
-    <div id="answer-check-verdict", class="verdict">TEST</div>
-    <div id="answer-followup", class="followup", style="display: none;">{{ page.followup | escape }}</div>
-    <script src="{{ '/assets/answer-check.js' | relative_url }}"></script>
-  </div>
 
   <div class="post-content">
     {{ content }}
