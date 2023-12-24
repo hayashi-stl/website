@@ -4,6 +4,7 @@ page-type: hunt-puzzle
 metapuzzle: true
 hunt: Stuck on Extraction
 title: "Meta: Extraction"
+answer: VANEMON EXTRACT
 ---
 
 <p class="errata">Remember, this puzzle hunt was run in April 2021.</p>

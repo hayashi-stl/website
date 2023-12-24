@@ -3,6 +3,7 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Stuck on Extraction
 title: Word Scramble
+answer: PERMUTATORIAL EXPLOSION
 ---
 <p class="puzzle-flavor">What happens if you mix a calm clam, a post stop, and some dynamite?</p>
 

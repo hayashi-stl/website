@@ -4,6 +4,8 @@ page-type: hunt-puzzle
 hunt: Stuck on Extraction
 title: The Jig is Up!
 author: Linus
+answer: X IS WORD Y IS LETTER
+followup: "Words are separated by spaces and spaces only. Letters include numbers."
 ---
 <p class="errata">
 Clue #27 was living-group-specific. It has been removed and the answer given.

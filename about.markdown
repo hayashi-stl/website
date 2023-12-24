@@ -15,7 +15,9 @@ Some favorites:
 * Non-puzzle videogame: Super Mario Galaxy 1/2, Super Mario Odyssey
 * Musical instrument: Drums
 * Fruit: Mango
+* Programming language: Rust
 
 Some least favorites:
 * Hunt puzzle type: cryptics, pop culture
 * Fruit: Green apple
+* Programming language: Lua? Javascript? (I like expressive type systems)

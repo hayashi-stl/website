@@ -3,6 +3,8 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Stuck on Extraction
 title: The Chess Fairy
+answer: COMBINE PERMUTATIONS
+followup: 'Compute the permutations. For example, 2413 is the permutation that transforms "abcd" into "bdac". "Combine" by indexing them into a sorted list of all permutations.'
 ---
 
 <p class="puzzle-flavor">A bunch of unique fairies have arrived on the chessboard! The fairies have discovered that their teams can win in one move in exactly one way. Each fairy is disguised as an 'F'.</p>

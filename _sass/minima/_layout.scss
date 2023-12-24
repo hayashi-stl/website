@@ -293,16 +293,18 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: calc($spacing-unit / 2);
-  max-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .input {
     display: flex;
     flex-direction: row;
+    width: 350px;
 
     .text-box {
       flex: 1;
+      font-family: monospace;
     }
 
     .check-button {
@@ -312,6 +314,22 @@
 
   .verdict {
     font-weight: bold;
+    text-align: center;
+
+    .answer {
+      font-family: monospace;
+    }
+
+    .correct {
+      color: #0c0;
+    }
+
+    .wrong {
+      color: red;
+    }
+  }
+
+  .followup {
     text-align: center;
   }
 }

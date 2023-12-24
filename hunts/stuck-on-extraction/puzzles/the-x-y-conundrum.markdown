@@ -3,6 +3,7 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Stuck on Extraction
 title: The (x, y) Conundrum
+answer: FLY A COMPLEX PLANE
 ---
 <p class="puzzle-flavor">
 You find yourself in a coordinate system, at the origin, facing the +x direction (east). If you follow the following instructions, you'll find out how to leave.
