@@ -1,31 +1,33 @@
-.chess-flexbox {
-    display: flex;
-    flex: 1fr;
-}
+[hunt="Stuck on Extraction"] {
+  .chess-flexbox {
+      display: flex;
+      flex: 1fr;
+  }
 
-.chessboard {
-    display: block;
+  .chessboard {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #stuck-on-extraction-table {
+    display: table;
+    margin-bottom: $spacing-unit;
     margin-left: auto;
     margin-right: auto;
-}
-
-#stuck-on-extraction-table {
-  display: table;
-  margin-bottom: $spacing-unit;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  text-align: center;
-  color: $text-color;
-  border-collapse: collapse;
-  border: none;
-  tr {
-    background-color: transparent;
-  }
-  th, td {
-    padding: 0px 5px;
-  }
-  td {
+    width: auto;
+    text-align: center;
+    color: $text-color;
+    border-collapse: collapse;
     border: none;
+    tr {
+      background-color: transparent;
+    }
+    th, td {
+      padding: 0px 5px;
+    }
+    td {
+      border: none;
+    }
   }
 }

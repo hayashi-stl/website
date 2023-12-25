@@ -1,0 +1,81 @@
+[hunt="An All-American Puzzle Hunt"] {
+  .second-place-solution-table {
+    table {
+      display: table;
+      margin-bottom: $spacing-unit;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      text-align: center;
+      color: $text-color;
+      border-collapse: collapse;
+      border: none;
+      tr {
+        background-color: transparent;
+        &:nth-child(even) {
+          background-color: lighten($background-color, 6%);
+        }
+      }
+      th, td {
+        padding: 0px 5px;
+      }
+      th {
+        background-color: lighten($background-color, 10%);
+        border: 1px solid $text-color;
+        border-bottom-color: $text-color;
+      }
+      td {
+        border: none;
+      }
+    }
+  }
+
+  .pasta-grid {
+    display: table;
+    margin-bottom: $spacing-unit;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    color: $text-color;
+    border-collapse: collapse;
+    border: none;
+    tr {
+      background-color: transparent;
+    }
+    td {
+      padding: 0px;
+      width: 27px;
+      height: 27px;
+      border: 1px solid black;
+      background-color: #ffc;
+      color: black;
+      > div {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .corner {
+          font-size: 10px;
+          position: absolute;
+          left: 1px;
+          text-align: left;
+          align-self: flex-start;
+        }
+        
+        .letter {
+          text-align: center;
+          flex: 1;
+        }
+        
+        .pastal {
+          text-align: center;
+          color: #f00;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

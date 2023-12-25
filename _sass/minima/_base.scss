@@ -40,6 +40,9 @@ ul, ol, dl, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
 
 
 /**
@@ -57,6 +60,11 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+}
+
+.center-img {
+  display: block;
+  margin: auto;
 }
 
 
@@ -92,6 +100,11 @@ li {
   li {
     margin-bottom: calc($spacing-unit / 2);
   }
+}
+
+.raw-list {
+  list-style: none;
+  margin-left: 0;
 }
 
 

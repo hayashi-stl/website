@@ -3,7 +3,13 @@
 
   {%- include head.html -%}
 
-  <body>
+  {% if page.page-type == "hunt" %}
+    {% assign hunt-name = page.title %}
+  {% endif %}
+  {% if page.page-type == "hunt-puzzle" or page.page-type == "hunt-solution" %}
+    {% assign hunt-name = page.hunt %}
+  {% endif %}
+  <body hunt="{{ hunt-name }}">
 
     {%- include header.html -%}
 
