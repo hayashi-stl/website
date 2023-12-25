@@ -3,7 +3,7 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: An All-American Puzzle Hunt
 title: Pasta Strands
-answer: NO TRIAL MIXING
+answer: NO TRIAL MIXINGS
 ---
 <p class="puzzle-flavor" markdown="1">
 Pasta has been imported from Italy to America. But it seems like this pasta is all mixed up with all the sauces, forming a giant tube! What caused this?

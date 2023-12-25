@@ -3,7 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: An All-American Puzzle Hunt
 title: Pasta Strands
-answer: NO TRIAL MIXING
+answer: NO TRIAL MIXINGS
 ---
 First, we solve the clues, using the pasta grid to give enumerations, and put them into the grid.
 When we look in the grid, we can find names of pasta shapes and sauces hidden vertically. As the flavor text clues,
