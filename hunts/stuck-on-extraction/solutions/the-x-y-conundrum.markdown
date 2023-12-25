@@ -7,6 +7,8 @@ answer: FLY A COMPLEX PLANE
 ---
 Just follow the instructions. How hard can it be? You will get a list of coordinates at the end.
 
+<div class="spaced-list" markdown="1">
+
 1.  Marked: `(1, 0)`. Current state: at (1, 0) @ 0°.
 2.  Marked: `(1, 0)`. Current state: at (1, 0) @ 90°.
 3.  Marked: `(10, 0)`. Current state: at (10, 0) @ 90°. Note that you move without turning.
@@ -23,6 +25,7 @@ Just follow the instructions. How hard can it be? You will get a list of coordin
 14. Marked: `(2, 0)`. Current state: at (2, 0) @ direction ⟨-11, 5⟩. The coordinates marked in steps 1-13 need to be absolute-valued and incremented by 1.
 15. Marked: `(15, 6)`. Current state: at (16, 6) @ direction ⟨-11, 5⟩. Careful, as the coordinates you snap to and the coordinates you mark are not the same.
 16. Marked: `(14, 20)`. Current state: at (14, 20) @ 180°. Nothing like a nice long walk to end the adventure. Also, the coordinates marked in steps 14-15 need to be incremented by 1.
+</div>
 
 At the end, the marked coordinates become
 * (2, 1)

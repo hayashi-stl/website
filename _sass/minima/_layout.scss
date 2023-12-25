@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $text-color;
-  border-bottom: 5px solid $text-color;
+  border-top: 5px solid $header-text-color;
+  border-bottom: 5px solid $header-text-color;
   background-color: #008;
   min-height: $spacing-unit * 1.865;
 
@@ -18,12 +18,12 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  color: $text-color;
+  color: $header-text-color;
   font-weight: bold;
 
   &,
   &:visited {
-    color: $text-color;
+    color: $header-text-color;
   }
 }
 
