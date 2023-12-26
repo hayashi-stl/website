@@ -21,7 +21,8 @@ module Jekyll
 
     class GridTagBlock < Liquid::Block
 
-        def initialize(tag_name, markup, options)
+        def initialize(tag_name, markup, parse_context)
+            @mapping_filename = Liquid::Variable.new(markup, parse_context)
             super
         end
 
@@ -80,27 +81,25 @@ module Jekyll
             }
 
             # Generate HTML!
-            require "#{Dir.pwd}/assets/pasta-grid.rb"
-            #print "#{Dir.pwd.path}"
-            #$:.each {|a| print "#{a}\n"}
+            require "#{Dir.pwd}#{@mapping_filename.render(context)}"
             html = ["<table>"]
             array.each_with_index {|row, y|
                 html << "<tr>"
                 row.each_with_index {|item, x|
-                    html << ""#table_entry(item, x, y, array)
+                    html << table_entry(item, x, y, array)
                 }
                 html << "</tr>"
             }
             html << "</table>"
             result = html.map {|line| "#{line}\n"}.join
-            ""
+            result
         end
 
     end
 
     class PropTagBlock < Liquid::Block
 
-        def initialize(tag_name, markup, options)
+        def initialize(tag_name, markup, parse_context)
             super
             @markup = markup
         end
