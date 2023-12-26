@@ -28,11 +28,7 @@ module Jekyll
 
         def render(context)
             text = super
-            ENV.each {|k, v|
-                print "#{k}=#{v}\n"
-            }
-            print "#{Dir.pwd}\n"
-            print "#{@mapping_filename.render(context)}\n"
+            github_action = ENV.key? "GITHUB_ACTION"
             
             num_lines = 0
             prop = nil
@@ -86,12 +82,17 @@ module Jekyll
             }
 
             # Generate HTML!
-            #require "#{Dir.pwd}#{@mapping_filename.render(context)}"
+            rel_path = @mapping_filename.render(context)
+            if github_action then
+                # Remove first directory; this is the directory of the overall website
+                rel_path.gsub!(/^\/[^\/]*/, "")
+            end
+            require "#{Dir.pwd}#{rel_path}"
             html = ["<table>"]
             array.each_with_index {|row, y|
                 html << "<tr>"
                 row.each_with_index {|item, x|
-                    html << ""#table_entry(item, x, y, array)
+                    html << table_entry(item, x, y, array)
                 }
                 html << "</tr>"
             }
