@@ -82,12 +82,12 @@ module Jekyll
             }
 
             # Generate HTML!
-            require "#{Dir.pwd}#{@mapping_filename.render(context)}"
+            #require "#{Dir.pwd}#{@mapping_filename.render(context)}"
             html = ["<table>"]
             array.each_with_index {|row, y|
                 html << "<tr>"
                 row.each_with_index {|item, x|
-                    html << table_entry(item, x, y, array)
+                    html << ""#table_entry(item, x, y, array)
                 }
                 html << "</tr>"
             }
