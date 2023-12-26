@@ -28,6 +28,9 @@ module Jekyll
 
         def render(context)
             text = super
+            ENV.each {|k, v|
+                print "#{k}=#{v}\n"
+            }
             print "#{Dir.pwd}\n"
             print "#{@mapping_filename.render(context)}\n"
             
