@@ -56,6 +56,7 @@ module Jekyll
                     # Finished reading an attribute; process it
                     if num_lines == 0
                         prop_arrays[prop] = prop_array(text_array, text_format)
+                        text_array = []
                     end
                 end
             }
@@ -87,17 +88,21 @@ module Jekyll
                 # Remove first directory; this is the directory of the overall website
                 rel_path.gsub!(/^\/[^\/]*/, "")
             end
-            require "#{Dir.pwd}#{rel_path}"
+            load "#{Dir.pwd}#{rel_path}"
             html = ["<table>"]
             array.each_with_index {|row, y|
-                html << "<tr>"
+                entries = []
                 row.each_with_index {|item, x|
-                    html << table_entry(item, x, y, array)
+                    entries << table_entry(item, x, y, array)
                 }
-                html << "</tr>"
+                
+                all_entries = entries.join
+                if not /^\s*$/.match all_entries then
+                    html << "<tr>#{all_entries}</tr>"
+                end
             }
             html << "</table>"
-            result = html.map {|line| "#{line}\n"}.join
+            result = html.join
             result
         end
 
