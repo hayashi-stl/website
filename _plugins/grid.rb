@@ -97,7 +97,7 @@ module Jekyll
                 }
                 
                 all_entries = entries.join
-                if not /^\s*$/.match all_entries then
+                if not /\A\s*\z/.match? all_entries then
                     html << "<tr>#{all_entries}</tr>"
                 end
             }
