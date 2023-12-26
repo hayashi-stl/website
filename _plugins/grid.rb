@@ -28,6 +28,7 @@ module Jekyll
 
         def render(context)
             text = super
+            print "#{Dir.pwd}\n"
             print "#{@mapping_filename.render(context)}\n"
             
             num_lines = 0
