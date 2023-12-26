@@ -9,6 +9,22 @@ First, we solve the clues, using the pasta grid to give enumerations, and put th
 When we look in the grid, we can find names of pasta shapes and sauces hidden vertically. As the flavor text clues,
 we have a <span class="puzzle-flavor">pasta tube</span>, so words can wrap around.
 
+{% grid %}
+{% prop text asc %}
+toOknoTeoFaNdoTheRsaluminiUm
+boRninTheUsAleAGuEmozaMBique
+thEsebIrdSlochNEsspharAOhtoP
+deCeasedFIfthtIMeinchaRLottE
+oRChestrALightyEaRsmarIObroS
+jOHncaSoRLewisCLeAleliNGuisT
+sTIrruPrFIdLabELsDontwANnagO
+vIEnnaAwArdAngLIcIzedgREater
+oNToloGyLieShaLfwAydisASteRs
+mITzvaHaLliAncEsiTswednEsdAy
+ovErthErEenGlaNdwOnhedgehoGs
+{% endprop %}
+{% endgrid %}
+
 <table class="pasta-grid">
   <tr>                           
     <td><div><div class="letter">T</div><div class="corner">1</div></div></td>
