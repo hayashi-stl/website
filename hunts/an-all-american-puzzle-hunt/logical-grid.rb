@@ -1,24 +1,27 @@
 def table_entry(item, x, y, array)
-    if x % 2 == 1 and y % 2 == 1
-        borders = []
-        if array[y - 1][x]["text"] != " "
-            borders << "top"
+    td_classes = []
+    if item.key? "region"
+        region = item["region"]
+        if array.at(x, y - 1)["region"] != region
+            td_classes << "top"
         end
-        if array[y + 1][x]["text"] != " "
-            borders << "bottom"
+        if array.at(x, y + 1)["region"] != region
+            td_classes << "bottom"
         end
-        if array[y][x - 1]["text"] != " "
-            borders << "left"
+        if array.at(x - 1, y)["region"] != region
+            td_classes << "left"
         end
-        if array[y][x + 1]["text"] != " "
-            borders << "right"
+        if array.at(x + 1, y)["region"] != region
+            td_classes << "right"
         end
-        "<td class='#{borders.join " "}'>
-            <div>
-                <div class='char'>#{item["text"]}</div>
-            </div>
-        </td>"
-    else
-        ""
+        if region == "Y"
+            td_classes << "inside"
+        end
     end
+    "<td class='#{td_classes.join " "}'>
+        <div>
+            #{ if item["star"] == "s" then "<div class='star'>⭐</div>" else "" end }
+            <div class='char'>#{item["text"] or ""}</div>
+        </div>
+    </td>"
 end

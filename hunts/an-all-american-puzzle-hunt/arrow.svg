@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="0.21386719in"
+   height="0.36621094in"
+   viewBox="0 0 5.4322266 9.3017582"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
+   sodipodi:docname="Logical Programs.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#444444"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="1717.2851"
+     inkscape:cy="614.27636"
+     inkscape:document-units="in"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-page="false"
+     inkscape:snap-midpoints="false"
+     units="in"
+     inkscape:object-paths="false"
+     inkscape:snap-global="true"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <sodipodi:guide
+       position="-200.4839,59.02185"
+       orientation="1,0"
+       id="guide925"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="2.7161015,325.72186"
+       orientation="1,0"
+       id="guide2696"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="205.91608,325.72186"
+       orientation="1,0"
+       id="guide2700"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="197.38524,224.33883"
+       orientation="0,-1"
+       id="guide5253"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-302.0839,-59.021857)">
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.26"
+       id="rect955"
+       width="197.49509"
+       height="22.065491"
+       x="2.8524535"
+       y="41.739216" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect955);stroke-width:0.264583"
+       x="136.82317"
+       y="44.897907"
+       id="text951"><tspan
+         x="3.9686999"
+         y="45.590083"
+         id="tspan6"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Noto Sans Italic'"
+           id="tspan5">Which country has the best computer science programs? America! (don’t quote this, please) Practice with </tspan></tspan><tspan
+         x="33.637919"
+         y="50.881747"
+         id="tspan8"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Noto Sans Italic'"
+           id="tspan7">these programs and find out what weird event happened in one of them!</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;stroke-width:0.264583"
+       x="299.4856"
+       y="68.323616"
+       id="text5023"><tspan
+         sodipodi:role="line"
+         id="tspan5021"
+         x="299.4856"
+         y="68.323616"
+         style="fill:#f9f9f9;stroke-width:0.264583">↑</tspan></text>
+  </g>
+</svg>

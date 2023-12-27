@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "rootDir": "./assets",
+        "outDir": "./_site/assets",
+        "allowJs": false,
+        "strict": true,
+        "strictFunctionTypes": false
+    },
+    "include": ["./**/*"]
+}

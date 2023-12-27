@@ -82,6 +82,18 @@ module Jekyll
                 }
             }
 
+            array.instance_variable_set(:@width, width)
+            array.instance_variable_set(:@height, height)
+            def array.keys() self[0][0].keys end
+
+            def array.at(x, y)
+                if x >= 0 && x < @width && y >= 0 && y < @height
+                    self[y][x]
+                else
+                    keys.map {|k| [k, ""]}.to_h
+                end
+            end
+
             # Generate HTML!
             rel_path = @mapping_filename.render(context)
             if github_action then
