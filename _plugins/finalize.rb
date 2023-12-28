@@ -26,6 +26,8 @@ Jekyll::Hooks.register :site, :post_write do |site|
         [absolute_list.last, absolute_list]
     }.to_h
 
+    puts "Dep map: #{dep_map}"
+
     Dir.glob("#{dest_dir}/**/*.html") {|html_path| 
         puts html_path
 
@@ -42,6 +44,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
                 File.expand_path(File.dirname(html_path) + "/" + scr["src"])
             end
         }.to_a
+        puts scr_paths
         
         # Calculate unique dependencies
         deps = scr_paths.flat_map {|path| dep_map[path]}.uniq.to_a.difference(scr_paths)
