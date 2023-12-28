@@ -1,6 +1,7 @@
 export {}
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 function resizeCanvasToDisplaySize(canvas: HTMLCanvasElement): boolean {
     if (canvas.width != canvas.clientWidth || canvas.height != canvas.clientHeight) {
@@ -26,6 +27,8 @@ async function main() {
     scene.add(gltf.scene);
 
     camera.position.z = 10;
+
+    const controls = new OrbitControls(camera, renderer.domElement);
 
     function animate() {
         requestAnimationFrame(animate);
