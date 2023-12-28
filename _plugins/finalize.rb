@@ -40,7 +40,12 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
             # Distinguish absolute from relative path
             if scr["src"].start_with? "/"
-                File.expand_path(dest_dir + scr["src"])
+                rel_path = scr["src"]
+                if github_action then
+                    # Remove first directory; this is the directory of the overall website
+                    rel_path.gsub!(/^\/[^\/]*/, "")
+                end
+                File.expand_path(dest_dir + rel_path)
             else
                 File.expand_path(File.dirname(html_path) + "/" + scr["src"])
             end
