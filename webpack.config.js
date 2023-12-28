@@ -27,6 +27,7 @@ module.exports = (env, argv) => {
         output: {
             filename: '.deps/[name].js',
             path: path.resolve(__dirname, '.webpack'),
+            clean: true,
         },
         optimization: {
             runtimeChunk: 'single',

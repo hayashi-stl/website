@@ -6,7 +6,7 @@ title: Game Fort
 answer: FLYNN DID AN ARMY EXIT
 ---
 <p class="puzzle-flavor" markdown="1">
-On your tour of the fortress, you visit the seven stars in order. Then you visit the red jewels from highest to lowest, breaking ties by increasing distance from the crushing stones. You find that one of them has moved and visit its original location afterwards. Finally, you mysteriously teleport up. Looking diagonally over the fortress, you find it deserted. What happened?
+On your tour of the fortress, you visit the seven stars in order. Then you visit the red jewels from highest to lowest, breaking ties by increasing distance from the sky islands guarding the fort. You find that one of them has moved and visit its original location afterwards. Finally, you mysteriously teleport up. Looking diagonally over the fortress, you find it deserted. What happened?
 </p>
 
 <div class="fort-grid">
@@ -56,3 +56,6 @@ On your tour of the fortress, you visit the seven stars in order. Then you visit
 
 <canvas class="gltf-viewer wf-model"></canvas>
 <script type="module" src="{{ '/assets/gltf-viewer.js' | relative_url }}"></script>
+<div class="caption">Move: Drag with right mouse button OR shift + drag with left mouse button</div>
+<div class="caption">Rotate: Drag with left mouse button</div>
+<div class="caption">Zoom: Scroll mouse wheel OR drag with middle mouse button</div>
