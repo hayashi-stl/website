@@ -36,6 +36,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
         scr_paths = doc.xpath("//script").filter_map {|scr|
             # Ignore raw scripts and http scripts
             next if !scr["src"] || scr["src"].include?("//")
+            puts scr["src"]
 
             # Distinguish absolute from relative path
             if scr["src"].start_with? "/"
