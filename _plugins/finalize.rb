@@ -8,6 +8,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     # Copy .webpack over to _site
     webpack_dir = File.expand_path(site.source + "/.webpack")
 	dest_dir = site.dest
+    puts "Dest: #{dest_dir}"
 
     FileUtils.cp_r(webpack_dir + "/.", dest_dir)
 
@@ -26,6 +27,8 @@ Jekyll::Hooks.register :site, :post_write do |site|
     }.to_h
 
     Dir.glob("#{dest_dir}/**/*.html") {|html_path| 
+        puts html_path
+
         # Find all <script> tags and get their sources
         doc = File.open(html_path) {|file| Nokogiri::HTML(file)}
         scr_paths = doc.xpath("//script").filter_map {|scr|
@@ -42,9 +45,15 @@ Jekyll::Hooks.register :site, :post_write do |site|
         
         # Calculate unique dependencies
         deps = scr_paths.flat_map {|path| dep_map[path]}.uniq.to_a.difference(scr_paths)
+        puts deps
 
         # Get home paths
-        rel_deps = deps.map{|path| "/" + Pathname.new(path).relative_path_from(Pathname.new dest_dir).to_s }
+        rel_deps = deps.map{|path|
+            puts path
+            "/" + Pathname.new(path).relative_path_from(Pathname.new dest_dir).to_s
+        }
+
+        puts ""
         
         # Write the dependencies!
         body = doc.xpath("//body").first
