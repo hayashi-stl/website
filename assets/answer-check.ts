@@ -1,3 +1,5 @@
+export {}
+
 let check_text = document.getElementById("answer-check-text")! as HTMLInputElement
 let check_button = document.getElementById("answer-check-button")!
 
@@ -9,8 +11,8 @@ function checkAnswer() {
     let normalized = answer.replace(/\s/g, "").toLowerCase()
 
     if (text === normalized) {
-        verdict.innerHTML = "<span class='answer'>#{answer}</span><span class='correct'> is correct!</span>"
-        followup.style.cssText = "";
+        verdict.innerHTML = `<span class='answer'>${answer}</span><span class='correct'> is correct!</span>`
+        followup.style.cssText = ""
     } else {
         verdict.innerHTML = "<span class='wrong'>Wrong!</span>"
         followup.style.cssText = "display: none;"

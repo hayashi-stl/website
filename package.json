@@ -1,0 +1,32 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Azure Puzzle Grove",
+  "private": true,
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "assets-webpack-plugin": "^7.1.1",
+    "three": "^0.160.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "npx webpack --mode development && bundle exec jekyll build",
+    "serve-1-dev": "npx webpack --mode development --watch",
+    "serve-2": "bundle exec jekyll serve",
+    "build-prod": "npx webpack --mode production && bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayashi-stl/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayashi-stl/website/issues"
+  },
+  "homepage": "https://github.com/hayashi-stl/website#readme"
+}

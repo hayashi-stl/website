@@ -2,5 +2,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-.typescript
+.webpack
+webpack-assets.json
 vendor
+node_modules

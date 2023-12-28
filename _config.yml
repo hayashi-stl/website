@@ -40,6 +40,14 @@ plugins:
   - jekyll-feed
   - jekyll-coffeescript
 
+exclude:
+  - tsconfig.json
+  - "*.ts" # Taken care of by Webpack
+  - webpack-assets.json
+
+watch_exclude:
+  - ".ts$"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -55,4 +55,4 @@ On your tour of the fortress, you visit the seven stars in order. Then you visit
 18. Smash Bros move used for recovery
 
 <canvas class="gltf-viewer wf-model"></canvas>
-<script src="{{ '/assets/gltf-viewer.js' | relative_url }}"></script>
+<script type="module" src="{{ '/assets/gltf-viewer.js' | relative_url }}"></script>
