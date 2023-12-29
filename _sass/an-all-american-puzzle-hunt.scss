@@ -160,4 +160,67 @@
     width: calc(($content-width - $spacing-unit * 2) * 0.75);
     aspect-ratio: calc(4.0 / 3);
   }
+
+  .answer-table {
+    table {
+      @extend %centered-table;
+
+      tr {
+        background-color: transparent;
+      }
+      th, td {
+        padding: 0px 5px;
+      }
+      th {
+        background-color: transparent;
+        border: 1px solid mix($background-color, $text-color, 50%);
+      }
+      td {
+        border: none;
+      }
+    }
+  }
+
+  .american-grid {
+    table {
+      @extend %centered-table;
+
+      td {
+        @include grid-entry(30px);
+        border: none;
+        background-color: transparent;
+
+        > div {
+          .char {
+            text-align: center;
+            flex: 1;
+          }
+
+          .ellipsis {
+            font-size: 30px;
+            position: absolute;
+            top: -12px;
+          }
+          .right { left: 5px; }
+          .left { right: 5px; }
+        }
+      }
+
+      .red, .white, .blue {
+        border: 1px solid black;
+        color: black;
+      }
+      .red   { background-color: #faa; }
+      .white { background-color: #fff; }
+      .blue  { background-color: #acf; }
+    }
+  }
+
+  .boxes {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr;
+    justify-content: center;
+    column-gap: calc($spacing-unit * 3);
+    row-gap: $spacing-unit;
+  }
 }

@@ -295,7 +295,7 @@
 
 .puzzle-flavor {
   font-style: italic;
-  color: #088;
+  color: #077;
   text-align: center;
 }
 
@@ -352,4 +352,23 @@
 .caption {
   text-align: center;
   font-style: italic;
+}
+
+.raw-grid {
+  table {
+    @extend %centered-table;
+
+    td {
+      @include grid-entry(calc($base-font-size + 0.2em));
+      border: none;
+      background-color: transparent;
+
+      > div {
+        .char {
+          text-align: center;
+          flex: 1;
+        }
+      }
+    }
+  }
 }

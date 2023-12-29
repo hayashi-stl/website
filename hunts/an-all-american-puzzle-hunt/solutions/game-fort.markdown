@@ -110,3 +110,8 @@ HYPERNOVA
 <br>
 
 So the answer is `FLYNN DID AN ARMY EXIT`.
+
+### Notes
+
+This used to be a physical puzzle with a physical model of Whomp's Fortress. Of course,
+a virtual model was needed here.
