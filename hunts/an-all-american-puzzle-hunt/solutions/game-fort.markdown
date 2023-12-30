@@ -8,7 +8,7 @@ answer: FLYNN DID AN ARMY EXIT
 
 First, we solve the clues. We realize that they are each 9 letters long.
 
-<div style="font-family: monospace;" markdown="1">
+<div class="mono" markdown="1">
 
  1. BABAISYOU
  2. COMMUNITY

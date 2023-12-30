@@ -1,12 +1,15 @@
 @charset "utf-8";
 
+@import "fonts";
+
 // Define defaults for each variable.
 
-$base-font-family: "Noto Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: "This Noto Sans", "Arial", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
+$code-font-family: "This Noto Sans Mono", "monospace" !default;
 
 $spacing-unit:     30px !default;
 
@@ -61,14 +64,22 @@ $code-color:       #ccc !default;
   }
 }
 
-@mixin grid-entry($size) {
-  padding: 0px;
+@mixin fixed-width($size) {
   width: $size;
   min-width: $size;
   max-width: $size;
+}
+
+@mixin fixed-height($size) {
   height: $size;
   min-height: $size;
   max-height: $size;
+}
+
+@mixin grid-entry($size) {
+  padding: 0px;
+  @include fixed-width($size);
+  @include fixed-height($size);
   box-sizing: border-box;
   > div {
     position: relative;
@@ -86,5 +97,6 @@ $code-color:       #ccc !default;
   "minima/layout",
   "minima/syntax-highlighting",
   "stuck-on-extraction",
-  "an-all-american-puzzle-hunt"
+  "an-all-american-puzzle-hunt",
+  "fractallia"
 ;

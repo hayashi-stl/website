@@ -9,7 +9,7 @@ answer: EACH STATE HAS ITS QUIRKS, EVEN THE POLYGON STATES IN THE WEST
 First, we notice that each answer has an even length. We can put the answers into $$n$$×2 boxes as clued by the mess of boxes in the puzzle.
 
 <div class="boxes">
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 AMOUNTWONA
@@ -17,7 +17,7 @@ MOTORCYCLE
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 CRAZIEST
@@ -25,7 +25,7 @@ SARAHBAN
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 DOCKSTO
@@ -33,7 +33,7 @@ NUNAVUT
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 FLYNNDIDA
@@ -41,7 +41,7 @@ NARMYEXIT
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 ITWAVED
@@ -49,7 +49,7 @@ AVICTIM
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 LIVEINWARM
@@ -57,7 +57,7 @@ FLAMMABLES
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 MTVVIDEOIN
@@ -65,7 +65,7 @@ TOWNISSKEW
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 NOSNOW
@@ -73,7 +73,7 @@ JOKERS
 {% endprop %}
 {% endgrid %}
 </div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 NOTRIAL
@@ -82,7 +82,7 @@ MIXINGS
 {% endgrid %}
 </div>
 <div></div>
-<div class="raw-grid" style="font-family: monospace;">
+<div class="raw-grid mono">
 {% grid "/assets/raw-grid.rb" | relative_url %}
 {% prop text asc %}
 OWLTHANK

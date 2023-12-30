@@ -14,7 +14,7 @@ the disambiguator in the flavor text hints at taking the second such election.
 
 <div style="display: flex; justify-content: center">
     <div>
-        <ul class="raw-list" style="font-family: monospace;">
+        <ul class="raw-list" class="mono">
             <li>2020</li>
             <li>1912</li>
             <li>1952</li>
@@ -29,7 +29,7 @@ the disambiguator in the flavor text hints at taking the second such election.
     </div>
     <div style="width: 50px;"></div>
     <div>
-        <ul class="raw-list" style="font-family: monospace;">
+        <ul class="raw-list" class="mono">
             <li>Harris</li>
             <li>Marshall</li>
             <li>Nixon</li>
@@ -44,7 +44,7 @@ the disambiguator in the flavor text hints at taking the second such election.
     </div>
     <div style="width: 50px;"></div>
     <div>
-        <ul class="raw-list" style="font-family: monospace;">
+        <ul class="raw-list" class="mono">
             <li>Trump</li>
             <li>Roosevelt</li>
             <li>Stevenson</li>

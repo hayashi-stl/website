@@ -1,4 +1,39 @@
 [hunt="An All-American Puzzle Hunt"] {
+  .flag {
+    $height: 60px;
+    display: grid;
+    grid-template-columns: calc($height * 2.5) 1fr;
+    margin-bottom: $spacing-unit;
+
+    .blue-side {
+      @include fixed-height($height);
+      grid-row-start: 1;
+      grid-row-end: 4;
+      background-color: #000080;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .red-stripe {
+      @include fixed-height(calc($height / 4));
+      background-color: red;
+    }
+
+    .white-stripe {
+      @include fixed-height(calc($height / 2));
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > div {
+        font-style: italic;
+        color: black;
+      }
+    }
+  }
+
   .second-place-solution-table {
     table {
       @extend %centered-table;

@@ -1,0 +1,86 @@
+[hunt="Fractallia"] {
+  .smore-logic-grid {
+    @extend %raw-grid;
+
+    td {
+      > div {
+        .sure {
+          font-weight: bold;
+        }
+
+        .unsure {
+          color: mix($background-color, $text-color, 30%);
+        }
+
+        .name {
+          color: #ca0;
+        }
+      }
+    }
+  }
+
+  .word-search-hard {
+    color: #c00;
+  }
+
+  .word-search-array {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-unit;
+  }
+
+  .word-search {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .extract {
+      border: 1px solid #a80;
+      background-color: #000;
+      font-weight: 900;
+    }
+
+    .order {
+      font-size: calc($base-font-size * 2);
+    }
+
+    .deemph {
+      color: mix($background-color, $text-color, 30%);
+    }
+  }
+
+  .word-search-grid {
+    @extend %raw-grid;
+
+    .top { border-top: 1px solid #ca0; }
+    .left { border-left: 1px solid #ca0; }
+    .bottom { border-bottom: 1px solid #ca0; }
+    .right { border-right: 1px solid #ca0; }
+
+    table {
+      td {
+        @include fixed-width(20px);
+        @include fixed-height(20px);
+
+        .arrow {
+          position: absolute;
+          z-index: 1;
+          
+          line, polyline {
+            stroke: #fff;
+            stroke-width: 1;
+            fill: none;
+          }
+        }
+      }
+    }
+  }
+
+  .word-search .r, .words .r { color: #c00; }
+  .word-search .y, .words .y { color: #cc0; }
+  .word-search .g, .words .g { color: #0c0; }
+  .word-search .b, .words .b { color: #08f; }
+  .word-search .p, .words .p { color: #a0f; }
+}

@@ -3,9 +3,11 @@ layout: default
 ---
 <article class="post">
 
+  {% include hunt-header-flavor.html %}
+
   <div class="puzzle-header">
     <div class="puzzle-back">
-      {% assign hunt = site.pages | where_exp: "item", "item.page-type == 'hunt' and item.title == page.hunt" | first %}
+      {% assign hunt = site.pages | where_exp: "item", "item.page-type == 'hunt' and item.hunt == page.hunt" | first %}
       <a href="{{ hunt.url | relative_url }}">{{ page.hunt | escape }}: All puzzles</a>
     </div>
     <div class="puzzle-solution-toggle">

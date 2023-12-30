@@ -1,6 +1,7 @@
 ---
 layout: hunt
 page-type: hunt
+hunt: Stuck on Extraction
 title: Stuck on Extraction
 hunt-date: "April 2021"
 ---

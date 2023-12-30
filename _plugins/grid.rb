@@ -8,6 +8,11 @@ def prop_array(lines, text_format)
             lines.each {|line|
                 arr << line.grapheme_clusters
             }
+
+        when "csv"
+            lines.each {|line|
+                arr << line.split(",")
+            }
     end
 
     # Rectangularize

@@ -1,6 +1,7 @@
 ---
 layout: hunt
 page-type: hunt
+hunt: An All-American Puzzle Hunt
 title: An All-American Puzzle Hunt
 hunt-date: "February 2022"
 ---

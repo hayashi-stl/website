@@ -13,7 +13,7 @@ Everyone's in second place in a sense. They receive support in the form of votes
 
 <div style="display: flex; justify-content: center">
     <div>
-        <ul class="raw-list" style="font-family: monospace;">
+        <ul class="raw-list" class="mono">
             <li>(-4) Harris</li>
             <li>(-4) Marshall</li>
             <li>(-3) Nixon</li>
@@ -28,7 +28,7 @@ Everyone's in second place in a sense. They receive support in the form of votes
     </div>
     <div style="width: 100px;"></div>
     <div>
-        <ul class="raw-list" style="font-family: monospace;">
+        <ul class="raw-list" class="mono">
             <li>(-5) Clinton</li>
             <li>(-6) Cox</li>
             <li>(+0) Hancock</li>

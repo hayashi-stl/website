@@ -96,6 +96,12 @@ li {
   }
 }
 
+.somewhat-spaced-list {
+  li {
+    margin-bottom: calc($spacing-unit / 5);
+  }
+}
+
 .spaced-list {
   li {
     margin-bottom: calc($spacing-unit / 2);
@@ -174,6 +180,7 @@ code {
 
 code {
   padding: 1px 5px;
+  font-family: $code-font-family;
 }
 
 pre {
@@ -185,6 +192,10 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.mono {
+  font-family: $code-font-family;
 }
 
 

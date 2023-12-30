@@ -354,7 +354,7 @@
   font-style: italic;
 }
 
-.raw-grid {
+.raw-grid, %raw-grid {
   table {
     @extend %centered-table;
 
