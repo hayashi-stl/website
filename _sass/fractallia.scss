@@ -26,7 +26,7 @@
   .word-search-array {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: $spacing-unit;
   }
@@ -83,4 +83,67 @@
   .word-search .g, .words .g { color: #0c0; }
   .word-search .b, .words .b { color: #08f; }
   .word-search .p, .words .p { color: #a0f; }
+
+  .turtle-code-array {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $spacing-unit;
+  }
+
+  .turtle-code-array.wider {
+    gap: calc($spacing-unit * 2);
+  }
+
+  .turtle-unknowns {
+    margin-bottom: 0px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid $text-color;
+    color: $text-color;
+    
+    tr {
+      &:where(:nth-child(even)) {
+        background-color: lighten($background-color, 6%);
+      }
+      border-bottom: 1px solid $text-color;
+    }
+    td {
+      padding: 5px;
+      border: none;
+      vertical-align: top;
+
+      &:nth-child(1) {
+        vertical-align: middle;
+        font-family: $code-font-family;
+        font-size: calc($base-font-size * 2.5);
+      }
+    }
+
+    .highlight {
+      margin-bottom: 0px;
+    }
+
+    td.emph {
+      .highlight {
+        background-color: #860;
+      }
+    }
+  }
+
+  .turtle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > div {
+      padding: 10px;
+
+      &:nth-child(1), &:nth-child(2) { border-bottom: 1px solid $text-color; }
+      &:nth-child(1), &:nth-child(3) { border-right: 1px solid $text-color; }
+
+      h1, h2, h3, h4, h5, h6 { text-align: center; }
+    }
+  }
 }
