@@ -146,4 +146,53 @@
       h1, h2, h3, h4, h5, h6 { text-align: center; }
     }
   }
+
+  .ripoff-legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: $spacing-unit;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: calc($spacing-unit * 0.6);
+    }
+  }
+
+  .ripoff-extraction {
+    font-family: $code-font-family;
+    li {
+      margin-bottom: calc($spacing-unit * 0.6);
+    }
+  }
+
+  .multid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > div {
+      padding: calc($spacing-unit / 2);
+
+      &:nth-child(odd) {
+        border-right: 1px dashed $text-color;
+      }
+
+      &:nth-last-child(n+3) {
+        border-bottom: 1px solid $text-color;
+      }
+
+      hi {
+        background-color: lighten($background-color, 20%);
+      }
+
+      ht {
+        display: inline;
+        color: #ca0;
+        font-weight: bold;
+      }
+    }
+  }
 }

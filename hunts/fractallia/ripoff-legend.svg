@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="461.31113"
+   height="331"
+   viewBox="0 0 122.05523 87.577083"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   sodipodi:docname="ripoff-behavior.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#000033"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1"
+     inkscape:cx="1083"
+     inkscape:cy="1745"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-237.9927"
+       originy="-412.61768"
+       spacingx="1.3229166"
+       spacingy="1.3229166"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="6"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2"
+       markerHeight="2"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path7" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-237.99271,-412.61767)">
+    <rect
+       style="fill:#b8ffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect290"
+       width="23.8125"
+       height="15.875"
+       x="238.125"
+       y="412.74997"
+       inkscape:export-filename="ripoff-behavior.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" />
+    <rect
+       style="fill:#008d11;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect291"
+       width="23.8125"
+       height="7.9374866"
+       x="238.125"
+       y="428.62497" />
+    <rect
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#00aaaa;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect292"
+       width="23.8125"
+       height="23.8125"
+       x="238.125"
+       y="412.74997" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
+       x="249.92627"
+       y="426.19269"
+       id="text294"><tspan
+         sodipodi:role="line"
+         id="tspan294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+         x="249.92627"
+         y="426.19269">Land</tspan></text>
+    <rect
+       style="fill:#b8ffff;fill-opacity:1;fill-rule:evenodd;stroke:#00aaaa;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect296"
+       width="23.8125"
+       height="23.8125"
+       x="238.125"
+       y="476.24997" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="249.92627"
+       y="489.69269"
+       id="text296"
+       inkscape:export-filename="../hunts/fractallia/ripoff-behavior.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9"><tspan
+         sodipodi:role="line"
+         id="tspan296"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="249.92627"
+         y="489.69269">Air</tspan></text>
+    <rect
+       style="fill:#3c4bff;fill-opacity:1;fill-rule:evenodd;stroke:#00aaaa;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect297"
+       width="23.8125"
+       height="23.8125"
+       x="238.125"
+       y="444.49997" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#ffffff;stroke-width:0.264583"
+       x="249.92627"
+       y="457.87698"
+       id="text297"><tspan
+         sodipodi:role="line"
+         id="tspan297"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="249.92627"
+         y="457.87698">Water</tspan></text>
+    <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 269.87499,492.12498 h 23.8125"
+       id="path297" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="281.67627"
+       y="489.69269"
+       id="text298"><tspan
+         sodipodi:role="line"
+         id="tspan298"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="281.67627"
+         y="489.69269">Wall</tspan></text>
+    <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.79375, 0.79375;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 269.87499,428.62498 h 23.8125"
+       id="path298" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="281.67627"
+       y="426.19269"
+       id="text299"><tspan
+         sodipodi:role="line"
+         id="tspan299"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="281.67627"
+         y="426.19269">Go-through</tspan></text>
+    <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 269.87499,459.84581 h 23.8125"
+       id="path299" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="281.67627"
+       y="457.94269"
+       id="text300"><tspan
+         sodipodi:role="line"
+         id="tspan300"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="281.67627"
+         y="457.94269">Bouncy</tspan></text>
+    <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 269.87499,460.90415 h 23.8125"
+       id="path300" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect300"
+       width="7.9374933"
+       height="7.9375143"
+       x="309.5625"
+       y="418.04163" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="313.42627"
+       y="431.48434"
+       id="text301"><tspan
+         sodipodi:role="line"
+         id="tspan301"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="313.42627"
+         y="431.48434">Healthy</tspan></text>
+    <rect
+       style="fill:#b100ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect301"
+       width="7.9374933"
+       height="7.9375143"
+       x="309.5625"
+       y="449.79166" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="313.42627"
+       y="463.23438"
+       id="text302"><tspan
+         sodipodi:role="line"
+         id="tspan302"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="313.42627"
+         y="463.23438">Harmful</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
+       id="rect302"
+       width="7.9374933"
+       height="7.9375143"
+       x="309.5625"
+       y="481.54166" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="313.42627"
+       y="494.98438"
+       id="text303"><tspan
+         sodipodi:role="line"
+         id="tspan303"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="313.42627"
+         y="494.98438">Neutral</tspan></text>
+    <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7)"
+       d="M 337.34374,422.0104 H 350.5729"
+       id="path303" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="345.17627"
+       y="428.8385"
+       id="text304"><tspan
+         sodipodi:role="line"
+         id="tspan304"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="345.17627"
+         y="428.8385">Direction</tspan></text>
+    <path
+       style="fill:#ffe700;fill-opacity:1;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 342.6354,454.28957 v -1.05834 h 2.11667 v -2.11667 h 1.05834 v 2.11667 h 2.11667 v 1.05834 h -2.11667 v 2.11667 h -1.05834 v -2.11667 z"
+       id="path304"
+       inkscape:export-filename="../hunts/fractallia/ripoff-behavior.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+       x="345.17627"
+       y="463.23434"
+       id="text305"><tspan
+         sodipodi:role="line"
+         id="tspan305"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;fill:#00aaaa;fill-opacity:1;stroke-width:0.264583"
+         x="345.17627"
+         y="463.23434">Spawn position</tspan></text>
+  </g>
+</svg>
