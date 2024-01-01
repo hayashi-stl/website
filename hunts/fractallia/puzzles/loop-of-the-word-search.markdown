@@ -3,9 +3,14 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Fractallia
 place: Checkerboard Cross
+banner-offset: -100px
 title: Loop of the Word Search
 answer: LET THE MANNED ROOK BE BY THE NEXT DREADED BISHOP
 ---
+<followup>
+<div class="center-text">You got nothing special other than the answer!</div>
+</followup>
+
 <p class="puzzle-flavor">
 It looks like you came across a bunch of suspicious word searches. You start at the left and hop around, moving some
 pieces (only as many as necessary) and jumping over stuff, hoping to find the words. Every time before you move, you

@@ -3,9 +3,15 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Fractallia
 place: Digging Ring
+banner-offset: -50px
 title: Multidimensional Whack-a-Mole
 answer: START DIGIT
 ---
+<followup>
+<div class="center-text">You got a Start Digit!</div>
+<img class="center-img" src="../start-digit.svg"/>
+</followup>
+
 <p class="puzzle-flavor">
 It's a <b>cross</b> between two puzzles!
 </p>

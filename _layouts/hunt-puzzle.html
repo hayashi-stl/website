@@ -31,13 +31,17 @@ layout: default
       <input id="answer-check-button" type="button" class="check-button" value="Check"/>
     </div>
     <div id="answer-check-verdict", class="verdict"></div>
-    <div id="answer-followup", class="followup", style="display: none;">{{ page.followup | escape }}</div>
+    <div id="answer-followup", style="display: none;">
+      {{ content | extract_html_tag: 'followup' }}
+    </div>
     <script type="module" src="{{ '/assets/answer-check.js' | relative_url }}"></script>
   </div>
 
   <div class="post-content">
-    {{ content }}
+    {{ content | exclude_html_tag: 'followup' }}
   </div>
+
+  {% include hunt-footer-flavor.html %}
   
   <div id="answer" style="display: none">{{ page.answer | escape }}</div>
 

@@ -1,4 +1,25 @@
 [hunt="Fractallia"] {
+  .banner {
+    @include fixed-height(calc($content-width / 4.5));
+    overflow: hidden;
+    position: relative;
+
+    > img {
+      position: relative;
+    }
+  }
+
+  .fractal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .place {
+      font-size: calc($base-font-size * 1.5);
+    }
+  }
+
   .smore-logic-grid {
     @extend %raw-grid;
 
@@ -192,6 +213,88 @@
         display: inline;
         color: #ca0;
         font-weight: bold;
+      }
+    }
+  }
+
+  .circuitry-grid {
+    table {
+      @extend %centered-table;
+
+      td {
+        @include grid-entry(24px);
+
+        &.empty {
+          border: none;
+          background-color: transparent;
+        }
+
+        &.cell {
+          background-color: white;
+          border: 1px solid black;
+          &.boolean { background-color: #8f8; }
+          &.circuit { background-color: #acf; }
+          &.extract { background-color: yellow;}
+        }
+        color: black;
+
+        > div {
+          .corner {
+            font-size: 8.5px;
+            position: absolute;
+            left: 1px;
+            text-align: left;
+            align-self: flex-start;
+          }
+          
+          .char {
+            text-align: center;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .circuitry-clues {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-unit;
+
+    > div {
+      flex: 100%;
+    }
+  }
+
+  .circuitry-bank {
+    column-count: 4;
+  }
+
+  .scramble-grid {
+    table {
+      @extend %centered-table;
+
+      td {
+        @include grid-entry(21px);
+        @include fixed-height(40px);
+
+        border: 1px solid $text-color;
+
+        > div {
+          .number {
+            font-size: 12px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            align-self: flex-start;
+          }
+          
+          .char {
+            text-align: center;
+            align-self: flex-end;
+            flex: 1;
+          }
+        }
       }
     }
   }

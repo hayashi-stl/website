@@ -3,9 +3,15 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Fractallia
 place: Sand Jewel Wonderland
+banner-offset: -200px
 title: Turntle Glyphs
 answer: SIERPINSKI TRIANGLE
 ---
+<followup>
+<div class="center-text">You got a Sierpiński Triangle!</div>
+<img class="center-img" src="../sierpinski-triangle.svg"/>
+</followup>
+
 <p class="puzzle-flavor">
 In the Sand Jewel Wonderland, you find a lot of disorder. Scrambled writing, letters all over without a care for rotation,
 and a lot of indirection. Okay, that was an exaggeration, as the letters are just quarter-turns off.

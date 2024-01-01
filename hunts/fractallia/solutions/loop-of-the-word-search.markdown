@@ -3,6 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: Fractallia
 place: Checkerboard Cross
+banner-offset: -100px
 title: Loop of the Word Search
 answer: LET THE MANNED ROOK BE BY THE NEXT DREADED BISHOP
 ---

@@ -3,6 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: Fractallia
 place: Blockhole Tunnels
+banner-offset: -280px
 title: A Total Ripoff
 answer: SPACE-FILLING CURVE
 ---
@@ -34,3 +35,4 @@ Using the flavor text, we know to take the name used in Super Mario Bros 3, even
 17. (Red) Koopa Troopa
 
 We use the indexing chart to index into the appropriate word in each entity name, giving `SPACE-FILLING CURVE`.
+<img class="center-img" src="../space-filling-curve.svg"/>

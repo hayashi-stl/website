@@ -8,3 +8,12 @@
     <div class="red-stripe"></div>
 </div>
 {% endif %}
+{% if page.hunt == "Fractallia" %}
+    {% if page.place and page.page-type == "hunt-puzzle" or page.page-type == "hunt-solution" %}
+    <div class="banner">
+        {% assign banner-name = page.place | slugify %}
+        <image style="top: {{ page.banner-offset }};"
+            src="{{ banner-name | prepend: '/hunts/fractallia/' | append: '.png' | relative_url }}"/>
+    </div>
+    {% endif %}
+{% endif %}

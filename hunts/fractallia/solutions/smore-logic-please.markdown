@@ -3,6 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: Fractallia
 place: Campfire Coral Circle
+banner-offset: -50px
 title: S'more Logic, Please
 answer: RULES
 ---
@@ -251,3 +252,5 @@ ABCDEFGH
 
 If we read the rows, they spell letters in ASCII, and the give `Rules`, terminated by a NUL character for good measure.
 So the answer is `RULES`.
+
+<img class="center-img" src="../rules.svg"/>

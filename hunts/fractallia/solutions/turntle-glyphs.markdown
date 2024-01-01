@@ -3,6 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: Fractallia
 place: Sand Jewel Wonderland
+banner-offset: -200px
 title: Turntle Glyphs
 answer: SIERPINSKI TRIANGLE
 ---
@@ -63,6 +64,7 @@ Now we plug these values into the final program and run it! The result (after a 
 <image class="center-img" src="../turtle-drawings/sierpinski.svg"/><br>
 
 So the answer is `SIERPINSKI TRIANGLE`.
+<img class="center-img" src="../sierpinski-triangle.svg"/>
 
 ### Notes
 

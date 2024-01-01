@@ -3,9 +3,15 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Fractallia
 place: Blockhole Tunnels
+banner-offset: -280px
 title: A Total Ripoff
 answer: SPACE-FILLING CURVE
 ---
+<followup>
+<div class="center-text">You got a Space-Filling Curve! (Okay, it's not quite space-filling, but close enough)</div>
+<img class="center-img" src="../space-filling-curve.svg"/>
+</followup>
+
 <p class="puzzle-flavor">
 After zooming in, you find an interesting document describing the behaviors of things in some game. Apparently someone was making a ripoff of some famous game, but chose not to use the actual sprites in the design document to hide that fact. But you know better. You see words like “stomped” and realize that it can be none other than that game. The one labelled 3 in fact. They're even using the same names from that game, even when the things have been renamed in later ones. But you still have to crack the picture code used to draw the things. Luckily, there’s a legend for that, but unfortunately, the references are missing!
 </p>

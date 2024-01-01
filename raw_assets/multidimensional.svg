@@ -28,8 +28,8 @@
      showguides="false"
      showgrid="true"
      inkscape:zoom="1"
-     inkscape:cx="611"
-     inkscape:cy="1843"
+     inkscape:cx="392"
+     inkscape:cy="3130"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -99,7 +99,10 @@
        style="fill:none;stroke:#ae7520;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 149.4896,488.15622 -21.16667,-1e-5"
        id="path806"
-       sodipodi:nodetypes="cc" /><path
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="../hunts/fractallia/multidimensional/warmup-whack-a-mole.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" /><path
        style="fill:none;stroke:#ae7520;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 173.30211,527.84369 -21.16667,-1e-5"
        id="path805"

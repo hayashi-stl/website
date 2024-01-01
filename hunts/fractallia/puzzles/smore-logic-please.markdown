@@ -3,9 +3,15 @@ layout: hunt-puzzle
 page-type: hunt-puzzle
 hunt: Fractallia
 place: Campfire Coral Circle
+banner-offset: -50px
 title: S'more Logic, Please
 answer: RULES
 ---
+<followup>
+<div class="center-text">You got the Rules!</div>
+<img class="center-img" src="../rules.svg"/>
+</followup>
+
 <p class="puzzle-flavor">
 After zooming in, you find Alice, Bob, Charlie, Davis, Elizabeth, Frank, Gabriel, and Hans around a campfire with some
 s’more ingredients. Some of them currently have s’mores. You find out that they measure time in a very very obscure unit called

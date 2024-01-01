@@ -3,6 +3,7 @@ layout: hunt-solution
 page-type: hunt-solution
 hunt: Fractallia
 place: Digging Ring
+banner-offset: -50px
 title: Multidimensional Whack-a-Mole
 answer: START DIGIT
 ---
@@ -89,3 +90,5 @@ Number of dimensions: $$\log_2 3$$ = 1.584<ht>9</ht>6...
 We may notice that the names of the puzzles are weird. Perhaps we should index the numbers into the names. But the flavor text
 says something about "cross". So we cross-index into the puzzle name on the opposite side (e.g. index 1 into DOWN ARROW and 2 into A SNAKE).
 This gives `START` on the left column and `DIGIT` on the right column. So the answer is `START DIGIT`.
+
+<img class="center-img" src="../start-digit.svg"/>
