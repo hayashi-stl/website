@@ -3,6 +3,28 @@ PropDesc = /^(?<num_lines>\d+) \s+ (?<prop>\w+) \s+ (?<format>\w+) \s* $/x
 def prop_array(lines, text_format)
     arr = []
 
+    def dsv_split(line, sep)
+        delimiter = if sep == " " then /\s+/ else /#{Regexp.quote sep}/ end
+        component = /\G (?<comp> | [^"] .*? | " ([^"] | "")*? " ) (#{delimiter} | $)/x
+
+        offset = 0
+        size = line.chars.size
+        result = []
+        while offset < size
+            match = component.match(line, offset)
+            match = if match then match else raise Exception.new("#{line} is not in the proper delimiter-separated format") end
+            comp = match[:comp]
+            if comp.start_with? '"' then
+                comp.delete_prefix! '"'
+                comp.delete_suffix! '"'
+                comp.gsub!('""', '"')
+            end
+            result << comp
+            offset += match[0].chars.size
+        end
+        result
+    end
+
     case text_format
         when "asc"
             lines.each {|line|
@@ -11,12 +33,12 @@ def prop_array(lines, text_format)
 
         when "csv"
             lines.each {|line|
-                arr << line.split(",")
+                arr << dsv_split(line, ",")
             }
 
         when "ssv"
             lines.each {|line|
-                arr << line.split(" ")
+                arr << dsv_split(line, " ")
             }
     end
 

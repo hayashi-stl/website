@@ -1,0 +1,150 @@
+[hunt="Puzzle Tour in the Volcano"] {
+
+  .d-pad-grid {
+    @extend %raw-grid;
+
+    .top { border-top: 3px solid $text-color; }
+    .left { border-left: 3px solid $text-color; }
+    .bottom { border-bottom: 3px solid $text-color; }
+    .right { border-right: 3px solid $text-color; }
+    .dashed-top { border-top: 1px dashed $text-color; }
+    .dashed-left { border-left: 1px dashed $text-color; }
+
+    table {
+      td {
+        @include fixed-width(25px);
+        @include fixed-height(25px);
+
+        &.deemph {
+          color: mix($background-color, $text-color, 30%);
+        }
+
+        &.emph {
+          color: #e60;
+        }
+      }
+    }
+  }
+
+  .fire-fight-grid {
+    table {
+      @extend %centered-table;
+
+      td {
+        @include grid-entry(28px);
+
+        &.fire, &.arrow, &.space {
+          border: none;
+          background-color: transparent;
+        }
+
+        &.space { @include fixed-width(14px); }
+        &.fire, &.arrow {
+          width: auto;
+          max-width: none;
+
+          img {
+            padding: 0px 10px;
+          }
+        }
+
+        &.move, &.fire-move {
+          border: 1px solid $text-color;
+          background-color: transparent;
+        }
+
+        &.fire-move {
+          border: 1px solid #e60;
+          color: #e60;
+          background-color: transparent;
+        }
+
+        &.fire-cell, &.extract {
+          border: 1px solid black;
+          color: black;
+        }
+
+        &.extract {
+          background-color: white;
+        }
+
+        &.fire-1 { background-color: #ff0000; }
+        &.fire-2 { background-color: #ff2a00; }
+        &.fire-3 { background-color: #ff5500; }
+        &.fire-4 { background-color: #ff8000; }
+        &.fire-5 { background-color: #ffaa00; }
+        &.fire-6 { background-color: #ffd400; }
+        &.fire-7 { background-color: #ffff00; }
+
+        &.move, &.fire-move {
+          @include fixed-width(200px);
+        }
+
+        > div {
+          .char {
+            text-align: center;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .line-font {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .space-every-other {
+    :nth-child(even) {
+      margin-bottom: calc($spacing-unit / 2);
+    }
+  }
+
+  .property-grid {
+    table {
+      @extend %centered-table;
+
+      th {
+        @include grid-entry(28px);
+        height: auto;
+        max-height: none;
+        border: none;
+        background-color: transparent;
+        writing-mode: vertical-lr;
+        font-weight: normal;
+        padding-top: 10px;
+        rotate: 180deg;
+        vertical-align: top;
+
+        &:nth-last-child(1) {
+          border: none;
+          width: auto;
+          max-width: none;
+          padding-left: 10px;
+        }
+      }
+
+      td {
+        @include grid-entry(28px);
+
+        border: 1px solid $text-color;
+        background-color: transparent;
+        text-align: center;
+
+        &:nth-last-child(1) {
+          border: none;
+          width: auto;
+          max-width: none;
+          padding-left: 10px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .property-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

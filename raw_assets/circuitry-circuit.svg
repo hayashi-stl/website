@@ -25,8 +25,8 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="1"
-     inkscape:cx="367"
-     inkscape:cy="1572"
+     inkscape:cx="231"
+     inkscape:cy="1059"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -60,7 +60,10 @@
        style="fill:none;stroke:#00aaaa;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 0,370.41665 H 47.625"
        id="path1"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="../hunts/fractallia/circuitry-circuit.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" />
     <path
        style="fill:none;stroke:#00aaaa;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 0,396.87498 26.458333,0 V 375.70831 H 47.625"
