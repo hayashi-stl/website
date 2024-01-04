@@ -147,4 +147,84 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .lava-grid {
+    @extend %centered-table;
+
+    table {
+      border: none;
+
+      td {
+        @include grid-entry(75px);
+
+        background-color: transparent;
+        border: none;
+        color: black;
+
+        &.cell {
+          background-color: white;
+          border: 1px solid black;
+        }
+
+        &.lava {
+          color: white;
+        }
+
+        .char {
+          position: absolute;
+          font-size: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        img {
+          &.down { rotate: 270deg; }
+          &.right { rotate: 180deg; }
+          &.up { rotate: 90deg; }
+        }
+      }
+    }
+  }
+
+  ._15-puzzle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    aspect-ratio: 1;
+  }
+
+  #_15-puzzle {
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    .interact {
+      pointer-events: visiblePainted;
+    }
+  }
+
+  ._4-red-coins-solution-table {
+    table {
+      @extend %centered-table;
+      margin-bottom: $spacing-unit;
+      text-align: center;
+      tr {
+        &:nth-child(even) {
+          background-color: lighten($background-color, 6%);
+        }
+      }
+      th, td {
+        padding: 0px 5px;
+      }
+      th {
+        background-color: lighten($background-color, 10%);
+        border: 1px solid $text-color;
+        border-bottom-color: $text-color;
+      }
+      td {
+        border: none;
+      }
+    }
+  }
 }

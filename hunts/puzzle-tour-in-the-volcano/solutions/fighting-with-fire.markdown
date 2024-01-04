@@ -92,7 +92,7 @@ of the D-pad correspond to directions of special moves (center is neutral specia
 are up and down special, respectively). So we take the corresponding special moves for each fighter
 and figure out which one is fiery and which one is not.
 
-<div class="solution-table" markdown="1">
+<div markdown="1">
 
 | Fighter          | Not fiery             | Fiery                | Notes
 | ---------------- | --------------------- | -------------------- | -------

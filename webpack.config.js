@@ -10,6 +10,7 @@ module.exports = (env, argv) => {
         entry: {
             answer_check:  { import: './assets/answer-check.ts' , filename: './assets/answer-check.js' },
             gltf_viewer: { import: './assets/gltf-viewer.ts', filename: './assets/gltf-viewer.js' },
+            _15_puzzle: { import: './assets/15-puzzle.ts', filename: './assets/15-puzzle.js' },
         },
         //devtool: 'inline-source-map',
         module: {
