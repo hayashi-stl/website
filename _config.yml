@@ -31,6 +31,7 @@ youtube_username: HayashiSTL
 header_pages:
   - blog.markdown
   - puzzles.markdown
+  - games.markdown
   - about.markdown
 
 
