@@ -32,6 +32,7 @@ header_pages:
   - blog.markdown
   - puzzles.markdown
   - games.markdown
+  - music.markdown
   - about.markdown
 
 

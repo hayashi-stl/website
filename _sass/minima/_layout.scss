@@ -372,3 +372,25 @@
     }
   }
 }
+
+.main-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-unit;
+
+  > div {
+    @include fixed-width(250px);
+    border: 2px solid $text-color;
+    padding: 5px;
+
+    .title {
+      font-size: calc($base-font-size * 1.5);
+    }
+
+    * {
+      text-align: center;
+    }
+  }
+}

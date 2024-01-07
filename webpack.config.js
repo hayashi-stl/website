@@ -11,6 +11,8 @@ module.exports = (env, argv) => {
             answer_check:  { import: './assets/answer-check.ts' , filename: './assets/answer-check.js' },
             gltf_viewer: { import: './assets/gltf-viewer.ts', filename: './assets/gltf-viewer.js' },
             _15_puzzle: { import: './assets/15-puzzle.ts', filename: './assets/15-puzzle.js' },
+            binary_operation_pictures_render:
+                { import: './assets/posts/binary-operation-pictures/render.ts', filename: './assets/posts/binary-operation-pictures/render.js' },
         },
         //devtool: 'inline-source-map',
         module: {
