@@ -26,6 +26,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     }.to_h
 
     github_action = ENV.key? "GITHUB_ACTION"
+    puts "Dest: #{dest_dir}"
     prefix = if github_action
         /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
     else
@@ -34,6 +35,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
     Dir.glob("#{dest_dir}/**/*.html") {|html_path| 
 
+        puts "Path: #{html_path}"
         # Find all <script> tags and get their sources
         doc = File.open(html_path) {|file| Nokogiri::HTML(file)}
         scr_paths = doc.xpath("//script").filter_map {|scr|
@@ -58,6 +60,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
         # Get home paths
         rel_deps = deps.map{|path|
+            puts "    prefix #{prefix}, path #{path}"
             prefix + "/" + Pathname.new(path).relative_path_from(Pathname.new dest_dir).to_s
         }
         
