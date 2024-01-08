@@ -130,4 +130,4 @@ Let's not forget bitwise operations.
 
 [^2]: The post title says "binary", but that assumes a static image :)
 
-<script type="module" src="{{ '/assets/posts/binary-operation-pictures/render.js' }}"></script>
+<script type="module" src="{{ '/assets/posts/binary-operation-pictures/render.js' | relative_url }}"></script>

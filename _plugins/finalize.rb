@@ -56,6 +56,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
         }.to_a
         
         # Calculate unique dependencies
+        puts "    scr_paths #{scr_paths}"
         deps = scr_paths.flat_map {|path| dep_map[path]}.uniq.to_a.difference(scr_paths)
 
         # Get home paths
