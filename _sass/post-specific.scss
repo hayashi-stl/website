@@ -1,0 +1,7 @@
+[post="Binary Operation Pictures"] {
+  fakecanvas {
+    display: block;
+    @include fixed-width(256px);
+    @include fixed-height(256px);
+  }
+}

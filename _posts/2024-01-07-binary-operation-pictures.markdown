@@ -1,5 +1,6 @@
 ---
 layout: post
+page-type: post
 title:  "Binary Operation Pictures"
 date:   2024-01-07 14:55:00 -0800
 categories: math
@@ -13,11 +14,11 @@ For example, here's addition mod 256, which is a diagonal gradient, as expected,
 <div class="figrow">
     <figure>
         <!--img src="/assets/posts/binary-operation-pictures/addition.png"/-->
-        <canvas width="256" height="256" fn="return (x + y) % 256u;"></canvas>
+        <fakecanvas fn="return (x + y) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x + y, 256)$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return (x * y) % 256u;"></canvas>
+        <fakecanvas fn="return (x * y) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x\times y, 256)$$</figcaption>
     </figure>
 </div>
@@ -26,15 +27,15 @@ There are 4 classic arithmetic operations, so the other two should of course get
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" fn="return (x - y) % 256u;"></canvas>
+        <fakecanvas fn="return (x - y) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x - y, 256)$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return y == 0u ? 0u : (256u * x / y) % 256u;"></canvas>
+        <fakecanvas fn="return y == 0u ? 0u : (256u * x / y) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(\lfloor 256x/y\rfloor, 256)$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return y == 0u ? 0u : (x % y);"></canvas>
+        <fakecanvas fn="return y == 0u ? 0u : (x % y);"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x, y)$$</figcaption>
     </figure>
 </div>
@@ -43,15 +44,15 @@ Bitwise operations can also be done. The pictures for those look kind of fractal
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" fn="return x & y;"></canvas>
+        <fakecanvas fn="return x & y;"></fakecanvas>
         <figcaption>Bitwise AND: $$f(x, y) = x\ \&\ y$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return x | y;"></canvas>
+        <fakecanvas fn="return x | y;"></fakecanvas>
         <figcaption>Bitwise OR: $$f(x, y) = x\ |\ y$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return x ^ y;"></canvas>
+        <fakecanvas fn="return x ^ y;"></fakecanvas>
         <figcaption>Bitwise XOR: $$f(x, y) = x \oplus y$$</figcaption>
     </figure>
 </div>
@@ -60,11 +61,11 @@ As a matter of fact, let's compare the result of bitwise AND to 0 and return 255
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" fn="return (x & y) == 0u ? 255u : 0u;"></canvas>
+        <fakecanvas fn="return (x & y) == 0u ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x\ \&\ y = 0$ \\ 0 & otherwise}$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" fn="return (x | y) == 255u ? 255u : 0u;"></canvas>
+        <fakecanvas fn="return (x | y) == 255u ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x\ |\ y = 255$ \\ 0 & otherwise}$$</figcaption>
     </figure>
 </div>
@@ -73,7 +74,7 @@ Oh look! It's a pair of right isosceles Sierpiński triangles! We can't really d
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" fn="return (x ^ y) == 85u ? 255u : 0u;"></canvas>
+        <fakecanvas fn="return (x ^ y) == 85u ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x \oplus y = 85$ \\ 0 & otherwise}$$</figcaption>
     </figure>
 </div>
@@ -82,7 +83,7 @@ A Cantor set with aspect ratio 2! Changing this equals sign to a less-than sign 
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" fn="return (x ^ y) < 85u ? 255u : 0u;"></canvas>
+        <fakecanvas fn="return (x ^ y) < 85u ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x \oplus y < 85$ \\ 0 & otherwise}$$</figcaption>
     </figure>
 </div>
@@ -91,11 +92,11 @@ We can animate the value being compared to, resulting in some cool animations. L
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" animate fn="return (x & y) == t ? 255u : 0u;"></canvas>
+        <fakecanvas animate fn="return (x & y) == t ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x\ \&\ y = t$ \\ 0 & otherwise}$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" animate fn="return (x ^ y) == t ? 255u : 0u;"></canvas>
+        <fakecanvas animate fn="return (x ^ y) == t ? 255u : 0u;"></fakecanvas>
         <figcaption>$$f(x, y) = \cases{ 255 & $x \oplus y = t$ \\ 0 & otherwise}$$</figcaption>
     </figure>
 </div>
@@ -104,11 +105,11 @@ A flickering gliding Sierpiński triangle and a parameterized Cantor set! While 
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" animate fn="return (x + y + t) % 256u;"></canvas>
+        <fakecanvas animate fn="return (x + y + t) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x + y + t, 256)$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" animate fn="return (x * y * t) % 256u;"></canvas>
+        <fakecanvas animate fn="return (x * y * t) % 256u;"></fakecanvas>
         <figcaption>$$f(x, y) = \textrm{mod}(x\times y\times t, 256)$$</figcaption>
     </figure>
 </div>
@@ -117,11 +118,11 @@ Let's not forget bitwise operations.
 
 <div class="figrow">
     <figure>
-        <canvas width="256" height="256" animate fn="return x & y & t;"></canvas>
+        <fakecanvas animate fn="return x & y & t;"></fakecanvas>
         <figcaption>$$f(x, y) = x\ \&\ y\ \&\ t$$</figcaption>
     </figure>
     <figure>
-        <canvas width="256" height="256" animate fn="return x ^ y ^ t;"></canvas>
+        <fakecanvas animate fn="return x ^ y ^ t;"></fakecanvas>
         <figcaption>$$f(x, y) = x\oplus y\oplus t$$</figcaption>
     </figure>
 </div>

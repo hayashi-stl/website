@@ -179,7 +179,6 @@
  * Page content
  */
 .page-content {
-  background-color: black;
   display: flex;
   flex: 1;
   align-items: stretch;
@@ -393,4 +392,14 @@
       text-align: center;
     }
   }
+}
+
+// For faking rendering to multiple canvases
+.omni-canvas {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
 }

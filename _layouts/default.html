@@ -6,7 +6,10 @@
   {% if page.page-type == "hunt" or page.page-type == "hunt-puzzle" or page.page-type == "hunt-solution" %}
     {% assign hunt-name = page.hunt %}
   {% endif %}
-  <body hunt="{{ hunt-name }}">
+  {% if page.page-type == "post" %}
+    {% assign post-title = page.title %}
+  {% endif %}
+  <body hunt="{{ hunt-name }}" post="{{ post-title }}">
 
     {%- include header.html -%}
 
