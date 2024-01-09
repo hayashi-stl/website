@@ -2,7 +2,7 @@ require "json"
 require "nokogiri"
 require "pathname"
 
-Jekyll::Hooks.register :site, :post_write do |site|
+def add_dependency_scripts(site)
 	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
     # Copy .webpack over to _site
@@ -70,4 +70,65 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
 	t2 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 	puts("Finalized scripts in #{t2-t1} seconds.")
+end
+
+def convert_svg_text_to_paths(site)
+	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+
+    # Convert SVG text to paths for consistent display regardless of font existence
+
+    cache_dir = File.expand_path(site.source + "/.svg-cache")
+    rel_paths = Dir.glob("#{site.dest}/**/*.svg").map {|path|
+        Pathname.new(path).relative_path_from(Pathname.new site.dest).to_s
+    }
+    rel_path_set = rel_paths.map {|path| [path, true]}.to_h
+
+    # Clear stale cache files
+    Dir.glob("#{cache_dir}/**/*.svg") {|path|
+        rel = Pathname.new(path).relative_path_from(Pathname.new cache_dir).to_s
+        if !rel_path_set.key? rel
+            FileUtils.rm(path)
+        end
+    }
+
+    # Regenerate invalid cache files
+    rel_paths.each {|path|
+        src = File.expand_path(site.source + "/" + path)
+        cache = File.expand_path(cache_dir + "/" + path)
+        dest = File.expand_path(site.dest + "/" + path)
+
+        # Check if source changed
+        next if !File.exist?(src) || (File.exist?(cache) && File.mtime(cache) >= File.mtime(src))
+        puts "Regenerating #{path}"
+        FileUtils.mkdir_p(File.dirname cache)
+
+        doc = File.open(dest) {|file| Nokogiri::XML(file)}
+        if doc.xpath("//xmlns:text").any? {|_| true}
+            # There's text!
+            system('inkscape', '-l', '-T', '-o', cache, dest)
+            # Remove text attributes (sometimes empty ones are left)
+            doc = File.open(cache) {|file| Nokogiri::XML(file)}
+            doc.xpath("//xmlns:text").each {|node| node.unlink}
+            File.open(cache, "w") {|file| doc.write_to(file, encoding: "UTF-8", indent: 4)}
+        else
+            # No text, just copy over
+            FileUtils.cp(dest, cache)
+        end
+
+        # Make modification time of cache match that of src
+        # so that detection still works if src was modified while
+        # cache was being generated
+        FileUtils.touch(cache, :mtime => File.mtime(src))
+    }
+
+    # Copy cache files back to dest
+    FileUtils.cp_r(cache_dir + "/.", site.dest)
+
+	t2 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+	puts("Converted SVG text to paths in #{t2-t1} seconds.")
+end
+
+Jekyll::Hooks.register :site, :post_write do |site|
+    add_dependency_scripts(site)
+    convert_svg_text_to_paths(site)
 end

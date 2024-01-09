@@ -47,6 +47,7 @@ exclude:
   - "*.ts" # Taken care of by Webpack
   - webpack-assets.json
   - raw_assets/
+  - .svg-cache/
 
 watch_exclude:
   - ".ts$"
