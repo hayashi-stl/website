@@ -1,0 +1,62 @@
+---
+layout: post
+page-type: post
+title:  "MIT Mystery Hunt 2024 Postmortem"
+date:   2024-01-07 14:55:00 -0800
+tags: math
+---
+So MITMH2024 just happened. We (ET Phone in Answer) escaped from the underworld and tried to get all the Pluto shards, but there were just too many cities to visit in such a short amount of time. Seems like Pluto is condemned to forever being Insignificant Space Debris. But anyway, there were some interesting puzzles in the hunt. There will be spoilers. Click to reveal them.
+
+## Arts & Crafts
+
+{% spoiler %}
+Arts & Crafts was a fun puzzle that involved the following steps:
+* Solve a nonogram that also indicates a crease pattern
+* Cut the resulting pattern and fold along the creases
+* Build the resulting 3D structure in Minecraft
+* Figure out which combinations of levers in each structure light the glowstone
+* Extract using binary
+
+The main thing I worked on was the cut-and-fold part. There were 5 structures, and having to cut and fold all of them would take way too long. So I used Blender! All I had to do was save both the Minecraft grid and the nonogram solution as textures, instantiate an appropriately-sized grid in Blender, set up the material and UV mapping to display the Minecraft grid and nonogram solution, delete the unused squares (which conveniently appeared green), and use rotations to perform the 90° folds. The result is a *perfect 3D model of the Minecraft structure* with the following advantages:
+* No tape needed to maintain strucure!
+* Made a cutting mistake? Just undo it!
+* To get a different structure, just replace the texture!
+
+<img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/minecraft-structures.png' | relative_url }}"
+alt="Result of 'cutting' and 'folding' the crease pattern in Blender"/>
+
+(Afterwards, someone referenced it to build it in Minecraft.)
+{% endspoiler %}
+
+## Marathon Block Pushing Game
+
+{% spoiler %}
+Oh look, Sokoban! But it's a *huge* level, and nobody has time for that. So of course I hacked into it. But before that, I played a little of it and noticed some familiar structures: the diode, and the 1-toggle.
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/diode.svg' | relative_url}}"
+            alt="Diode"/>
+        <figcaption>A diode. Only one direction of movement is allowed.</figcaption>
+    </figure>
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/1-toggle.svg' | relative_url}}"
+            alt="1-toggle"/>
+        <figcaption>A 1-toggle. Like a diode, but traversing it flips the direction.</figcaption>
+    </figure>
+</div>
+
+Which made some team members wonder if the writer of the puzzle knew about [the](https://arxiv.org/pdf/1806.03539.pdf) [gadget](https://arxiv.org/pdf/1812.03592.pdf) [framework](https://arxiv.org/pdf/2006.01256.pdf). (In retrospect, I think they either looked at an older Sokoban hardness paper or came up with the gadgets themselves.)
+
+### The Block Hacking Game
+
+Hacking leads to the source code, where we can see the full array of repeated components used in the level. So I figured out what each repeated component represents: a toggle switch.
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/toggle-switch.svg' | relative_url}}"
+            alt="Toggle Switch"/>
+        <figcaption>A toggle switch. There are 2 outputs. Everytime the path is crossed, it switches what output it leads to.</figcaption>
+    </figure>
+</div>
+{% endspoiler %}

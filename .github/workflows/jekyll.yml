@@ -42,8 +42,10 @@ jobs:
       - name: Setup Fonts
         run: |
           chmod +x install-google-font.sh
+          mkdir .fonts
           ./install-google-font.sh "Noto Sans"
           ./install-google-font.sh "Noto Sans Mono"
+          fc-cache -fv
       - name: Setup Inkscape
         run: |
           sudo add-apt-repository ppa:inkscape.dev/stable

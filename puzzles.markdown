@@ -9,7 +9,7 @@ I've made some puzzles in the past
 
 Beware, as almost all of these hunts were made to be solved in person at a specific time.
 It turns out that I like putting physical components in my puzzles. I'll put warnings in
-the appropriate puzzles.
+the appropriate puzzles. Also, many puzzles are best viewed on a computer.
 
 {% assign hunts = site.pages | where: "page-type", "hunt" %}
 <ul>

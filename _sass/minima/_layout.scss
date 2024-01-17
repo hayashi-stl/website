@@ -404,3 +404,26 @@
   display: block;
   pointer-events: none;
 }
+
+.spoiler {
+  position: relative;
+  .spoiler-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $text-color;
+    &:hover {
+      background-color: mix($text-color, $background-color, 80%);
+    }
+  }
+
+  .spoiler-text {
+    color: $background-color;
+    font-weight: bold;
+    position: absolute;
+    pointer-events: none;
+    @include center-absolute();
+  }
+}
