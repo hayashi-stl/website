@@ -51,6 +51,7 @@ jobs:
           sudo add-apt-repository ppa:inkscape.dev/stable
           sudo apt update
           sudo apt install -y inkscape
+          find ~/.config
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
