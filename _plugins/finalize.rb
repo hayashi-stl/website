@@ -25,7 +25,7 @@ def add_dependency_scripts(site)
         [absolute_list.last, absolute_list]
     }.to_h
 
-    github_action = ENV.key? "github_action"
+    github_action = ENV.key? "GITHUB_ACTION"
     puts "Dest: #{dest_dir}"
     prefix = if github_action
         /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
@@ -73,7 +73,7 @@ def add_dependency_scripts(site)
 end
 
 def convert_svg_for_web_display(site)
-    github_action = ENV.key? "github_action"
+    github_action = ENV.key? "GITHUB_ACTION"
 
 	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
