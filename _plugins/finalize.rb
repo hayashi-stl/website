@@ -25,9 +25,9 @@ def add_dependency_scripts(site)
         [absolute_list.last, absolute_list]
     }.to_h
 
-    github_action = ENV.key? "GITHUB_ACTION"
+    GITHUB_ACTION = ENV.key? "GITHUB_ACTION"
     puts "Dest: #{dest_dir}"
-    prefix = if github_action
+    prefix = if GITHUB_ACTION
         /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
     else
         ""
@@ -44,7 +44,7 @@ def add_dependency_scripts(site)
             # Distinguish absolute from relative path
             if scr["src"].start_with? "/"
                 rel_path = scr["src"]
-                if github_action then
+                if GITHUB_ACTION then
                     # Remove first directory; this is the directory of the overall website
                     rel_path.gsub!(/^\/[^\/]*/, "")
                 end
@@ -73,6 +73,8 @@ def add_dependency_scripts(site)
 end
 
 def convert_svg_text_to_paths(site)
+    GITHUB_ACTION = ENV.key? "GITHUB_ACTION"
+
 	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
     # Convert SVG text to paths for consistent display regardless of font existence
@@ -91,7 +93,22 @@ def convert_svg_text_to_paths(site)
         end
     }
 
-    File.open(File.expand_path("~/.config/inkscape/preferences.xml")) {|file| puts file.read}
+    # Set up preferences for dodging the poorly-supported "context-stroke"
+    preference_filename = File.expand_path("~/.config/inkscape/preferences.xml")
+    if GITHUB_ACTION
+        inkscape_cfg = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <inkscape version="1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <group id="dialogs">
+                    <group id="save_as" enable_svgexport="1"/>
+                </group>
+                <group id="options">
+                    <group id="svgexport" marker_autostartreverse="1" marker_contextpaint="1"/>
+                </group>
+            </inkscape>
+        '
+        FileUtils.mkdir_p(File.dirname preference_filename)
+        File.open(preference_filename, "w") {|file| file.write inkscape_cfg}
+    end
 
     # Regenerate invalid cache files
     rel_paths.each {|path|
