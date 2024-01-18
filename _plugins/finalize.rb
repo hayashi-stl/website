@@ -25,9 +25,9 @@ def add_dependency_scripts(site)
         [absolute_list.last, absolute_list]
     }.to_h
 
-    GITHUB_ACTION = ENV.key? "GITHUB_ACTION"
+    github_action = ENV.key? "github_action"
     puts "Dest: #{dest_dir}"
-    prefix = if GITHUB_ACTION
+    prefix = if github_action
         /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
     else
         ""
@@ -44,7 +44,7 @@ def add_dependency_scripts(site)
             # Distinguish absolute from relative path
             if scr["src"].start_with? "/"
                 rel_path = scr["src"]
-                if GITHUB_ACTION then
+                if github_action then
                     # Remove first directory; this is the directory of the overall website
                     rel_path.gsub!(/^\/[^\/]*/, "")
                 end
@@ -72,8 +72,8 @@ def add_dependency_scripts(site)
 	puts("Finalized scripts in #{t2-t1} seconds.")
 end
 
-def convert_svg_text_to_paths(site)
-    GITHUB_ACTION = ENV.key? "GITHUB_ACTION"
+def convert_svg_for_web_display(site)
+    github_action = ENV.key? "github_action"
 
 	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
@@ -94,21 +94,7 @@ def convert_svg_text_to_paths(site)
     }
 
     # Set up preferences for dodging the poorly-supported "context-stroke"
-    preference_filename = File.expand_path("~/.config/inkscape/preferences.xml")
-    if GITHUB_ACTION
-        inkscape_cfg = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <inkscape version="1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
-                <group id="dialogs">
-                    <group id="save_as" enable_svgexport="1"/>
-                </group>
-                <group id="options">
-                    <group id="svgexport" marker_autostartreverse="1" marker_contextpaint="1"/>
-                </group>
-            </inkscape>
-        '
-        FileUtils.mkdir_p(File.dirname preference_filename)
-        File.open(preference_filename, "w") {|file| file.write inkscape_cfg}
-    end
+    config_dir = File.expand_path(site.source + "/.inkscape")
 
     # Regenerate invalid cache files
     rel_paths.each {|path|
@@ -123,12 +109,17 @@ def convert_svg_text_to_paths(site)
 
         doc = File.open(dest) {|file| Nokogiri::XML(file)}
         if doc.xpath("//xmlns:text").any? {|_| true}
+            puts "    Text"
             # There's text!
-            system('inkscape', '-l', '-T', '-o', cache, dest)
+            system({'INKSCAPE_PROFILE_DIR' => config_dir}, 'inkscape', '-l', '-T', '-o', cache, dest)
             # Remove text attributes (sometimes empty ones are left)
             doc = File.open(cache) {|file| Nokogiri::XML(file)}
             doc.xpath("//xmlns:text").each {|node| node.unlink}
             File.open(cache, "w") {|file| doc.write_to(file, encoding: "UTF-8", indent: 4)}
+        elsif doc.xpath("//@style").any? {|a| /context-(fill|stroke);/.match? a.value}
+            puts "    Poorly supported SVG2"
+            # There's context-stroke or related (not widely supported)
+            system({'INKSCAPE_PROFILE_DIR' => config_dir}, 'inkscape', '-l', '-T', '-o', cache, dest)
         else
             # No text, just copy over
             FileUtils.cp(dest, cache)
@@ -149,5 +140,5 @@ end
 
 Jekyll::Hooks.register :site, :post_write do |site|
     add_dependency_scripts(site)
-    convert_svg_text_to_paths(site)
+    convert_svg_for_web_display(site)
 end

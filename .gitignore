@@ -7,3 +7,6 @@ _site
 webpack-assets.json
 vendor
 node_modules
+/test
+/.inkscape/*
+!/.inkscape/preferences.xml

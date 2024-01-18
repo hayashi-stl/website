@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inkscape version="1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+    <group id="dialogs">
+        <group id="save_as" enable_svgexport="1"/>
+    </group>
+    <group id="options">
+        <group id="svgexport" marker_autostartreverse="1" marker_contextpaint="1"/>
+    </group>
+</inkscape>
