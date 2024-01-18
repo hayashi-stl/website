@@ -22,35 +22,30 @@
        viewBox="0 0 5.3244081 6.1553851"
        preserveAspectRatio="xMidYMid"><path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:#00aaaa;fill-rule:evenodd;stroke:#00aaaa;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path135" /></marker></defs><metadata
      id="metadata5"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
-     <rect
-       style="fill:#000071;fill-opacity:1;fill-rule:evenodd;stroke:#00aaaa;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
-       id="rect15"
-       width="20"
-       height="20"
-       x="0"
-       y="0" /><path
-       style="fill:none;stroke:#00aaaa;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
-       d="M 0,10 H 20"
-       id="path16" />
-    <style>
-      #agent {
-        offset-path: path('M -20,10 H 40');
-        offset-distance: 0%;
-        animation: agent 3s linear infinite;
-      }
-      @keyframes agent {
-        from { offset-distance: 0%; }
-        to   { offset-distance: 100%; }
-      }
-    </style>
+    <rect
+      style="fill:#000071;fill-opacity:1;fill-rule:evenodd;stroke:#00aaaa;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
+      id="rect15"
+      width="20"
+      height="20"
+      x="0"
+      y="0" /><path
+      style="fill:none;stroke:#00aaaa;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+      d="M 0,10 H 20"
+      id="path16"/>
     <circle
-      style="fill:#00ffff;fill-rule:evenodd;stroke-width:1;stroke-linecap:square"
+      style="fill:#00ffff;fill-rule:evenodd;stroke-width:1;stroke-linecap:square;"
       id="agent"
-      r="2.5000002" />
+      r="2.5000002" >
+      <animateMotion
+        path="M -20,10 H 40"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </circle>
 </svg>

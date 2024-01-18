@@ -91,6 +91,8 @@ def convert_svg_text_to_paths(site)
         end
     }
 
+    File.open(File.expand_path("~/.config/inkscape/preferences.xml")) {|file| puts file.read}
+
     # Regenerate invalid cache files
     rel_paths.each {|path|
         src = File.expand_path(site.source + "/" + path)

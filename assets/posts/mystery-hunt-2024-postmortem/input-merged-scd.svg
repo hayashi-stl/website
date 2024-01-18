@@ -35,17 +35,20 @@
        height="20"
        x="0"
        y="0" />
+     <path
+       style="fill:none;stroke:#00aaaa;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="M 0,10 L 20,15"
+       id="a" />
     <path
-      style="fill:none;stroke:#00aaaa;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);
-        transform-origin:10px 10px;"
-      d="M 0,10 H 20"
+      style="transform-origin:0px 10px;fill:none;stroke:#00aaaa;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+      d="M 0,10 L 20,15"
       id="path">
       <animateTransform
         attributeName="transform"
-        type="scale"
-        keyTimes="0; 0.33333; 0.35; 0.83333; 0.85; 1"
-        values="1 1; 1 1; -1 1; -1 1; 1 1; 1 1"
-        dur="6s"
+        type="rotate"
+        keyTimes="0; 0.22222; 0.23333; 0.88889; 0.9; 1"
+        values="0; 0; -28.072; -28.072; 0; 0"
+        dur="9s"
         repeatCount="indefinite"
       />
     </path>
@@ -53,9 +56,12 @@
       style="fill:#00ffff;fill-rule:evenodd;stroke-width:1;stroke-linecap:square"
       id="agent"
       r="2.5000002" >
-      <animateMotion
-        path="M -20,10 H 40 H -20"
-        dur="6s"
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        keyTimes="0; 0.11111; 0.22222; 0.33333; 0.33333; 0.44444; 0.55556; 0.66667; 0.66667; 0.77778; 0.88889; 1"
+        values="-20 10; 0 10; 20 15; 40 15; -20 10; 0 10; 20 15; 40 15; -20 10; 0 10; 20 5; 40 5"
+        dur="9s"
         repeatCount="indefinite"
       />
     </circle>

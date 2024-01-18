@@ -59,4 +59,27 @@ Hacking leads to the source code, where we can see the full array of repeated co
         <figcaption>A toggle switch. There are 2 outputs. Everytime the path is crossed, it switches what output it leads to.</figcaption>
     </figure>
 </div>
+
+Well, technically, you could take the bottom path as many times as you want because of how the repeated component was set up in the original.
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/input-merged-scd.svg' | relative_url}}"
+            alt="Input-Merged Self-Closing Door"/>
+        <figcaption>An input-merged self-closing door. Like the toggle switch, but the bottom path is always open
+            and always allows opening the top path.</figcaption>
+    </figure>
+</div>
+
+Well, *technically*, you could also try to cheese things by taking the top path even if it's not truly open, but this will cause the gadget to be completely intraversable later. The setup of the level ensures that the gadget is equivalent to a toggle switch, since you always want to take the top path if it's truly open. So we will go back to the toggle switch simplification. If a bunch of toggle switches are chained together in a very mean way, it can take an exponential amount of toggle switch traversals to reach the goal:
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/toggle-switch-chain.svg' | relative_url}}"
+            alt="Toggle Switch Chain"/>
+        <figcaption>A chain of adversarily attached toggle switches. For $$n$$ toggle switches, getting to the end requires
+        $$2^{n+1} - 2$$ toggle switch traversals.</figcaption>
+    </figure>
+</div>
+
 {% endspoiler %}
