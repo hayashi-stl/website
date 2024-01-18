@@ -2,7 +2,7 @@
 layout: post
 page-type: post
 title:  "MIT Mystery Hunt 2024 Postmortem"
-date:   2024-01-07 14:55:00 -0800
+date:   2024-01-18 15:33:00 -0800
 tags: math
 ---
 So MITMH2024 just happened. We (ET Phone in Answer) escaped from the underworld and tried to get all the Pluto shards, but there were just too many cities to visit in such a short amount of time. Seems like Pluto is condemned to forever being Insignificant Space Debris. But anyway, there were some interesting puzzles in the hunt. There will be spoilers. Click to reveal them.
@@ -82,4 +82,51 @@ Well, *technically*, you could also try to cheese things by taking the top path 
     </figure>
 </div>
 
+The level is made up of a mean chain of 78 toggle switches. Some of the switches are already up, so it would take less toggle switch traversals than $$2^{79} - 2 \approx 6.045\times 10^{23}$$. However, the puzzle requests for the number of *moves*, not the number of toggle switch traversals. Counting them is tricky, especially because the toggle switch chain goes back and forth inside a big rectangle. Thankfully, I had experience counting moves (video game algorithmic hardness, making sure that some constraints line up), but it was still annoying. Eventually you get that it takes about $$2.211\times 10^{24}$$ moves to get to the goal. (Though you need the exact value).
+
+But wait! There's a part 2!
+
+## Build Sokoban
+
+The requirement was to build a tricky but solvable Push-1 Sokoban (no pulling) that fits in a 20×20 grid and takes at least 1,000 moves to win. But there's one big twist: only one (1) push block is allowed! This was an embarrasing moment, as I struggled to find a way to make the player have to step on tiles a great number of times. I had experience with building gadgets when an arbitrary amount of state was allowed, not just one block! Thankfully, a teammate came up with a clever gadget: if you want to push a block through it, you must push it partway, go all the way to the other side of the gadget, and finish the pushing. Chaining these together is what gave the necessary complexity, with our team achieving over 2,400 moves.
+{% endspoiler %}
+
+## Turing Tar-pit
+
+{% spoiler %}
+Ooh, esoteric programming languages! Rockstar thankfully had a convenient online interpreter, but the rest we had to build. I do find it especially interesting that what was displayed was the *result* or *process* of doing the thing that the esolang was based off of (cooking, acting a play, singing rock music) with the only exception being Piet. And then there's the epigrams. The list is so funny. At the end of the puzzle, we got stuck on "EITERFACEOFF" for quite a while, even after multi-checking our work, even on Piet. Not sure what happened there. If anyone knows what an eiter is, let me know (oh wait, there's no comments section. Oh well.).
+{% endspoiler %}
+
+## Retro Chess Puzzle
+
+{% spoiler %}
+What a creative name for a puzzle. And the Chess960 twist at the end was amazing. I don't know how people construct these. Now, we did get stuck on "NINE A X" for a while. How do you NINE A X? By putting an I in front! (But that was a big red herring). During the Chess960 twist, I worked on the retro chess puzzle that I chose, and used a pink queen just because we had one. Of course, this one was parallelized a lot.
+{% endspoiler %}
+
+## Transformations
+
+{% spoiler %}
+After opening the puzzle I'm immediately greeted by nonsense strings like "NINTHILSEKIRTSMIHNISNACMIHOTTEMMNLPSDRAWOTEHTDNNORNIDNALNIAREVIR". It's one of *those* puzzles. Eventually, I figured out (using the last nonsense string) that they're the result of performing the same transformation of each word in a sentence and removing the spaces. Some teammates helped, as this puzzle required a *lot* of parallelization. Some things to note:
+* Every sentence has perfect grammar. I was suspicious about our sentence for "DUGHTERLIVESAINHERMORSREGIAONDFLLSAINLOVEAWITHAOVERLORDAOFLD", until someone realized that all the articles are removed. Tricky!
+* Just because `a`→`b` during the transformation does not mean that `b`→`a` to reverse it. Some `b`s were just naturally there.
+* "Rest" and "respite" are synonyms. We got mildly trolled by that one, wondering what that random E turns into.
+
+The ending got less interesting, as we solved it by looking up the story fragments instead of the intended solution clued by the canned hint.
+{% endspoiler %}
+
+## Turning Æsop's Tables; a new translation
+
+{% spoiler %}
+Seeing Aesop's fables get transformed with things like a *sudden sliced raw cabbage and mayonnaise salad* was funny. That's all. (I didn't see the puzzle to its eventual solving.)
+{% endspoiler %}
+
+## Hell, MI
+
+{% spoiler %}
+Interseting round. We originally thought that the 7-colored torus fact was irrelevant, after interpreting "goes all the way around the doughnut" as "is a loop", when that ended up not being the case. I also heard legends about that text adventure, taking classic puzzles, making them impossible, and requiring external solutions (like putting a Tower of Hanoi ring on top of a Pole (Polish person)!).
+{% endspoiler %}
+
+Welp, that's all I have for now. By the way, I have some interesting puzzle ideas for some future Mystery Hunt.
+{% spoiler %}
+<div class="center-text">Made you look. They're a secret!</div>
 {% endspoiler %}

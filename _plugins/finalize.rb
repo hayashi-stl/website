@@ -109,7 +109,6 @@ def convert_svg_for_web_display(site)
 
         doc = File.open(dest) {|file| Nokogiri::XML(file)}
         if doc.xpath("//xmlns:text").any? {|_| true}
-            puts "    Text"
             # There's text!
             system({'INKSCAPE_PROFILE_DIR' => config_dir}, 'inkscape', '-l', '-T', '-o', cache, dest)
             # Remove text attributes (sometimes empty ones are left)
@@ -117,7 +116,6 @@ def convert_svg_for_web_display(site)
             doc.xpath("//xmlns:text").each {|node| node.unlink}
             File.open(cache, "w") {|file| doc.write_to(file, encoding: "UTF-8", indent: 4)}
         elsif doc.xpath("//@style").any? {|a| /context-(fill|stroke);/.match? a.value}
-            puts "    Poorly supported SVG2"
             # There's context-stroke or related (not widely supported)
             system({'INKSCAPE_PROFILE_DIR' => config_dir}, 'inkscape', '-l', '-T', '-o', cache, dest)
         else
