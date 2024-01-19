@@ -123,7 +123,7 @@ Seeing Aesop's fables get transformed with things like a *sudden sliced raw cabb
 ## Hell, MI
 
 {% spoiler %}
-Interseting round. We originally thought that the 7-colored torus fact was irrelevant, after interpreting "goes all the way around the doughnut" as "is a loop", when that ended up not being the case. I also heard legends about that text adventure, taking classic puzzles, making them impossible, and requiring external solutions (like putting a Tower of Hanoi ring on top of a Pole (Polish person)!).
+Interesting round. We originally thought that the 7-colored torus fact was irrelevant, after interpreting "goes all the way around the doughnut" as "is a loop", when that ended up not being the case. I also heard legends about that text adventure, taking classic puzzles, making them impossible, and requiring external solutions (like putting a Tower of Hanoi ring on top of a Pole (Polish person)!).
 {% endspoiler %}
 
 Welp, that's all I have for now. By the way, I have some interesting puzzle ideas for some future Mystery Hunt.
