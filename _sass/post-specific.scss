@@ -5,3 +5,13 @@
     @include fixed-height(256px);
   }
 }
+
+[post="Cone You Assign Normals to a Cone?"] {
+  fakecanvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include fixed-width(256px);
+    @include fixed-height(256px);
+  }
+}

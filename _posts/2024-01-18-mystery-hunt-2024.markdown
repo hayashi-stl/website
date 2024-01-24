@@ -3,7 +3,7 @@ layout: post
 page-type: post
 title:  "MIT Mystery Hunt 2024 Postmortem"
 date:   2024-01-18 15:33:00 -0800
-tags: math
+tags: puzzle puzzle-hunt
 ---
 So MITMH2024 just happened. We (ET Phone in Answer) escaped from the underworld and tried to get all the Pluto shards, but there were just too many cities to visit in such a short amount of time. Seems like Pluto is condemned to forever being Insignificant Space Debris. But anyway, there were some interesting puzzles in the hunt. There will be spoilers. Click to reveal them.
 

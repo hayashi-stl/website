@@ -13,6 +13,8 @@ module.exports = (env, argv) => {
             _15_puzzle: { import: './assets/15-puzzle.ts', filename: './assets/15-puzzle.js' },
             binary_operation_pictures_render:
                 { import: './assets/posts/binary-operation-pictures/render.ts', filename: './assets/posts/binary-operation-pictures/render.js' },
+            assign_normals_cone_render:
+                { import: './assets/posts/assign-normals-cone/render.ts', filename: './assets/posts/assign-normals-cone/render.js' },
         },
         //devtool: 'inline-source-map',
         module: {
