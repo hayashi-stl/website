@@ -1,6 +1,6 @@
 export {}
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 function updateSize(renderer: THREE.WebGLRenderer, omniCanvas: HTMLCanvasElement) {
@@ -17,20 +17,42 @@ class Picture {
     scene: THREE.Scene;
     controls: OrbitControls;
 
-    public constructor(filename: string, canvas: HTMLElement) {
+    public constructor(gltf: GLTF, canvas: HTMLElement) {
+        if (canvas.hasAttribute("shaderTrick")) {
+            // Modify shader to do the cone shader trick
+            let mesh = gltf.scene.getObjectByProperty("type", "Mesh") as THREE.Mesh;
+            const mat = mesh.material instanceof THREE.Material ? mesh.material : mesh.material[0];
+            let newMat = mat.clone();
+            newMat.onBeforeCompile = (shader, renderer) => {
+                shader.vertexShader = shader.vertexShader
+                    .replace(/(?<=void main\(\) \{)/,
+                        "bool squeeze = normal.y > 0.999;")
+                    .replace(/(?=\}\s*$)/,
+                        "vNormal = squeeze ? vec3(0.0, 0.0, 0.0) : vNormal;");
+            };
+            if (mesh.material instanceof THREE.Material)
+                mesh.material = newMat;
+            else
+                mesh.material[0] = newMat;
+        }
+
         this.canvas = canvas;
         this.scene = new THREE.Scene();
+        this.scene.add(gltf.scene);
+        const ambient = new THREE.AmbientLight(0x808080);
+        this.scene.add(ambient);
+        this.camera = gltf.cameras[0];
 
-        this.camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
-        this.camera.position.z = 2;
+        //this.camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+        //this.camera.position.z = 2;
+        
+        //const geo = new THREE.ConeGeometry(1, 1);
+        //this.scene.add(new THREE.Mesh(geo));
+
+        //const light = new THREE.DirectionalLight(0xffffff);
+        //this.scene.add(light);
 
         this.controls = new OrbitControls(this.camera, canvas);
-        
-        const geo = new THREE.ConeGeometry(1, 1);
-        this.scene.add(new THREE.Mesh(geo));
-
-        const light = new THREE.DirectionalLight(0xffffff);
-        this.scene.add(light);
     }
 
     public render(renderer: THREE.WebGLRenderer, omniCanvas: HTMLCanvasElement): void {
@@ -59,9 +81,12 @@ async function main() {
     omniCanvas.setAttribute("class", "omni-canvas");
     document.body.prepend(omniCanvas);
     
-    const pictures = canvases.map((canvas) => {
-        return new Picture(canvas.getAttribute("src")!, canvas as HTMLElement);
+    const picture_promises = canvases.map(async (canvas) => {
+        const filename = canvas.getAttribute("src")!;
+        let gltf = await new GLTFLoader().loadAsync(filename);
+        return new Picture(gltf, canvas as HTMLElement);
     });
+    const pictures = await Promise.all(picture_promises);
 
     const renderer = new THREE.WebGLRenderer({ canvas: omniCanvas, antialias: true });
     renderer.setClearColor(0x000000, 1);

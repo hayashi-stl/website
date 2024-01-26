@@ -56,7 +56,7 @@ Hacking leads to the source code, where we can see the full array of repeated co
     <figure>
         <img class="center-img" src="{{ '/assets/posts/mystery-hunt-2024-postmortem/toggle-switch.svg' | relative_url}}"
             alt="Toggle Switch"/>
-        <figcaption>A toggle switch. There are 2 outputs. Everytime the path is crossed, it switches what output it leads to.</figcaption>
+        <figcaption>A toggle switch. There are 2 outputs. Every time the path is crossed, it switches what output it leads to.</figcaption>
     </figure>
 </div>
 

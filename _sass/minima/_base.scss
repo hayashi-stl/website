@@ -79,6 +79,8 @@ figure > img {
 }
 
 figcaption {
+  width: min-content;
+  min-width: 100%;
   font-size: $small-font-size;
   text-align: center;
 
