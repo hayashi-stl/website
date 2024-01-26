@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="255.99998"
+   height="255.99998"
+   viewBox="0 0 67.733328 67.733329"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   sodipodi:docname="trapezoid-interpolation.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000033"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1"
+     inkscape:cx="343"
+     inkscape:cy="129"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="67.73333"
+       height="67.73333"
+       id="page9"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.6603017,60.073031 27.315075,7.6603031 l 13.103182,-1e-6 19.654775,52.4127299 z"
+       id="path4"
+       sodipodi:nodetypes="ccccc" />
+    <circle
+       style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:square;stroke-dasharray:none"
+       id="path5"
+       cx="27.315075"
+       cy="7.6603031"
+       r="1.8809534" />
+    <circle
+       style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:square;stroke-dasharray:none"
+       id="circle5"
+       cx="7.6603017"
+       cy="60.073032"
+       r="1.8809534" />
+    <circle
+       style="fill:#00aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:square;stroke-dasharray:none"
+       id="circle6"
+       cx="60.073032"
+       cy="60.073032"
+       r="1.8809534" />
+    <circle
+       style="fill:#00aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:square;stroke-dasharray:none"
+       id="circle7"
+       cx="40.418259"
+       cy="7.6603022"
+       r="1.8809534" />
+  </g>
+</svg>

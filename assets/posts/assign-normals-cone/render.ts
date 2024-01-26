@@ -26,7 +26,7 @@ class Picture {
             newMat.onBeforeCompile = (shader, renderer) => {
                 shader.vertexShader = shader.vertexShader
                     .replace(/(?<=void main\(\) \{)/,
-                        "bool squeeze = normal.y > 0.999;")
+                        "bool squeeze = position.y > 0.0 && normal.y > 0.999;")
                     .replace(/(?=\}\s*$)/,
                         "vNormal = squeeze ? vec3(0.0, 0.0, 0.0) : vNormal;");
             };
