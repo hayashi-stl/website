@@ -25,8 +25,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="1"
-     inkscape:cx="343"
-     inkscape:cy="129"
+     inkscape:cx="314"
+     inkscape:cy="97"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -48,7 +48,10 @@
        height="67.73333"
        id="page10"
        margin="0"
-       bleed="0" />
+       bleed="0"
+       inkscape:export-filename="../assets/posts/assign-normals-cone/trapezoid-triangulated.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" />
     <inkscape:page
        x="155.46666"
        y="0"

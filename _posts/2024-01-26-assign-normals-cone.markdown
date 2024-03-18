@@ -158,7 +158,7 @@ So, in the end, you can assign normals to a can. But cone you assign normals to 
 
 And that's the end![^sphericon]
 
-[^zoom]: Do NOT zoom in on the cone.
+[^zoom]: Do not zoom in on the cone.
 [^sphericon]: Let's not talk about sphericons. Be honest. When was the last time you needed a sphericon?
 
 <script type="module" src="{{ '/assets/posts/assign-normals-cone/render.js' | relative_url }}"></script>
