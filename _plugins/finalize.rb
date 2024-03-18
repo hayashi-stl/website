@@ -28,7 +28,7 @@ def add_dependency_scripts(site)
     github_action = ENV.key? "GITHUB_ACTION"
     puts "Dest: #{dest_dir}"
     prefix = if github_action
-        /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
+        "" # /(?<pre>\/[^\/]+)\/[^\/]+$/.match(dest_dir)[:pre]
     else
         ""
     end
@@ -44,10 +44,10 @@ def add_dependency_scripts(site)
             # Distinguish absolute from relative path
             if scr["src"].start_with? "/"
                 rel_path = scr["src"]
-                if github_action then
-                    # Remove first directory; this is the directory of the overall website
-                    rel_path.gsub!(/^\/[^\/]*/, "")
-                end
+                #if github_action then
+                #    # Remove first directory; this is the directory of the overall website
+                #    rel_path.gsub!(/^\/[^\/]*/, "")
+                #end
                 File.expand_path(dest_dir + rel_path)
             else
                 File.expand_path(File.dirname(html_path) + "/" + scr["src"])
