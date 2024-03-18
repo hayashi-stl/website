@@ -128,10 +128,10 @@ module Jekyll
 
             # Generate HTML!
             rel_path = @mapping_filename.render(context)
-            if github_action then
-                # Remove first directory; this is the directory of the overall website
-                rel_path.gsub!(/^\/[^\/]*/, "")
-            end
+            #if github_action then
+            #    # Remove first directory; this is the directory of the overall website
+            #    rel_path.gsub!(/^\/[^\/]*/, "")
+            #end
             load "#{Dir.pwd}#{rel_path}"
             html = ["<table>"]
             array.each_with_index {|row, y|
