@@ -1,0 +1,46 @@
+---
+layout: post
+page-type: post
+title:  "√2-1 and Octagons"
+date:   2024-04-30 15:33:00 -0800
+tags: math
+---
+A short while ago, it was 4/14. Also known as √2-1 day, as $$\sqrt{2} - 1\approx 0.414$$.
+
+There's the golden ratio, $$\frac{1}{2}\sqrt{5} + \frac{1}{2}$$, but there's also a silver ratio: $$\sqrt{2} + 1$$, which is just $$\frac{1}{\sqrt{2} - 1}$$[^day].
+As you may know, if you take a golden rectangle (aspect ratio $$\frac{1}{2}\sqrt{5} + \frac{1}{2} : 1$$) and chop off a square from the end, you get another golden rectangle.
+A *silver* rectangle (aspect ratio $$\sqrt{2} + 1 : 1$$) is similar, but you need to chop off 2 squares:
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/sqrt-2-minus-1/silver-rectangle.svg' | relative_url}}"
+            alt="Silver Rectangle"/>
+        <figcaption>A silver rectangle. Chopping off 2 squares from the side reveals a smaller silver rectangle. Note that as mentioned before,
+        $$\frac{1}{\sqrt{2} - 1} = \sqrt{2} + 1$$.</figcaption>
+    </figure>
+</div>
+
+Here's where things get interesting. The golden ratio shows up a bunch in regular pentagons and pentagrams, but the silver ratio's favorite regular polygon is the regular octagon. If we take just 3 sides of a regular octagon and draw the diagonal connecting the endpoints, we can see that this ratio shows up:
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/sqrt-2-minus-1/octagon-segment.svg' | relative_url}}"
+            alt="Octagon Segment"/>
+        <figcaption>3 sides of a regular octagon, along with a diagonal connecting the endpoints. The diagonal's length is the side length times $$\sqrt{2} + 1$$.</figcaption>
+    </figure>
+</div>
+
+If we take an octagon and draw all the diagonals parallel to some side, this ratio shows up all over the place!
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/sqrt-2-minus-1/octagon.svg' | relative_url}}"
+            alt="Octagon with Several Silver Ratios"/>
+        <figcaption>An octagon, along with several lengths shown. $$d_S = \sqrt{2} + 1$$.</figcaption>
+    </figure>
+</div>
+
+This diagram, the octagon-and-parallel-diagonals[^name], is so pretty, I decided to make a Blender render *and* a short animation about it.
+
+[^day]: Note that $$\sqrt{2} + 1 = 2.414...$$, which would not make a nice day of the year.
+[^name]: Does this have an actual name?

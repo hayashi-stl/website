@@ -2,4 +2,5 @@ Font making
 State cutters
 Blender Geometry Nodes sub-frame interpolation
     Glitched in 3.6
-    Different amounts of geometry seems to prevent interpolation
+    Differing amounts of geometry between frames seems to prevent interpolation
+Old Decrement undo system (save states)
