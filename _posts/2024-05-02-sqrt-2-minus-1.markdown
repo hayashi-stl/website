@@ -2,7 +2,7 @@
 layout: post
 page-type: post
 title:  "√2-1 and Octagons"
-date:   2024-04-30 15:33:00 -0800
+date:   2024-05-02 13:37:00 -0400
 tags: math
 ---
 A short while ago, it was 4/14. Also known as √2-1 day, as $$\sqrt{2} - 1\approx 0.414$$.
@@ -41,6 +41,22 @@ If we take an octagon and draw all the diagonals parallel to some side, this rat
 </div>
 
 This diagram, the octagon-and-parallel-diagonals[^name], is so pretty, I decided to make a Blender render *and* a short animation about it.
+
+<div class="figrow">
+    <figure>
+        <img class="center-img" width="400" height="400" src="{{ '/assets/posts/sqrt-2-minus-1/pretty-octagon.png' | relative_url}}"
+            alt="Octagon + Parallel Diagonals Blender Render"/>
+        <figcaption>A Blender render showing the octagon and its parallel diagonals. Power-of-(√2-1) ratios are emphasized.</figcaption>
+    </figure>
+</div>
+
+<div class="figrow">
+    <figure>
+        <video controls class="center-img fit-img" width="400" height="400" src="{{ '/assets/posts/sqrt-2-minus-1/octagon-video.mp4' | relative_url}}"
+            alt="Octagon Construction Video"/>
+        <figcaption>Constructing the octagon + parallel diagonals diagram with side lengths involving √2-1.</figcaption>
+    </figure>
+</div>
 
 [^day]: Note that $$\sqrt{2} + 1 = 2.414...$$, which would not make a nice day of the year.
 [^name]: Does this have an actual name?
