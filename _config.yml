@@ -48,6 +48,7 @@ exclude:
   - webpack-assets.json
   - raw_assets/
   - .svg-cache/
+  - .inkscape-fonts/
 
 watch_exclude:
   - ".ts$"
