@@ -15,6 +15,8 @@ module.exports = (env, argv) => {
                 { import: './assets/posts/binary-operation-pictures/render.ts', filename: './assets/posts/binary-operation-pictures/render.js' },
             assign_normals_cone_render:
                 { import: './assets/posts/assign-normals-cone/render.ts', filename: './assets/posts/assign-normals-cone/render.js' },
+            state_cutters_render:
+                { import: './assets/posts/state-cutters/render.ts', filename: './assets/posts/state-cutters/render.js' },
         },
         //devtool: 'inline-source-map',
         module: {
