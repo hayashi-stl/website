@@ -21,7 +21,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @include fixed-width(300px);
-    @include fixed-height(300px);
+    @include fixed-width(400px);
+    @include fixed-height(400px);
   }
 }

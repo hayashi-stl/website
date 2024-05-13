@@ -37,6 +37,7 @@ So, a laser-cut cookie cutter comes in 2 parts: the actual cutter, and the scaff
     </figure>
 </div>
 
+And here's a 3D model of the cutter put together for reference.
 <div class="figrow">
     <figure>
         <fakecanvas src="{{ '/assets/posts/state-cutters/example-cutter.glb' | relative_url }}"
@@ -67,6 +68,65 @@ Then came the scaffolding. The part that the blade attaches to is designed simil
         <figcaption>The offsets used for the scaffold, in milimeters. Not to scale.</figcaption>
     </figure>
 </div>
+
+To prepare the handle notches, for each state, I manually placed a line segment crossing the state, and at each endpoint, a 17mm line segment centered at the endpoint and roughly aligned with the boundary of the state.
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/handlebar.svg' | relative_url}}"
+            alt="Example handlebar"/>
+        <figcaption>An example of a manually-placed handlebar.</figcaption>
+    </figure>
+</div>
+
+Then using a script, I added the notches as shown in the diagram below.
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/notches.svg' | relative_url}}"
+            alt="Example notches"/>
+        <figcaption>The design of the notches in the part of the scaffold attached to the blade. Note that the red lines are <i>not</i> parallel because the 1.5mm adjustments done on each side of the handle are not necessarily reflections of each other.</figcaption>
+    </figure>
+</div>
+This changed the handlebar slightly, and the new measurements will get used later, so they are also shown.
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/measured-handlebar.svg' | relative_url}}"
+            alt="Adjusted handlebar with labels"/>
+        <figcaption>The adjusted handlebar with labels.</figcaption>
+    </figure>
+</div>
+
+Then came the handle and the handle ends. Some trigonometry was needed. This is also where some identifying engraving goes.
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/handle-end.svg' | relative_url}}"
+            alt="Example handle end"/>
+        <figcaption>The measurements of a handle end. $$\theta$$ is either $$\alpha$$ or $$\beta$$ depending on which side of the handle the end goes on.</figcaption>
+    </figure>
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/handle.svg' | relative_url}}"
+            alt="Example handle"/>
+        <figcaption>The measurements of a handle.</figcaption>
+    </figure>
+</div>
+<div class="figrow">
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/handle-end-engraving.svg' | relative_url}}"
+            alt="Example handle end with engraving"/>
+        <figcaption>The engraving on the handle end. Shows the state abbreviation and joining-the-Union order. The dot at the bottom is present only in the handle end that goes on the right side of the handle.</figcaption>
+    </figure>
+    <figure>
+        <img class="center-img" src="{{ '/assets/posts/state-cutters/handle-engraving.svg' | relative_url}}"
+            alt="Example handle with engraving"/>
+        <figcaption>The engraving on the handle. Shows the state name.</figcaption>
+    </figure>
+</div>
+
+Now that all the parts are done, I prepared them for laser cutting, which required specific color/width settings for the outlines and engraving. For the specific laser cutter I was using, cutting lines needed their width set to 0.1mm, and engraving areas were separated by color by how many passes I wanted on them. For the blade, tabs were added so the smaller blades wouldn't fall through the laser cutter. For the scaffolding, I set things up so that the engraved area that the blade attaches to is extra deep (2 passes, red) and everything else just gets 1 pass (orange). This resulted in 3 files:
+* [The blades]({{ '/assets/posts/state-cutters/us-cutter.pdf' | relative_url}})
+* [The scaffolding, part 1]({{ '/assets/posts/state-cutters/us-scaffold-1.pdf' | relative_url}})
+* [The scaffolding, part 2]({{ '/assets/posts/state-cutters/us-scaffold-2.pdf' | relative_url}})
+
+These files were made to be cut on an 24in×24in acrylic sheet.
 
 TODO: Cite source
 
