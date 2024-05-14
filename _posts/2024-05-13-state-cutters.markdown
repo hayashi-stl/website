@@ -149,8 +149,22 @@ Then all that was left was putting them together. I used epoxy for that.[^epoxy]
         <figcaption>Pumpkin pie with a map of New England on it. Used the state cutters. (Click to enlarge)</figcaption>
     </figure>
 </div>
-
-I made gingerbread cookies using all the cutters, but don't have a picture of it.
+<div class="figrow">
+    <figure>
+        <a href="{{ '/assets/posts/state-cutters/gingerbread-1.png' | relative_url}}">
+        <img class="center-img" width="350" src="{{ '/assets/posts/state-cutters/gingerbread-1.png' | relative_url}}"
+            alt="Contiguous 48 state gingerbread cookies"/>
+        </a>
+        <figcaption>Gingerbread cookies of the contiguous 48 states + DC (Click to enlarge)</figcaption>
+    </figure>
+    <figure>
+        <a href="{{ '/assets/posts/state-cutters/gingerbread-2.png' | relative_url}}">
+        <img class="center-img" width="350" src="{{ '/assets/posts/state-cutters/gingerbread-2.png' | relative_url}}"
+            alt="Alaska + Hawaii gingerbread cookies"/>
+        </a>
+        <figcaption>Gingerbread cookies of Alaska and Hawaii (Click to enlarge)</figcaption>
+    </figure>
+</div>
 
 [^epoxy]: Acrylic glue exists, but epoxy lets me fix mistakes :)
 
