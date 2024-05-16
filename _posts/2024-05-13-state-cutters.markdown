@@ -33,7 +33,7 @@ So, a laser-cut cookie cutter comes in 2 parts: the actual cutter, and the scaff
     <figure>
         <img class="center-img" src="{{ '/assets/posts/state-cutters/example-scaffold.svg' | relative_url}}"
             alt="Cookie Cutter Scaffold"/>
-        <figcaption>Scaffold. Pink areas are engraved.</figcaption>
+        <figcaption>Scaffold. Yellow areas are engraved.</figcaption>
     </figure>
 </div>
 
