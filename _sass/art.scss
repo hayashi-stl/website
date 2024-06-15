@@ -1,0 +1,37 @@
+.art-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-unit;
+
+  > div {
+    padding: 5px;
+
+    .art-title {
+      text-align: center;
+      font-size: calc($base-font-size * 1.5);
+    }
+
+    img, video {
+      max-width: 250px;
+      object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .caption {
+      width: min-content;
+      min-width: 100%;
+      font-size: $small-font-size;
+      text-align: center;
+      font-style: normal;
+
+      mjx-container[display="true"][display="true"] {
+        display: inline;
+        margin: 0;
+      }
+    }
+  }
+}

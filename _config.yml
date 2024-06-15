@@ -20,7 +20,7 @@
 
 title: Azure Puzzle Grove
 author: HayashiSTL
-email: hayashi.stl16@gmail.com
+email: hayashi.stl@hayastl.com
 description: >- # this means to ignore newlines until "baseurl:"
   Puzzles, games, and complexity
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -32,6 +32,7 @@ header_pages:
   - blog.markdown
   - puzzles.markdown
   - games.markdown
+  - art.markdown
   - music.markdown
   - about.markdown
 
