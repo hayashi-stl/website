@@ -37,7 +37,7 @@ animations = null
 export preprocess = (render) ->
     # Find animation: after empty space
     animationY = 0
-    while render.context(animationY, 0).key not in [undefined, ""]
+    while render.context(animationY, 0).key != "animation"
         animationY += 1
     animationY += 1
 
@@ -45,18 +45,28 @@ export preprocess = (render) ->
         numAnimations = 0
         animations = {}
         keys = []
-        while render.context(animationY, numAnimations).key not in [undefined, ""]
-            keys.push render.context(animationY, numAnimations).key[0]
-            animations[render.context(animationY, numAnimations).key[0]] = []
+        # First column reserved for step-specific properties
+        while render.context(animationY, numAnimations + 1).key not in [undefined, ""]
+            keys.push render.context(animationY, numAnimations + 1).key
+            animations[render.context(animationY, numAnimations + 1).key] = []
             numAnimations += 1
 
         y = animationY + 1
-        while render.context(y, 0).key not in [undefined, ""]
+        while render.context(y, 1).key not in [undefined, ""]
             for x in [0...numAnimations]
-                animations[keys[x]].push render.context(y, x).key
+                animations[keys[x]].push [render.context(y, 0).key, render.context(y, x + 1).key]
             y += 1
 
     render.drawing.keys.splice(animationY - 1)
+    # Even out the number of rows and columns
+    #for row in render.drawing.keys
+    #    row.push ""
+    #render.drawing.keys.push ("" for _ in [0...render.drawing.keys[0].length])
+
+    render.drawing.keys = ( \
+        (render.drawing.keys[i][j] for j in [0...render.drawing.keys[i].length] when j % 2 == 0) \
+        for i in [0...render.drawing.keys.length] when i % 2 == 0 \
+        )
 
 
 dirQuarterTurns = (dir) ->
@@ -83,7 +93,7 @@ class Animation
         @keyframes = (k / length for k in @keyframes)
 
         # 0 and 1 are mandatory
-        if @keyframes[0] > 0
+        if !(@keyframes[0]?) || @keyframes[0] > 0
             @keyframes.unshift 0
             @values.unshift @initValue
         else
@@ -98,33 +108,53 @@ class Animation
         animKeyTimes = ("#{k}" for k in @keyframes).join "; "
         animKeySplines = ("#{s[0]} #{s[1]} #{s[2]} #{s[3]}" for s in @splines).join "; "
         animValues = (("#{c}" for c in v).join(" ") for v in @values).join "; "
+        transform = @type in ["translate", "rotate"]
         
-        <animateTransform
-            attributeName = "transform"
-            type = "#{@type}"
-            keyTimes = "#{animKeyTimes}"
-            keySplines = "#{animKeySplines}"
-            values = "#{animValues}"
-            dur = "#{@length}s"
-            repeatCount = "indefinite"
-            calcMode = "spline"
-            additive = "sum"
-        />
+        if transform
+            <animateTransform
+                attributeName = "transform"
+                type = "#{@type}"
+                keyTimes = "#{animKeyTimes}"
+                keySplines = "#{animKeySplines}"
+                values = "#{animValues}"
+                dur = "#{@length}s"
+                repeatCount = "indefinite"
+                calcMode = "spline"
+                additive = "sum"
+            />
+        else
+            <animate
+                attributeName = "#{@type}"
+                keyTimes = "#{animKeyTimes}"
+                keySplines = "#{animKeySplines}"
+                values = "#{animValues}"
+                dur = "#{@length}s"
+                repeatCount = "indefinite"
+                calcMode = "spline"
+            />
 
 STEP_TIME = 0.75
 TWEEN_TIME = 0.1
 ROCK_DELAY = 0.05
+EX_DELAY = 0.175
 
 export map = (key) ->
-    tileKey = key[0]
-    id = key[1]
-    startDir = animationDirs[key[2]] ? [0, 1]
-    startMoving = key[3] == "m"
+    if key == ""
+        return blankTile
+
+    if key[0] == "{"
+        json = JSON.parse key
+        tileKey = json["t"]
+        id = json["id"]
+        startDir = animationDirs[json["dir"]] ? [0, 1]
+        startMoving = if json["move"] then 1 else 0
+    else
+        tileKey = key
     rock = tileKey == "r"
 
     tile = wallTiles[tileKey]
     tiles = []
-    if tileKey != '#'
+    if tileKey not in ["", "#"]
         tiles.push floorTile
     if tile?
         anim = animations[id]
@@ -137,35 +167,46 @@ export map = (key) ->
             moving = startMoving
             quarterTurns = dirQuarterTurns dir
             step = 0
-            delay = if rock then ROCK_DELAY else 0
+            baseDelay = if rock then ROCK_DELAY else 0
 
             posAnim = new Animation "translate", [0, 0]
             rotAnim = new Animation "rotate", [quarterTurns * 90, center[0], center[1]]
-            scaleAnim = new Animation "scale", [1, 1]
+            opacityAnim = new Animation "opacity", [1]
             movingRockAnim = null
             if rock
-                movingRockAnim = new Animation "scale", [moving + 0, moving + 0]
+                movingRockAnim = new Animation "opacity", [moving + 0]
 
-            for k in anim
-                new_dir = animationDirs[k[0]]
-                bumpDist = bumpDistances[k[1]]
-                if new_dir?
+            for pair in anim
+                common = pair[0]
+                k = pair[1]
+                step_len = if /f/.exec(common)? then 0.5 else 1
+
+                newDir = animationDirs[/[v<>^]/.exec(k)?[0]]
+                bumpDist = bumpDistances[/[-*+]/.exec(k)?[0]]
+                disappear = /x/.exec(k)?
+                dir_factor = if /r/.exec(k)? then -1 else 1
+                delay = baseDelay + (if /d/.exec(k)? then EX_DELAY else 0)
+                if newDir?
                     posAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [pos[0] * WIDTH, pos[1] * WIDTH]
                     rotAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [quarterTurns * 90, center[0], center[1]]
 
-                    dir = [...new_dir]
+                    dir = [...newDir]
                     newQuarterTurns = dirQuarterTurns dir
                     quarterTurns += (newQuarterTurns - quarterTurns + 2) %% 4 - 2
 
                     if !(bumpDist?)
-                        pos = [pos[0] + dir[0], pos[1] + dir[1]]
+                        pos = [pos[0] + dir[0] * dir_factor, pos[1] + dir[1] * dir_factor]
                         posAnim.add step * STEP_TIME + TWEEN_TIME + delay, [0.5, 0, 0.5, 1], [pos[0] * WIDTH, pos[1] * WIDTH]
                         if rock
                             rotAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [quarterTurns * 90, center[0], center[1]]
                             if !moving
                                 moving = true
-                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [0, 0]
-                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [1, 1]
+                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [0]
+                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [1]
+                            else if moving && dir_factor < 0
+                                moving = false
+                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [1]
+                                movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [0]
                         else
                             rotAnim.add step * STEP_TIME + TWEEN_TIME + delay, [0.5, 0, 0.5, 1], [quarterTurns * 90, center[0], center[1]]
                 
@@ -176,34 +217,36 @@ export map = (key) ->
                         rotAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [quarterTurns * 90, center[0], center[1]]
                         if moving
                             moving = false
-                            movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [1, 1]
-                            movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [0, 0]
+                            movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [1]
+                            movingRockAnim.add step * STEP_TIME + delay, [1/3, 1/3, 2/3, 2/3], [0]
                     else
                         rotAnim.add step * STEP_TIME + TWEEN_TIME + delay, [0.5, 0, 0.5, 1], [quarterTurns * 90, center[0], center[1]]
 
-                if k[0] == "x"
-                    scaleAnim.add step * STEP_TIME + ROCK_DELAY + TWEEN_TIME / 2, [1/3, 1/3, 2/3, 2/3], [1, 1]
-                    scaleAnim.add step * STEP_TIME + ROCK_DELAY + TWEEN_TIME / 2, [1/3, 1/3, 2/3, 2/3], [0, 0]
+                if disappear
+                    opacityAnim.add step * STEP_TIME + ROCK_DELAY + TWEEN_TIME / 2, [1/3, 1/3, 2/3, 2/3], [1]
+                    opacityAnim.add step * STEP_TIME + ROCK_DELAY + TWEEN_TIME / 2, [1/3, 1/3, 2/3, 2/3], [0]
 
-                step += 1
+                step += step_len
             
             length = step * STEP_TIME
 
             posAnim.finalize length
             rotAnim.finalize length
-            scaleAnim.finalize length
-            animJsxs = [posAnim.toJsx(), rotAnim.toJsx(), scaleAnim.toJsx()]
+            opacityAnim.finalize length
+            animJsxs = [posAnim.toJsx(), rotAnim.toJsx(), opacityAnim.toJsx()]
             if rock
                 movingRockAnim.finalize length
                 movingRockAnimJsx = movingRockAnim.toJsx()
 
 
         tiles.push <symbol {...tile.props}>
-                {tile.props.children}
-                {animJsxs}
-                {if rock then <g>
-                    {movingRock}
-                    {movingRockAnimJsx}
-                </g> else null}
+                <g>
+                    {tile.props.children}
+                    {animJsxs}
+                    {if rock then <g>
+                        {movingRock}
+                        {movingRockAnimJsx}
+                    </g> else null}
+                </g>
             </symbol>
     tiles
