@@ -2,6 +2,7 @@
 layout: post
 page-type: post
 title:  "√2-1 and Octagons"
+comments-id:  "√2-1 and Octagons"
 date:   2024-05-02 13:37:00 -0400
 tags: math
 ---

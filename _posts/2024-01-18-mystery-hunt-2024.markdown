@@ -2,6 +2,7 @@
 layout: post
 page-type: post
 title:  "MIT Mystery Hunt 2024 Postmortem"
+comments-id:  "MIT Mystery Hunt 2024 Postmortem"
 date:   2024-01-18 15:33:00 -0800
 tags: puzzle puzzle-hunt
 ---

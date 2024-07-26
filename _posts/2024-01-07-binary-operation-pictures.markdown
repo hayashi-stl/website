@@ -2,6 +2,7 @@
 layout: post
 page-type: post
 title:  "Binary Operation Pictures"
+comments-id:  "Binary Operation Pictures"
 date:   2024-01-07 14:55:00 -0800
 tags: math
 ---

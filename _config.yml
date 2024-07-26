@@ -34,6 +34,7 @@ header_pages:
   - games.markdown
   - art.markdown
   - music.markdown
+  - newsletter.markdown
   - about.markdown
 
 

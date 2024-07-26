@@ -2,6 +2,7 @@
 layout: post
 page-type: post
 title:  "Cone You Assign Normals to a Cone?"
+comments-id:  "Cone You Assign Normals to a Cone?"
 date:   2024-01-26 13:50:00 -0800
 tags: math graphics
 ---

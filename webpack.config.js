@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
             answer_check:  { import: './assets/answer-check.ts' , filename: './assets/answer-check.js' },
             gltf_viewer: { import: './assets/gltf-viewer.ts', filename: './assets/gltf-viewer.js' },
             _15_puzzle: { import: './assets/15-puzzle.ts', filename: './assets/15-puzzle.js' },
+            svg_hide_hidden: { import: './assets/svg-hide-hidden.ts', filename: './assets/svg-hide-hidden.js' },
             binary_operation_pictures_render:
                 { import: './assets/posts/binary-operation-pictures/render.ts', filename: './assets/posts/binary-operation-pictures/render.js' },
             assign_normals_cone_render:

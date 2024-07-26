@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
+  <head>
+    {%- include head.html -%}
+    {{ content | extract_html_tag: 'specific-style' }}
+  </head>
 
   {% if page.page-type == "hunt" or page.page-type == "hunt-puzzle" or page.page-type == "hunt-solution" %}
     {% assign hunt-name = page.hunt %}
@@ -15,7 +17,7 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {{ content }}
+        {{ content | exclude_html_tag: 'specific-style' }}
       </div>
     </main>
 
