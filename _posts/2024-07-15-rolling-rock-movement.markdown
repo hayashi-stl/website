@@ -183,7 +183,7 @@ First, we need to assign a *time* to each collision, a number between 0 and 1 in
     </figure>
 </div>
 
-Now for the algotithm.
+Now for the algorithm.
 
 After moving the rocks, some collisions may happen. We handle *all* collisions that tie for the lowest time at the same time. This involves
 * Calculating, for each collision, which of the two rocks (or perhaps both) have to move back
