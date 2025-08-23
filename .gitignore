@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .svg-cache
+.fold-cache
 .jekyll-cache
 .jekyll-metadata
 .webpack

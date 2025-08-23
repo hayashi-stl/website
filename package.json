@@ -4,8 +4,11 @@
   "description": "Azure Puzzle Grove",
   "private": true,
   "devDependencies": {
+    "@svgdotjs/svg.js": "^3.2.4",
     "@types/three": "^0.160.0",
     "assets-webpack-plugin": "^7.1.1",
+    "minimist": "^1.2.8",
+    "svgdom": "^0.1.22",
     "three": "^0.160.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
@@ -28,5 +31,9 @@
   "bugs": {
     "url": "https://github.com/hayashi-stl/website/issues"
   },
-  "homepage": "https://github.com/hayashi-stl/website#readme"
+  "homepage": "https://github.com/hayashi-stl/website#readme",
+  "dependencies": {
+    "fold": "^0.12.0",
+    "fraction.js": "^5.3.1"
+  }
 }

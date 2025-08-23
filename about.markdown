@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-
+  
 I make puzzles, do actual complexity theory research for games (specifically lower bounds), and theoretically make actual videogames
 (The process is *long*.). I also think computer graphics is interesting. I've played the piano and the violin before, and I've composed
 some videogame music.

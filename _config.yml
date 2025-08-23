@@ -19,8 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Azure Puzzle Grove
+ori_title: Layers of Origami
 author: HayashiSTL
-email: hayashi.stl@hayastl.com
+email: hayashi.stl16@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Puzzles, games, and complexity
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -34,8 +35,14 @@ header_pages:
   - games.markdown
   - art.markdown
   - music.markdown
-  - newsletter.markdown
+  - origami/origami.markdown
   - about.markdown
+
+ori_header_pages:
+  - origami/models.markdown
+  - origami/ori-blog.markdown
+  - index.markdown
+  - origami/ori-about.markdown
 
 
 # Build settings
@@ -50,6 +57,7 @@ exclude:
   - webpack-assets.json
   - raw_assets/
   - .svg-cache/
+  - .fold-cache/
   - .inkscape-fonts/
 
 watch_exclude:

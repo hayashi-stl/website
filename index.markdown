@@ -4,6 +4,7 @@
 
 layout: blog
 title: Main Page
+ori-link-title: Main Site
 ---
 <div class="main-display">
     <div>
