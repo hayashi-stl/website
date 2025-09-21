@@ -1,6 +1,7 @@
 require "json"
 require "nokogiri"
 require "pathname"
+require "open3"
 
 def add_dependency_scripts(site)
 	t1 = Process.clock_gettime(Process::CLOCK_MONOTONIC)
@@ -140,7 +141,10 @@ end
 
 def convert_fold(site)
     convert_with_cache(site, "fold", "Converted FOLD files", lambda {|dest, cache|
-        if !system('coffee', site.source + '/fold-manipulator/main.coffee', 'all', dest, cache)
+        stdout, stderr, status = Open3.capture3('coffee', site.source + '/fold-manipulator/main.coffee', 'all', dest, cache)
+        puts("#{stderr}")
+        puts("#{stdout}")
+        if !status
             raise "FOLD file error: #{$?}"
         end
         FileUtils.cp(dest, cache)
