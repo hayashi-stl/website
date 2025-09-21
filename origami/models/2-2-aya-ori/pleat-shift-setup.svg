@@ -14,28 +14,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs2">
-    <marker
-       style="overflow:visible"
-       id="Triangle"
-       refX="2"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135" />
-    </marker>
-  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -43,9 +21,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9505793"
-     inkscape:cx="3337.9827"
-     inkscape:cy="2165.5105"
+     inkscape:zoom="1.3833896"
+     inkscape:cx="3248.5426"
+     inkscape:cy="2208.344"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -75,6 +53,28 @@
        originy="-529.87002"
        visible="true" />
   </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="2"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -98,7 +98,7 @@
        height="40"
        x="850"
        y="530"
-       inkscape:export-filename="pleat-shift-setup.svg"
+       inkscape:export-filename="../origami/models/2-2-aya-ori/pleat-shift-setup.svg"
        inkscape:export-xdpi="95.9"
        inkscape:export-ydpi="95.9" />
     <rect
@@ -163,14 +163,14 @@
     <text
        xml:space="preserve"
        style="font-size:4.56106px;line-height:1.25;font-family:Counter;-inkscape-font-specification:Counter;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.26;stroke-dasharray:none"
-       x="876.81659"
-       y="576.25769"
+       x="871.16882"
+       y="576.75836"
        id="text1347"><tspan
          sodipodi:role="line"
          id="tspan1347"
          style="fill:#aa00aa;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
-         x="876.81659"
-         y="576.25769">1</tspan></text>
+         x="871.16882"
+         y="576.75836">1/2</tspan></text>
     <path
        style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
        d="M 875.15541,570.00002 V 580"
@@ -209,6 +209,6 @@
          id="tspan1353"
          style="fill:#aa00aa;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
          x="894.41791"
-         y="576.51617">3</tspan></text>
+         y="576.51617">3/2</tspan></text>
   </g>
 </svg>

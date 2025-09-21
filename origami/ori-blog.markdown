@@ -8,4 +8,4 @@ title: Blog
 permalink: /origami/blog/
 ---
 
-This is for posts that aren't associated with a specific origami model. Posts with models go [here]({{ "/origami/models.html" | relative_url }})
+This is for posts that aren't associated with a specific origami model. Posts with models go [here]({{ "/origami/models" | relative_url }})

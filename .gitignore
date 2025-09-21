@@ -11,3 +11,4 @@ node_modules
 /test
 /.inkscape/*
 !/.inkscape/preferences.xml
+*.FCBak
