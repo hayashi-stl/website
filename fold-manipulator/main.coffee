@@ -40,11 +40,11 @@ else if argv._[0] == "svg"
 
 else if argv._[0] == "all"
     argv = minimist process.argv.slice 3
+    console.log "Converting " + argv._[0] + " to " + argv._[1]
     file = fs.readFileSync argv._[0]
     fold = JSON.parse file
     if prop.convert fold
         if prop.type(fold) == "crease-pattern"
-            console.log "Converting " + argv._[0]
             fs.writeFileSync argv._[1] + ".cp", convert.to_cp fold
             fs.writeFileSync argv._[1] + ".svg", await convert.to_svg fold, false
             fs.writeFileSync argv._[1] + ".d.svg", await convert.to_svg fold, true
