@@ -140,7 +140,7 @@ end
 
 def convert_fold(site)
     convert_with_cache(site, "fold", "Converted FOLD files", lambda {|dest, cache|
-        if !system('coffee', './fold-manipulator/main.coffee', 'all', dest, cache)
+        if !system('coffee', site.source + '/fold-manipulator/main.coffee', 'all', dest, cache)
             raise "FOLD file error: #{$?}"
         end
         FileUtils.cp(dest, cache)
