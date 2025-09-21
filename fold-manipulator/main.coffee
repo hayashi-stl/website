@@ -40,7 +40,6 @@ else if argv._[0] == "svg"
 
 else if argv._[0] == "all"
     argv = minimist process.argv.slice 3
-    console.log "Converting " + argv._[0] + " to " + argv._[1]
     file = fs.readFileSync argv._[0]
     fold = JSON.parse file
     if prop.convert fold
