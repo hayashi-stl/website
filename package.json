@@ -13,8 +13,7 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "coffeescript": "^2.7.0"
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

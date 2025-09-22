@@ -60,6 +60,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Webpack assets plugin
         run: npm install assets-webpack-plugin
+      - name: Install Coffeescript
+        run: npm install --global coffeescript
       - name: Build with Webpack + Jekyll
         # Outputs to the './_site' directory by default
         run: npx webpack --mode production && bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

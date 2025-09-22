@@ -141,7 +141,7 @@ end
 
 def convert_fold(site)
     convert_with_cache(site, "fold", "Converted FOLD files", lambda {|dest, cache|
-        stdout, stderr, status = Open3.capture3(site.source + '/coffee', site.source + '/fold-manipulator/main.coffee', 'all', dest, cache)
+        stdout, stderr, status = Open3.capture3('coffee', site.source + '/fold-manipulator/main.coffee', 'all', dest, cache)
         puts("#{stderr}")
         puts("#{stdout}")
         if !status
