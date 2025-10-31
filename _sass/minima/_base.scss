@@ -314,3 +314,30 @@ table {
   }
 }
 
+table {
+  &.checkerboard {
+    tr {
+      background-color: transparent;
+    }
+    tr {
+      &:where(:nth-child(even)) {
+        td {
+          &:where(:nth-child(even)) {
+            background-color: lighten($background-color, 6%);
+          }
+        }
+      }
+      &:where(:nth-child(odd)) {
+        td {
+          &:where(:nth-child(odd)) {
+            background-color: lighten($background-color, 6%);
+          }
+        }
+      }
+    }
+  }
+
+  &.center-text {
+    text-align: center;
+  }
+}

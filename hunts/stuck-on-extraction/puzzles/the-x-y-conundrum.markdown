@@ -23,7 +23,7 @@ You find yourself in a coordinate system, at the origin, facing the +x direction
 10. Remember those circles you imagined? There are 2 points with nonnegative coordinates strictly between them. Move to my favorite one; you'll figure it out. Mark your coordinates.
 11. What's the index of the first step where you stopped facing east? Move back that many steps, then move west 1 step. Snap to the nearest integer coordinates and mark them.
 12. Move left until your coordinates are both integers again. You're stumped? It's impossible? Then turn right 3149&nbsp;degrees. Repeat the first 4 sentences of this step 8 more times. Mark your coordinates.
-13. For playing around and spinning so wildly, you're punished. Face (-1, -1). Go to (-1, -1). Go directly to (-1, -1). Do not cross (6, 0). Do not collect $200. Mark your coordinates. I hope you learned your lesson.
+13. For playing around and spinning so wildly, you're punished. Face (-1, -1). Go to (-1, -1). Go directly to (-1, -1). Do not cross (6, 0). Do not collect \$200. Mark your coordinates. I hope you learned your lesson.
 14. Take the absolute value of and add 1 to each coordinate you marked so far, both the x's and the y's. Move back 3 units. Snap to the nearest integer coordinates. Mark your coordinates.
 15. Move back the index of this step. Nice self reference. Mark the floors of your coordinates. Snap to the nearest integer coordinates.
 16. It's time for a walk! Face north. Move forward 7 units. Turn left 90&nbsp;degrees. Move forward 1 unit. Repeat sentences 3-5 (inclusive) of this step. Turn right 90&nbsp;degrees. Repeat sentences 3-6 (inclusive) of this step. Mark your coordinates. Add 1 to each coordinate you marked from the previous 2 steps.
