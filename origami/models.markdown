@@ -1,7 +1,6 @@
 ---
-origami: true
 layout: page
-title: Models
+title: Origami
 permalink: /origami/models/
 ---
   

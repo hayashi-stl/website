@@ -1,6 +1,4 @@
-Not ready yet
 ---
-origami: true
 layout: page
 page-type: ori-model
 thumbnail: pi.jpg
@@ -18,20 +16,15 @@ description: "A rectangular design with some shaping involved"
     </figure>
 </div>
 
-TODO
+This is another model developed using the [edge river method](https://origami.abstreamace.com/2021/12/12/geography-of-origami-a-brief-introduction-to-the-edge-river-method/)
+(though this one was developed with an extension I call the 2-color edge river method, which uses different colors for horizontal and vertical rivers, and was helpful
+for internalizing the rules for how rivers are allowed to interact with each other.)
+
+There was some shaping involved, which was not included in the abstraction.
 
 <div class="figrow">
     <figure>
         <img style="max-width: 300px;" src="abstraction.svg">
-        <figcaption>The abstraction for 正</figcaption>
-    </figure>
-    <figure>
-        <img style="max-width: 400px;" src="erm.svg">
-        <figcaption>The ERM map. Same color scheme as in the linked explanation, except that super-light yellow is specifically peninsulas.</figcaption>
+        <figcaption>The abstraction for π without shaping</figcaption>
     </figure>
 </div>
-
-At the time, I couldn't figure out how to fill in peninsulas if they weren't touching the backside lakes (dark blue, areas hidden under normal lakes), and I didn't feel like
-dealing with Pythagorean stretches, so there's room for optimization, but whatever.
-
-As this was one of my first designs, it ended up being quite difficult to collapse, and I estimate spending 4 hours trying to attack it before it collapsed. Even then, the bottom-left vertical line could use some improvement.

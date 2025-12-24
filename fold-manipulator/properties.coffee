@@ -2,6 +2,7 @@ FOLD = require "fold"
 _2_2_aya_ori = require "./grid/2-2-aya-ori"
 {Fraction} = require "fraction.js"
 RatSqrt = require "./grid/rational-sqrt"
+mathjs = require "mathjs"
 
 prop = exports
 
@@ -18,6 +19,7 @@ prop.convert = (fold) ->
 grid_regex = /^(?<type>(\w|-)+)( (?<params>.*))?$/
 box_params_regex = /^(?<partials>\d+)$/
 rational_params_regex = /^(?<max_denominator>\d+)$/
+coeff_regex = /^(?<numerator>-?\d+)\/(?<denominator>\d+)$/
 
 prop.add_vertices_exact_coords = (fold, factor, grid) ->
     match = grid.match(grid_regex).groups
@@ -63,31 +65,31 @@ prop.add_vertices_exact_coords = (fold, factor, grid) ->
     fold["file_stl:grid"] = grid
 
 prop.vertices_exact_coords = (fold) ->
-    coords = fold["vertices_stl:exact_coords"]
-    grid = fold["file_stl:grid"]
-    switch grid.type
-        when "box"
-            coords.map (v) -> v.map (c) -> new Fraction(c, grid.partials)
-        when "rational"
-            coords.map (v) -> v.map (c) -> new Fraction(c[0], c[1])
-        when "sqrt"
-            coords.map (v) -> v.map (c) -> new (RatSqrt(grid.sqrt))(new Fraction(c[0][0], c[0][1]), new Fraction(c[1][0], c[1][1]))
+    coords = fold["vertices_exact:coords"]
+    basis = fold["frame_exact:basis"]
+    exact = coords.map((v) ->
+        v.map((c) ->
+            coeffs = c.map((coeff) -> 
+                match = coeff.match(coeff_regex).groups
+                numer = BigInt(match.numerator)
+                denom = BigInt(match.denominator)
+                new Fraction(numer, denom))
+            coeffs
+            ))
+    (
+        coords: exact,
+        basis: basis
+    )
 
 prop.vertices_evaluated_coords = (fold, include_factor) ->
-    coords = fold["vertices_stl:exact_coords"]
+    exact = prop.vertices_exact_coords fold
+    basis = exact.basis.map (b) -> mathjs.evaluate(b)
     factor = fold["file_stl:coord_factor"]
-    grid = fold["file_stl:grid"]
-    evaluated = coords.map((v) ->
+    evaluated = exact.coords.map((v) ->
         v.map((c) ->
-            result = c
-            switch grid.type
-                when "box"
-                    result /= grid.partials
-                when "rational"
-                    result = c[0] / c[1]
-                when "sqrt"
-                    result = c[0][0] / c[0][1] + c[1][0] / c[1][1] * Math.sqrt grid.sqrt
-
+            result = 0.0
+            for i in [0...c.length]
+                result += basis[i] * c[i].valueOf()
             if include_factor then result = result * factor[1] / factor[0]
             result
             ))

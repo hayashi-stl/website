@@ -1,5 +1,4 @@
 ---
-origami: true
 layout: page
 page-type: ori-model
 thumbnail: 2-2-aya-ori.jpg

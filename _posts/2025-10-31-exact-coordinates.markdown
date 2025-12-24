@@ -1,11 +1,12 @@
 ---
-origami: true
 layout: post
-page-type: ori-post
+page-type: post
 title:  "Exact Coordinates"
 comments-id:  "ori-Exact Coordinates"
 date:   2025-10-31 14:26:00 -0500
 tags: origami math
+redirect_from:
+    - /origami/blog/exact-coordinates.html
 ---
 <script>
     window.MathJax = {

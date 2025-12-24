@@ -1,5 +1,4 @@
 ---
-origami: true
 layout: page
 page-type: ori-tsuru-model
 thumbnail: pi.jpg

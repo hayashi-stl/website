@@ -34,6 +34,7 @@
   "homepage": "https://github.com/hayashi-stl/website#readme",
   "dependencies": {
     "fold": "^0.12.0",
-    "fraction.js": "^5.3.4"
+    "fraction.js": "^5.3.4",
+    "mathjs": "^15.1.0"
   }
 }

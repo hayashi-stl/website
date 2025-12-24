@@ -2,11 +2,16 @@
 layout: page
 title: About
 permalink: /about/
+redirect_from:
+    - /origami/ori-about
 ---
   
 I make puzzles, do actual complexity theory research for games (specifically lower bounds), and theoretically make actual videogames
 (The process is *long*.). I also think computer graphics is interesting. I've played the piano and the violin before, and I've composed
 some videogame music.
+
+I started doing origami in 2025 (though did some in 2020 as well).
+I came from a research perspective, involving a bit of rigid origami and hole filling. My style is mainly geometric.
 
 Some favorites:
 * Hunt puzzle type: konundrums, logic puzzle spoofs
