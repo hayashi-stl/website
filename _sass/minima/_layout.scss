@@ -316,6 +316,7 @@ input[type="button"] {
   background-color: lighten($background-color, 6%);
   color: $text-color;
   border-color: $text-color;
+  font-family: $base-font-family;
 }
 
 .answer-check {

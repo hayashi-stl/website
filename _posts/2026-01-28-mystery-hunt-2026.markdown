@@ -277,9 +277,25 @@ extraction until hinted twice.
 <div id="hyperbolic-space" markdown="1">
 
 ## Hyperbolic Space
-<canvas id="poincare-disk" class="poincare-disk" width="800" height="800" style="display: none;">
-    <input id="hyperbolic-move-0" type="button" class="hyperbolic-move" value="→">
-</canvas>
+<div id="hyperbolic-navigation" class="hyperbolic-navigation" style="display: none;">
+    <canvas id="poincare-disk" class="poincare-disk" width="800" height="800"/>
+    <input type="button" class="hyperbolic-move hyperbolic-move-00" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-01" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-02" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-03" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-04" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-05" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-06" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-07" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-08" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-09" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-10" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-11" value=">>>" style="display: none;">
+    <input type="button" class="hyperbolic-move hyperbolic-move-12" value=">>>" style="">
+    <input type="button" class="hyperbolic-move hyperbolic-move-13" value=">>>" style="display: none;">
+</div>
+
+<div class="hyperbolic-puzzle" markdown="1">
 
 ### Had
 {% spoiler %}
@@ -291,6 +307,9 @@ extraction until hinted twice.
 We had worked on this puzzle, but wow, parsing that 9th clue is *hard*. Let me just say, that this is such a funny puzzle. Not only is it a logic puzzle (of the Einstein
 kind), but also a *parsing puzzle*. (It was eventually solved.)
 {% endspoiler %}
+</div>
+
+<div class="hyperbolic-puzzle" markdown="1">
 
 ### Multidimensional Crossword
 {% spoiler %}
@@ -298,6 +317,9 @@ A cool idea. You think it's three-dimensional (which is already unusual), but ba
 We didn't get that far on this one (just filling in some clues, fitting a few emoji, and figuring out how the grid works). However, I'm disappointed that in the
 top-*down* view that *down* doesn't point into the screen, and that in the front view, *into* doesn't point into the screen.
 {% endspoiler %}
+</div>
+
+<div class="hyperbolic-puzzle" markdown="1">
 
 ### Setting Boundaries
 {% spoiler %}
@@ -305,6 +327,9 @@ Cute puzzle. One of my favorite tricks (mentioned by Brian) is the boundary tric
 cells `A`, `B`, `A` in cyclic order on the boundary (where A and B are are puzzle types), then all boundary cells between the two `A`s on the arc that doesn't contain `B`
 must also be `A`. The extraction was also pretty cool.
 {% endspoiler %}
+</div>
+
+<div class="hyperbolic-puzzle" markdown="1">
 
 ### Stray Child
 {% spoiler %}
@@ -312,6 +337,9 @@ Cool, a Japanese puzzle! I filled out quite a lot of the clues, but some of them
 there's 7 spots in the crossword that are weird, corresponding to the 7 length-3 blanks. Filling those in with kanji and searching the results gives MyGO!! songs with
 tricky-to-read names. Once we got to the final extraction, though, we got stuck. When we finally realized what we were supposed to do there, we let out a collective groan.
 {% endspoiler %}
+</div>
+
+<div class="hyperbolic-puzzle" markdown="1">
 
 ### Meta: Hyperbolic Space
 {% spoiler %}
@@ -325,6 +353,11 @@ And then came the actual meta. You're telling me that not only is there this 24-
 (And anticubes! Don't get distracted!) I was the one to figure out what those cubes were, and it was especially tricky when we didn't copy letters from one part of the diagram
 to the other. I did find a nice way to find the point opposite of another point in a cube. (walk, left, walk, left, walk, right, walk, left, walk, left, walk)
 {% endspoiler %}
+</div>
+
+<div id="hyperbolic-nothing" markdown="1" style="display: none;">
+There doesn't seem to be anything here.
+</div>
 
 </div>
 
@@ -350,6 +383,9 @@ Time to solve hexagonal slitherlinks with the worst logic-puzzle-solving interfa
 {% endspoiler %}
 
 ### The Tortured Programmer's Department
+{% spoiler %}
+TODO
+{% endspoiler %}
 
 </div>
 

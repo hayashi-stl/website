@@ -6,6 +6,9 @@ precision highp float;
 in vec2 v_position;
 out vec4 o_color;
 
+uniform mat3 u_rotation;
+uniform mat3 u_conjugate_rotation;
+uniform mat3 u_interp_rotation;
 uniform sampler2D u_text;
 uniform ivec2 u_textures[24];
 uniform ivec2 u_num_textures;
@@ -194,12 +197,13 @@ void main() {
     float short_radius = COS_TAU_6 / SIN_TAU_14;
     short_radius = sqrt(short_radius * short_radius - 1.0) / (1.0 + short_radius);
     mat3 edges = triangle(COS_TAU_4, COS_TAU_6, COS_TAU_14);
-    //mat3 points = mat3(vec3(0, 0, 1),
-    //                   hnormalize(hcross(edges[2], edges[0])),
-    //                   hnormalize(hcross(edges[0], edges[1])));
+
     vec2 z = v_position;
     vec2 w = vec2(0, -short_radius);
-    z = add_poincare(z, -w);
+    //vec3 pz = unproject(add_poincare(z, -w));
+    vec3 pz = unproject(z);
+    pz = u_rotation * u_conjugate_rotation * u_interp_rotation * transpose(u_conjugate_rotation) * pz;
+    z = add_poincare(hproject(pz), -w);
 
     vec3 color = vec3(0.0, 0.0, 0.2);
     vec3 line_color = vec3(0.0, 2.0 / 3.0, 2.0 / 3.0);
@@ -207,7 +211,7 @@ void main() {
         o_color = vec4(color, 1.0);
         return;
     }
-    int num_folds = 20;
+    int num_folds = 30;
     int tri_index = 7 * 14 + 1;
     z = fold(z, num_folds, edges, tri_index);
     vec3 p = unproject(z);
@@ -224,6 +228,7 @@ void main() {
 
     float t = 1e8;
     t = min(t, hline(p, edges[1]));
-    color = mix(line_color, color, smoothstep(0.01, 0.02, abs(t)));
+    float width = dFdx(v_position.x) / (1.0 - dot(v_position, v_position));
+    color = mix(line_color, color, smoothstep(0.015 - width, 0.015 + width, abs(t)));
     o_color = vec4(color, 1.0);
 }

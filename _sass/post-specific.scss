@@ -49,4 +49,115 @@
       @include fixed-height(30px);
     }
   }
+
+  .hyperbolic-navigation {
+    position: relative;
+    @include fixed-width(800px);
+    @include fixed-height(800px);
+
+    .poincare-disk {
+      @include fixed-width(800px);
+      @include fixed-height(800px);
+    }
+
+    .hyperbolic-move {
+      @include fixed-width(50px);
+      @include fixed-height(30px);
+      font-size: large;
+      position: absolute;
+      background-color: transparentize(lighten($background-color, 12%), 0.6);
+      border-color: transparentize($text-color, 0.6);
+      padding-top: 0em;
+      translate: -50% -50%;
+
+      &:hover {
+        background-color: lighten($background-color, 12%);
+        border-color: $text-color;
+      }
+    }
+
+    .hyperbolic-move-00 {
+      left: 50.0%;
+      top: 63.303862263004405%;
+      rotate: 1.5707963267948966rad;
+    }
+
+    .hyperbolic-move-01 {
+      left: 55.77232950337733%;
+      top: 61.9863657218288%;
+      rotate: 1.121997376282069rad;
+    }
+
+    .hyperbolic-move-02 {
+      left: 60.40137835563522%;
+      top: 58.294822446316495%;
+      rotate: 0.6731984257692414rad;
+    }
+
+    .hyperbolic-move-03 {
+      left: 62.97030666002543%;
+      top: 52.96038785598991%;
+      rotate: 0.2243994752564138rad;
+    }
+
+    .hyperbolic-move-04 {
+      left: 62.97030666002543%;
+      top: 47.03961214401009%;
+      rotate: -0.2243994752564138rad;
+    }
+
+    .hyperbolic-move-05 {
+      left: 60.40137835563522%;
+      top: 41.705177553683505%;
+      rotate: -0.6731984257692414rad;
+    }
+
+    .hyperbolic-move-06 {
+      left: 55.77232950337733%;
+      top: 38.0136342781712%;
+      rotate: -1.121997376282069rad;
+    }
+
+    .hyperbolic-move-07 {
+      left: 50.0%;
+      top: 36.696137736995595%;
+      rotate: -1.5707963267948966rad;
+    }
+
+    .hyperbolic-move-08 {
+      left: 44.22767049662267%;
+      top: 38.0136342781712%;
+      rotate: -2.019595277307724rad;
+    }
+
+    .hyperbolic-move-09 {
+      left: 39.59862164436479%;
+      top: 41.7051775536835%;
+      rotate: -2.4683942278205517rad;
+    }
+
+    .hyperbolic-move-10 {
+      left: 37.029693339974564%;
+      top: 47.03961214401009%;
+      rotate: -2.9171931783333793rad;
+    }
+
+    .hyperbolic-move-11 {
+      left: 37.02969333997456%;
+      top: 52.960387855989886%;
+      rotate: -3.365992128846206rad;
+    }
+
+    .hyperbolic-move-12 {
+      left: 39.59862164436478%;
+      top: 58.294822446316495%;
+      rotate: -3.8147910793590345rad;
+    }
+
+    .hyperbolic-move-13 {
+      left: 44.22767049662268%;
+      top: 61.9863657218288%;
+      rotate: -4.263590029871863rad;
+    }
+  }
 }
