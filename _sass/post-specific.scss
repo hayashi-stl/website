@@ -25,3 +25,28 @@
     @include fixed-height(400px);
   }
 }
+
+[post="MIT Mystery Hunt 2026 Postmortem"] {
+  .portal {
+    border: solid $text-color 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+    //&#land-of-no-name {
+    //}
+  }
+
+  .letter-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input[type="button"] {
+      font-size: large;
+      font-weight: bold;
+      @include fixed-width(30px);
+      @include fixed-height(30px);
+    }
+  }
+}

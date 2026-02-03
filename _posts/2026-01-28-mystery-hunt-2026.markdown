@@ -1,0 +1,359 @@
+---
+layout: post
+page-type: post
+title:  "MIT Mystery Hunt 2026 Postmortem"
+comments-id:  "MIT Mystery Hunt 2026 Postmortem"
+date:   2026-01-28 15:33:00 -0500
+tags: puzzle puzzle-hunt
+---
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: {'[+]': [['$', '$']]}
+        }
+    };
+</script>
+<div style="display:none;">
+$
+\DeclareMathOperator*{\bigseven}{\huge 7}
+\DeclareMathOperator*{\bigcomma}{\huge ,}
+$
+</div>
+
+So MITMH2026 just happened. We (ET Phone in Answer) befriended some Puzzmon, but didn't manage to close the portals. Oh well.
+Now, unlike [lumia](https://iam.lumia.gay/puzzles/2026/01/28/mh2026.html) who decided to spend a big chunk of the writeup about girl-kissing, I'll
+focus mostly on puzzles. Besides, I'm more of a cuddler than a kisser.
+
+There will be spoilers. Click to reveal them.
+
+## Kingdom
+
+### Gen Nu Brain Rot
+{% spoiler %}
+I didn't really look at this one, but what a puzzle.
+{% endspoiler %}
+
+### Mechanical Soft Diet
+{% spoiler %}
+A puzzle based on the digits of $π$, the digits of $e$, and the digits of $π + e$. A pretty cool idea. My main contribution here was to write some code
+that extracted the digits corresponding to letters (as opposed to ?s) in the expansion. 
+{% endspoiler %}
+
+### Balancing Act
+{% spoiler %}
+Well now you have a bunch of crossword clues with other crossword clues in brackets. For example,
+"a number [this or _] [negative modal [part of speech signifying action] spelled as one word] be written as an [a natural number, or its negative]
+[word often preceded by 'L+']" (except with better clues). But this is a Hunt puzzle, not a simple crossword puzzle, so the clues have been split arbitrarily and
+scrambled. We had a fun time putting them back together.
+{% endspoiler %}
+
+### Crafts Materials
+{% spoiler %}
+An interesting puzzle involving various crafts. Including origami!
+
+This puzzle had 8 crafting instructions you have to parse and execute to figure out what object they make.
+1. **Beads**. I looked at it, didn't quite understand the last part, and someone else eventually did it
+2. **Popsicle Sticks I**. So apparently we didn't have popsicle sticks, so I had to improvise and use cardboard instead. They eventually make a suspension bridge.
+    String was also needed, but I just imagined the string.
+3. **Popsicle Sticks II**. This one uses 30 popsicle sticks, and I didn't feel like improvising that many, so I just drew it out. It looked like some kind of basket, but that
+    didn't fit alphabetically, and it took a while for me to realize it was a cradle.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/mystery-hunt-2026-postmortem/popsicle.jpg">
+        <figcaption>"Popsicle sticks" made out of cardboard</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/mystery-hunt-2026-postmortem/popsicle-2.jpg">
+        <figcaption>Drawn-out object that is apparently a cradle</figcaption>
+    </figure>
+</div>
+
+4. **Perler Beads**. Someone else did this one
+5. **Pipe Cleaner**. I did this in FreeCAD. You have to shift the lines around some because the description is very much not unique, but eventually you get a jigsaw piece.
+    (no picture; I didn't save it)
+6. **Sewing**. I attempted this one and failed to interpret the "the 90° turn" part, thinking there were two of them. Well, turns out, you affix the pom-pom *after* sewing
+    those edges together, and then it makes sense. (Some other people also tackled this one). Also, this object turned out to be *very* hard to recognize.
+7. **Parallelograms Galore**. Looked complicated; someone else did it
+8. **Origami**. Nice. A pattern developed from a bird base.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/mystery-hunt-2026-postmortem/crafts-what.jpg">
+        <figcaption>What even is this?</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/mystery-hunt-2026-postmortem/origami.jpg">
+        <figcaption>A teapot made with origami</figcaption>
+    </figure>
+</div>
+
+Thankfully, we extracted the answer eventually.
+{% endspoiler %}
+
+### System of Operations
+{% spoiler %}
+A pun on "operating system" and, well, operations in mathematics. The first equation establishes a version numbering system in Android, Debian, MacOS, and Ubuntu
+(those versions are "1", and later versions are simply numbered numerically),
+while the others just make you have to figure out silly things like what happens when you take an *eclair* and
+![circle-dot](/assets/posts/mystery-hunt-2026-postmortem/circle-dot.svg) it with a *rex*. (You get a *leopard*, apparently.). Funny puzzle indeed.
+{% endspoiler %}
+
+### Data Revisualization
+{% spoiler %}
+So, we looked at this, and I noticed that the second plot is trying to be an xy plot, so I xy plotted it and got the letter **r**. For a while, this was the only
+letter we got. While stuck on this puzzle, we had some cursed graph discussions, courtesy of Linus.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/mystery-hunt-2026-postmortem/stacked-chart.png">
+        <figcaption>A <i>three-dimensional stacked scatter pie chart</i> found by Linus. (I forgot the exact name they gave it)</figcaption>
+    </figure>
+</div>
+
+With a hint, and someone's clever move to *not* interpolate the histogram reinterpreted as a stacked area chart, we got unstuck. By the way, first we earned a **b**.
+Then based on the absolute ridiculousness of the puzzle and the fact that the answer is probably 4 letters long, I called in `bruh` (it didn't work).
+{% endspoiler %}
+
+### Method to the Mathmess
+{% spoiler %}
+**!! favorite puzzle alert !!**
+
+Yeah, I got very excited about this one. Have you *ever* wanted to calculate $$\bigseven_0^e\ e\ deye$$? (It turns out to be $$02f e^f$$.)
+Or calculate $$\displaystyle{\bigcomma_{ζ\nabla0}^e ζ}$$? (well, it's $$02xde<e503$$. Yep, apparently the *big comma* operator produces propositions.)
+Or say this classic limerick?:
+<div style="padding-left: 30px;" markdown="1">
+The big-seven eight to the <i>x</i> <i>y</i> eight<br>
+From zero to the <i>f</i>th root of <i>f</i><br>
+<i>d</i> the cosine<br>
+Of <i>f</i> dot twenty-nine<br>
+Nabla log of the <i>f</i>th root of sigma.
+</div>
+
+(a.k.a. $$\bigseven_0^{\sqrt[f]{f}} 8^x y8\ d\cos f\cdot 29\ \nabla\ln \sqrt[f]{\textrm{Σ}}$$)
+
+Well, this puzzle takes your favorite math symbols and scrambles them up, resulting in such nonsense-looking equations, my favorite. We quickly solved it.
+By the way, I wrote a [cursed math puzzle](https://drive.google.com/file/d/1PmcoZBrNCTxTUiy0lE05d25x0fB1_b_n/view) in 2023 for Puzzler's Club Secret Solver.
+(Perhaps I should turn *A Functional(?) Puzzle Hunt* into an actual hunt with more than one puzzle sometime.)
+{% endspoiler %}
+
+### Computation
+{% spoiler %}
+A puzzle about Easter that turned out to be a nice break in a sea of hard puzzles. We came across a site that just happened to have the Orthodox Easter Julian calendar
+calculation we need, with interesting variable names like `first_resurrection` and `creation_of_world` and `vruceleto`.
+<div style="text-align: right;">
+<i>"Okay that was just a nice easy puzzle"</i> --Banandy
+</div>
+{% endspoiler %}
+
+### Electrical Circuit
+{% spoiler %}
+Well, that's more like a *logical* circuit than an *electrical* circuit, but whatever. I implemented the logical circuit in Google Sheets, then got
+massively red-herringed by the fact that there are 7 inputs and 10 outputs, which could be the inverse of a 7-digit display. (It was not, in fact, the inverse
+of a 7-digit display. The function just doesn't work like that.) Other people realized that the inputs had to do with a quote and solved it.
+{% endspoiler %}
+
+Now for the dimensions. Well, uh, you see, we didn't manage to close the portals, so, uh, they kind of affected my blog post. I somehow managed to regain control
+fix things. However, the portals are still there, and can be reactivated with the accessibility toggle buttons.
+
+<input id="land-of-no-name-button" type="button" class="accessibility-button" value="Accessibility: ON"/>
+
+<div id="land-of-no-name" markdown="1">
+
+<div id="land-of-no-name-letters" class="letter-buttons" style="display: none;">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value="">
+</div>
+
+## Land of No Name
+
+### SPLIT!
+{% spoiler %}
+A nice Bananagrams puzzle. We needed most letters to solve it, and then when I decided to take another look at it, someone else had already solved it. Whatever.
+{% endspoiler %}
+
+### Imaginary Factorizations
+{% spoiler %}
+Someone figured out the enumeration with only like 3 letters unlocked, and then I wrote code to factor all the prime numbers over $$\mathbb{Z}[\sqrt{-1}]$$.
+After that, we noticed that all the numbers contain a component with at most 4 digits and one with at least 5 digits, but then got stuck forever. Oh well.
+{% endspoiler %}
+
+### ASCII
+{% spoiler %}
+A puzzle with no letters in it except the title and some x's at the bottom.
+Someone else figured out that each line of symbols is supposed to wrap around and make a rectangle, forming some
+ASCII image. Then I put a few pieces together and recognized the shape of Alaska. Eventually though, other people solved this puzzle.
+{% endspoiler %}
+
+### MIT Mosaic Lab
+{% spoiler %}
+A puzzle with no letters in it except the title and the word "Example". But speaking of the example...
+
+**Media! Lab! Media! Lab!**<br>
+I got pretty excited about seeing the Media Lab logo. Now, I'm not a Media Lab researcher, but
+last year, I took a class called How to Make (Almost) Anything, and that was one of my favorite classes. It happened in
+the 6th floor of E14, the Media Lab building. The building itself looks enticing from the inside (especially floors below 5), and there's Media Lab-like logos for the various
+groups that work in the Media Lab. After making this realization, there was a bit of tension between people who wanted to fully solve the logic puzzles and make sure their
+solutions were unique, and people who wanted to just solve enough to figure out what Media Lab group logo it's depicting (me).
+
+This was our first solve in the Land of No Names. When we solved it, we joyfully announced "We got a **J**!". Everyone rejoiced, perhaps just in jest, or truly jolly. People
+adjusted to the hijinks of this joust, subjecting themselves to a journey of letters being adjoined in frequency order.
+What jerks! In fact, just the perfect jab at Cardinality exists,
+but this object is a Japanese word: ijiwaru!
+
+(thankfully, we did get **M** as our third letter)
+{% endspoiler %}
+
+### Mass Confusion
+{% spoiler %}
+I didn't do this one, but I heard people solve it, and let's just say: "WHY MASSACHUSETTS PEOPLE, WHY?" (they say, currently living in Massachusetts)
+{% endspoiler %}
+
+### Not a QR Code
+{% spoiler %}
+The design rules were figureable from the letters we had at the time, but then we got stuck writing code. Turns out Reed-Solomon wasn't the solution. Oh well.
+{% endspoiler %}
+
+### Almost
+{% spoiler %}
+A fun fact about this puzzle, containing almost-pangrams, is that if you unlock a letter, and there's a line it doesn't appear in, then that line's missing letter is
+the letter you just unlocked. Someone else figured this out and cheesed a few lines. Also, I love that "the quick brown ox jumps over the lazy dog" shows up.
+Move out the way, foxes, it's the ox's time to jump!
+{% endspoiler %}
+
+### MIT Dropquotes
+{% spoiler %}
+When Banandy was adding puzzles to the team's spreadsheet from Land of No Name, they added this puzzle as one of the early ones (by 4-digit code, of course)
+with something like "this is a test, please don't actually attempt this puzzle, it's dropquotes"
+
+Eventually we got enough letters to make a serious attempt at this puzzle, but when I looked at it, for some reason I initially started trying to read it
+right-to-left. (Probably just got tricked by the vertical arrangement of letters at the top of a dropquote. Whatever.)
+{% endspoiler %}
+
+### HidAtoZ
+{% spoiler %}
+Figuring out the rules was pretty tricky without enough letters, though the z's were pretty helpful. We attempted to solve the first Hidato with less letters
+than we probably should attempt it with, and surprisingly succeeded. Then we attempted the next one, and failed due to lack of uniqueness.
+{% endspoiler %}
+
+### Meta: The Alphabet
+{% spoiler %}
+This looked like a 25/26-answers-required meta (or 24/26 if you're really stretching it) until someone figured out that you can write a linear equation system where the
+variables are *lengths* of the expansions of each letter, which would mean that at 24/26 letters there'd be only 12 variables (and 26 equations). However, the target lengths
+aren't in order, so things get more complicated.
+
+At the time, we couldn't render graphics (we were missing **GL**). Linus solved the more complicated system and backsolved those last 2 puzzles. From there, we got stuck on
+extraction until hinted twice.
+{% endspoiler %}
+
+</div>
+
+<input id="hyperbolic-space-button" type="button" class="accessibility-button" value="Accessibility: ON"/>
+
+<div id="hyperbolic-space" markdown="1">
+
+## Hyperbolic Space
+<canvas id="poincare-disk" class="poincare-disk" width="800" height="800" style="display: none;" />
+
+### Had
+{% spoiler %}
+<div style="text-align: right;">
+<i>"john while james had had had had had had had had had had had a better effect on the teacher"</i> --someone who forgot these:
+<code>"""""",,..</code>
+</div>
+
+We had worked on this puzzle, but wow, parsing that 9th clue is *hard*. Let me just say, that this is such a funny puzzle. Not only is it a logic puzzle (of the Einstein
+kind), but also a *parsing puzzle*. (It was eventually solved.)
+{% endspoiler %}
+
+### Multidimensional Crossword
+{% spoiler %}
+A cool idea. You think it's three-dimensional (which is already unusual), but based on some clues it's actually *four*-dimensional, with time being the fourth dimension.
+We didn't get that far on this one (just filling in some clues, fitting a few emoji, and figuring out how the grid works). However, I'm disappointed that in the
+top-*down* view that *down* doesn't point into the screen, and that in the front view, *into* doesn't point into the screen.
+{% endspoiler %}
+
+### Setting Boundaries
+{% spoiler %}
+Cute puzzle. One of my favorite tricks (mentioned by Brian) is the boundary trick: because each of the two components must be orthogonally connected, if you have
+cells `A`, `B`, `A` in cyclic order on the boundary (where A and B are are puzzle types), then all boundary cells between the two `A`s on the arc that doesn't contain `B`
+must also be `A`. The extraction was also pretty cool.
+{% endspoiler %}
+
+### Stray Child
+{% spoiler %}
+Cool, a Japanese puzzle! I filled out quite a lot of the clues, but some of them were too long (and no shorter word made sense). Then someone else realized that
+there's 7 spots in the crossword that are weird, corresponding to the 7 length-3 blanks. Filling those in with kanji and searching the results gives MyGO!! songs with
+tricky-to-read names. Once we got to the final extraction, though, we got stuck. When we finally realized what we were supposed to do there, we let out a collective groan.
+{% endspoiler %}
+
+### Meta: Hyperbolic Space
+{% spoiler %}
+Time to tile hyperbolic space! Someone else worked on backsolving the rest of the puzzles while we tiled a diagram. And let me tell you, navigating a big tessellation
+in hyperbolic space is *hard*. But we did it anyway.
+
+Well, some of us did. After backsolving enough puzzles, we unlocked Fate's Thread Casino, which distracted a lot of people. Thankfully, some of us resisted the temptation
+and continued to work on Hyperbolic Space.
+
+And then came the actual meta. You're telling me that not only is there this 24-heptagon structure that can tile the hyperbolic plane, but that it has *cubes* in it?!
+(And anticubes! Don't get distracted!) I was the one to figure out what those cubes were, and it was especially tricky when we didn't copy letters from one part of the diagram
+to the other. I did find a nice way to find the point opposite of another point in a cube. (walk, left, walk, left, walk, right, walk, left, walk, left, walk)
+{% endspoiler %}
+
+</div>
+
+<input id="atlas-of-mosaics-button" type="button" class="accessibility-button" value="Accessibility: ON"/>
+
+<div id="atlas-of-mosaics" markdown="1">
+
+## Atlas of Mosaics
+
+### Bite-sized Logic
+{% spoiler %}
+I only worked on the takoyaki, but this was such a funny idea. Let's eat puzzles!
+{% endspoiler %}
+
+### The Case of the Superhero Dinner Party
+{% spoiler %}
+Favorite puzzle!... is what I probably would have said if I didn't miss out on working on this puzzle. An investigation made out of hexagon tiles? Awesome.
+{% endspoiler %}
+
+### On the Fence
+{% spoiler %}
+Time to solve hexagonal slitherlinks with the worst logic-puzzle-solving interface I've encountered. Oof. I managed to get the final extraction on this one though.
+{% endspoiler %}
+
+### The Tortured Programmer's Department
+
+</div>
+
+Welp, that's all I have for now. By the way, I have some interesting puzzle ideas for some future Mystery Hunt.
+{% spoiler %}
+<div class="center-text">Made you look. They're a secret!</div>
+{% endspoiler %}
+
+<script type="module" src="{{ '/assets/posts/mystery-hunt-2026-postmortem/portals.js' | relative_url }}"></script>

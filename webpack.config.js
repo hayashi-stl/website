@@ -18,6 +18,8 @@ module.exports = (env, argv) => {
                 { import: './assets/posts/assign-normals-cone/render.ts', filename: './assets/posts/assign-normals-cone/render.js' },
             state_cutters_render:
                 { import: './assets/posts/state-cutters/render.ts', filename: './assets/posts/state-cutters/render.js' },
+            mystery_hunt_2026_portals:
+                { import: './assets/posts/mystery-hunt-2026-postmortem/portals.ts', filename: './assets/posts/mystery-hunt-2026-postmortem/portals.js' },
         },
         //devtool: 'inline-source-map',
         module: {
@@ -26,6 +28,14 @@ module.exports = (env, argv) => {
                     test: /\.tsx?$/,
                     use: 'ts-loader',
                     exclude: /node_modules/,
+                },
+                {
+                    test: /\.glsl$/,
+                    type: 'asset/source'
+                },
+                {
+                    test: /\.png$/,
+                    type: 'asset/resource'
                 }
             ]
         },

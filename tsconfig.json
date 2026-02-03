@@ -8,5 +8,5 @@
         "target": "ES6",
         "module": "ESNext",
     },
-    "include": ["./**/*"]
+    "include": ["./**/*", "index.d.ts"]
 }

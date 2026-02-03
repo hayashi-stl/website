@@ -312,6 +312,12 @@
   color: #f00;
 }
 
+input[type="button"] {
+  background-color: lighten($background-color, 6%);
+  color: $text-color;
+  border-color: $text-color;
+}
+
 .answer-check {
   margin-left: auto;
   margin-right: auto;

@@ -21,5 +21,4 @@ def table_entry(item, x, y, array)
             <div class='char'>#{item["text"]&.upcase or ""}</div>
         </div>
     </td>"
-    td_classes = []
 end
