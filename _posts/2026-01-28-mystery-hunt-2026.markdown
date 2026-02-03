@@ -277,7 +277,9 @@ extraction until hinted twice.
 <div id="hyperbolic-space" markdown="1">
 
 ## Hyperbolic Space
-<canvas id="poincare-disk" class="poincare-disk" width="800" height="800" style="display: none;" />
+<canvas id="poincare-disk" class="poincare-disk" width="800" height="800" style="display: none;">
+    <input id="hyperbolic-move-0" type="button" class="hyperbolic-move" value="→">
+</canvas>
 
 ### Had
 {% spoiler %}
