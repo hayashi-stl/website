@@ -52,10 +52,6 @@ const SHORT_RADIUS: number = Math.acosh(Math.cos(Math.PI / 3) / Math.sin(Math.PI
 
 const INTERP_SPEED: number = 0.1;
 
-function dot(a: [number, number], b: [number, number]): number {
-    return a[0] * b[0] + a[1] * b[1];
-}
-
 // Matrices here are column-major
 
 function transpose(a: number[]): number[] {

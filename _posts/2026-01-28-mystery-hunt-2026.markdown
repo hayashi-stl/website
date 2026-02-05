@@ -367,6 +367,8 @@ There doesn't seem to be anything here.
 
 ## Atlas of Mosaics
 
+<div id="no-atlas" markdown="1">
+
 ### Bite-sized Logic
 {% spoiler %}
 I only worked on the takoyaki, but this was such a funny idea. Let's eat puzzles!
@@ -386,6 +388,37 @@ Time to solve hexagonal slitherlinks with the worst logic-puzzle-solving interfa
 {% spoiler %}
 TODO
 {% endspoiler %}
+</div>
+<div id="atlas" style="display: none;">
+
+<div id="atlas-title" class="atlas-title">
+    <div class="title">&nbsp;</div>
+    <div class="subtitle">&nbsp;</div>
+</div>
+
+<!-- A transient rendering bug appeared where at 100% zoom, a 256x256 area starting from the top left
+was clipped out of some hide-hexes. Setting the viewBox fixed it. But unsetting it doesn't break things again. Weird. -->
+<svg width="564.91656" height="327.30942" viewBox="0 0 564.91656 327.30942">
+    <image href="/assets/posts/mystery-hunt-2026-postmortem/atlas-of-posts.svg"/>
+    <g id="hide-hexes"></g>
+    <g id="hover-hex" style="display: none" transform="translate(100,100)">
+        <path
+            class="hover-hex"
+            d="M 0,-0.5 -0.4330127,-0.25 -0.4330127,0.25 0,0.5 0.4330127,0.25 0.4330127,-0.25 Z
+               M 0,-0.375 -0.3247595,-0.1875 -0.3247595,0.1875 0,0.375 0.3247595,0.1875 0.3247595,-0.1875 Z"
+        />
+    </g>
+</svg>
+
+<div id="atlas-sidebar" class="atlas-sidebar" style="display: none">
+    <div class="heading">Tiles</div>
+    <div id="tile-template" style="display: none;">
+        <img src=""/>
+        <div class="limit">×7</div>
+    </div>
+</div>
+
+</div>
 
 </div>
 
