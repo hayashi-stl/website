@@ -226,30 +226,54 @@ const XMLNS = "http://www.w3.org/2000/svg"
 class Tile {
     filename: string
     image: SVGImageElement;
+    div: HTMLElement;
     limit: number;
-    positions: R2[];
+    left: number;
 
-    constructor(filename: string, limit: number) {
+    constructor(filename: string, limit: number, div: HTMLElement) {
         this.filename = `/assets/posts/mystery-hunt-2026-postmortem/atlas-tiles/${filename}.svg`
         this.image = document.createElementNS(XMLNS, "image")
         this.image.setAttribute("href", this.filename)
         this.limit = limit;
-        this.positions = [];
+        this.left = limit;
+        this.div = div;
+
+        this.div.setAttribute("style", "");
+        (this.div.children[0] as HTMLImageElement).src = this.filename;
+        if (this.limit === Infinity)
+            this.div.children[1].setAttribute("style", "display: none;")
+        this.setLeft(this.left);
+    }
+
+    setLeft(left: number) {
+        this.left = left;
+        this.div.children[1].innerHTML = `${this.left}`
+        if (left === 0)
+            this.div.classList.add("ran-out")
+        else
+            this.div.classList.remove("ran-out")
     }
 }
+
+type TileName = [string, string];
 
 class AtlasOfMosaics {
     div: HTMLDivElement;
     noAtlas: HTMLDivElement;
     atlas: HTMLDivElement;
     atlasSvg: SVGElement;
+    fillingSvg: SVGGElement;
     hoverHex: SVGGElement;
     sidebar: HTMLDivElement;
     title: HTMLDivElement;
+    draggedTile: HTMLImageElement;
     covers: Map<string, SVGElement>;
     activePuzzle: string | undefined = undefined;
+    activeTile: TileName | undefined = undefined;
     tiles: Map<string, Map<string, Tile>>;
     tileSidebars: Map<string, HTMLDivElement>;
+    filling: Map<string, [TileName, SVGElement]>; // maps positions to [tile name, tile element]
+    noteTimeout: number = 0;
     isInit: boolean = false;
 
     constructor() {
@@ -258,26 +282,28 @@ class AtlasOfMosaics {
         this.atlas = document.getElementById("atlas")! as HTMLDivElement;
         this.sidebar = document.getElementById("atlas-sidebar")! as HTMLDivElement;
         this.title = document.getElementById("atlas-title")! as HTMLDivElement;
+        this.draggedTile = document.getElementById("atlas-dragged-tile")! as HTMLImageElement;
         this.atlasSvg = this.atlas.children[1] as SVGElement;
+        this.fillingSvg = document.getElementById("filling")! as unknown as SVGGElement;
         this.hoverHex = document.getElementById("hover-hex")! as unknown as SVGGElement;
-        this.tiles = map_map_values(TILE_INFO, (_, tiles) => map_map_values(tiles, (_, tile) => new Tile(tile[0], tile[1])));
         let tileTemplate = document.getElementById("tile-template")! as HTMLElement;
-        this.tileSidebars = map_map_values(this.tiles, (_, tiles) => {
+        this.tiles = map_map_values(TILE_INFO, (_, tiles) => map_map_values(tiles, (_, tile) => new Tile(tile[0], tile[1], 
+            tileTemplate.cloneNode(true) as HTMLElement
+        )));
+        this.tileSidebars = map_map_values(this.tiles, (puzzle, tiles) => {
             let div = document.createElement("div")
             div.classList.add("tiles")
             div.setAttribute("style", "display: none");
             this.sidebar.appendChild(div);
             for (let [name, tile] of tiles.entries()) {
-                let tileDiv = tileTemplate.cloneNode(true) as HTMLElement;
-                tileDiv.setAttribute("style", "");
-                (tileDiv.children[0] as HTMLImageElement).src = tile.filename;
-                tileDiv.children[1].innerHTML = `${tile.limit}`
-                if (tile.limit === Infinity)
-                    tileDiv.children[1].setAttribute("style", "display: none;")
-                div.appendChild(tileDiv)
+                div.appendChild(tile.div)
+                tile.div.addEventListener("pointerdown", (ev: PointerEvent) => {
+                    this.startDrag([puzzle, name], ev);
+                })
             }
             return div
         });
+        this.filling = new Map();
 
         let hideHexes = document.getElementById("hide-hexes")! as unknown as SVGGElement;
         this.covers = new Map<string, SVGElement>(Array.from(BOUNDARY_PATHS.entries()).map(([name, path]) => {
@@ -296,13 +322,52 @@ class AtlasOfMosaics {
         // Prevent that full picture dragging effect
         this.atlasSvg.addEventListener("pointerdown", (ev: PointerEvent) => {
             ev.preventDefault();
+            ev.stopPropagation();
             let pos = offsetToGridPos([ev.offsetX, ev.offsetY]);
-            this.setActivePuzzle(ATLAS_GRID_INV.get(pos.toString()))
+            this.handlePointerDown(ATLAS_GRID_INV.get(pos.toString()), ev)
             this.updateHoverHex(pos);
+        })
+
+        this.sidebar.addEventListener("pointerdown", (ev: PointerEvent) => ev.stopPropagation())
+
+        // Clicking anywhere except the grid or the sidebar should disable the puzzle
+        window.addEventListener("pointerdown", (ev: PointerEvent) => {
+            this.handlePointerDown(undefined, ev)
+        })
+        
+        window.addEventListener("pointermove", (ev: PointerEvent) => {
+            this.drag([ev.x, ev.y]);
+        })
+        
+        window.addEventListener("pointerup", (ev: PointerEvent) => {
+            this.endDrag(undefined);
+        })
+
+        this.atlasSvg.addEventListener("pointerup", (ev: PointerEvent) => {
+            this.endDrag([ev.offsetX, ev.offsetY]);
+        })
+
+        // A little Easter egg
+        let note = document.getElementById("atlas-note")!
+        let hyperbolic = document.getElementById("hyperbolic-navigation")!
+        hyperbolic.addEventListener("pointerup", (ev: PointerEvent) => {
+            if (this.activeTile === undefined) return;
+            note.setAttribute("style", "");
+            window.clearTimeout(this.noteTimeout);
+            this.noteTimeout = window.setTimeout(() => {
+                note.setAttribute("style", "display: none;")
+                this.noteTimeout = 0;
+            }, 5000)
         })
     }
 
-    setActivePuzzle(name: string | undefined) {
+    handlePointerDown(name: string | undefined, ev: PointerEvent) {
+        if (this.activePuzzle === name) {
+            let tile = this.removeTile(offsetToGridPos([ev.offsetX, ev.offsetY]))
+            if (tile !== undefined)
+                this.startDrag(tile, ev);
+            return;
+        }
         if (this.activePuzzle !== undefined) {
             this.covers.get(this.activePuzzle)!.setAttribute("style", "");
             this.tileSidebars.get(this.activePuzzle)!.setAttribute("style", "display: none;")
@@ -318,6 +383,7 @@ class AtlasOfMosaics {
         } else {
             this.title.classList.remove("sticky")
         }
+        this.updateCorrect();
     }
 
     updateHoverHex(gridPos: R2) {
@@ -326,6 +392,72 @@ class AtlasOfMosaics {
             this.activePuzzle !== undefined && ATLAS_GRID_INV.get(gridPos.toString()) === this.activePuzzle
                 && FILLABLE.get(gridPos.toString())! ? "" : "display: none;");
         this.hoverHex.transform.baseVal[0].setTranslate(offset[0], offset[1]);
+    }
+
+    startDrag(tileName: TileName, ev: PointerEvent) {
+        ev.preventDefault();
+        let left = this.tiles.get(tileName[0])!.get(tileName[1])!.left;
+        if (left <= 0)
+            return;
+        this.activeTile = tileName;
+        let tile = this.tiles.get(tileName[0])!.get(tileName[1])!;
+        tile.setLeft(tile.left - 1)
+        this.draggedTile.src = tile.filename;
+        this.draggedTile.setAttribute("style", `left: ${ev.x}px; top: ${ev.y}px;`);
+    }
+
+    drag(pointerPos: R2) {
+        if (this.activeTile === undefined) return;
+        this.draggedTile.setAttribute("style", `left: ${pointerPos[0]}px; top: ${pointerPos[1]}px;`);
+    }
+
+    endDrag(offset: R2 | undefined) {
+        if (this.activeTile === undefined) return;
+        let tile = this.tiles.get(this.activeTile[0])!.get(this.activeTile[1])!;
+        tile.setLeft(tile.left + 1);
+        if (offset !== undefined) 
+            this.addTile(offsetToGridPos(offset), this.activeTile);
+        this.draggedTile.setAttribute("style", "display: none;");
+        this.activeTile = undefined;
+    }
+
+    removeTile(gridPos: R2, shouldUpdateCorrect = true): TileName | undefined {
+        let tile = this.filling.get(gridPos.toString());
+        this.filling.delete(gridPos.toString());
+        if (tile === undefined) return undefined;
+        tile[1].remove();
+        let tileData = this.tiles.get(tile[0][0])!.get(tile[0][1])!;
+        tileData.setLeft(tileData.left + 1);
+        this.updateCorrect();
+        return tile[0]
+    }
+
+    addTile(gridPos: R2, tileName: TileName) {
+        if (ATLAS_GRID_INV.get(gridPos.toString()) !== tileName[0]) return;
+        this.removeTile(gridPos, false);
+        let tileData = this.tiles.get(tileName[0])!.get(tileName[1])!;
+        tileData.setLeft(tileData.left - 1);
+        let image = tileData.image.cloneNode(true) as SVGImageElement;
+        this.fillingSvg.appendChild(image);
+        this.filling.set(gridPos.toString(), [tileName, image]);
+        let offset = gridPosToOffset(gridPos);
+        image.setAttribute("x", offset[0].toString());
+        image.setAttribute("y", offset[1].toString());
+        this.updateCorrect();
+    }
+
+    updateCorrect() {
+        if (this.activePuzzle === undefined) {
+            this.title.classList.remove("correct");
+            return;
+        }
+        let correctFilling = Array.from(CORRECT_FILLINGS.get(this.activePuzzle)!.entries());
+        let correct = correctFilling.every(([pos, tile]) => this.filling.get(pos)?.[0]?.[1] === tile);
+        if (correct)
+            this.title.classList.add("correct");
+        else
+            this.title.classList.remove("correct");
+        this.title.children[1].innerHTML = PUZZLE_NAMES.get(this.activePuzzle)![1] + (correct ? " (solved)" : "");
     }
 
     init() {

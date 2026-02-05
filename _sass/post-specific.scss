@@ -56,6 +56,28 @@
     >.title {
       font-size: x-large;
     }
+
+    &.correct {
+      border-color: #0a0;
+      color: #0a0;
+    }
+  }
+
+  .atlas-note {
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    translate: -50% 0;
+    border: solid $text-color 1px;
+    background-color: transparentize($background-color, 0.3);
+    padding: 5px;
+  }
+
+  #filling {
+    >image {
+      transform: translate(-50%, -50%);
+      transform-box: fill-box;
+    }
   }
 
   .atlas-sidebar {
@@ -86,12 +108,20 @@
         width: $atlas-grid-size * $sqrt-3-4;
         padding: 5px;
         position: relative;
+        
+        &:hover {
+          background-color: transparentize(#ffffff, 0.9);
+        }
+        
+        &.ran-out {
+          opacity: 0.5;
+        }
 
         >img {
           position: absolute;
           left: 50%;
           top: 50%;
-          translate: -50% -50%; // can't do this inside an SVG. Shame
+          translate: -50% -50%;
           pointer-events: none;
         }
 
@@ -112,6 +142,14 @@
     }
   }
 
+  .atlas-dragged-tile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    translate: -50% -50%;
+    pointer-events: none;
+  }
+
   .letter-buttons {
     display: flex;
     flex-direction: row;
@@ -129,7 +167,7 @@
     fill: #ffffff;
     fill-opacity: 0.2;
     fill-rule: evenodd;
-    transform: scale($atlas-grid-size / 1px);
+    transform: scale(calc($atlas-grid-size / 1px));
   }
 
   .hide-hex {

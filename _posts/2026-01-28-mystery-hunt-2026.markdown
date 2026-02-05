@@ -400,6 +400,7 @@ TODO
 was clipped out of some hide-hexes. Setting the viewBox fixed it. But unsetting it doesn't break things again. Weird. -->
 <svg width="564.91656" height="327.30942" viewBox="0 0 564.91656 327.30942">
     <image href="/assets/posts/mystery-hunt-2026-postmortem/atlas-of-posts.svg"/>
+    <g id="filling"></g>
     <g id="hide-hexes"></g>
     <g id="hover-hex" style="display: none" transform="translate(100,100)">
         <path
@@ -417,6 +418,9 @@ was clipped out of some hide-hexes. Setting the viewBox fixed it. But unsetting 
         <div class="limit">×7</div>
     </div>
 </div>
+
+<img id="atlas-dragged-tile" class="atlas-dragged-tile" src="" style="display: none;"/>
+<div id="atlas-note" class="atlas-note" style="display: none;">Those are heptagons, you silly!</div>
 
 </div>
 
