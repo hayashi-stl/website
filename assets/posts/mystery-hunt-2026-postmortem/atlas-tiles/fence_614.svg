@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="88.602608"
+   height="102.30948"
+   viewBox="0 0 23.442773 27.069383"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-871.02748,-216.23301)">
+    <g
+       id="fence_614"
+       transform="translate(488.963,30.6609)">
+      <path
+         id="path594"
+         style="color:#000000;fill:#cc6600;fill-opacity:1;-inkscape-stroke:none"
+         d="m 382.32927,192.49275 -3e-5,10.78489 9e-5,2.44416 2.11638,1.22189 9.34041,5.3927 2.11674,-1.22202 -11.45724,-6.61484 -6e-5,-13.22905 z m 20.79695,-1.22249 -1.1e-4,15.67366 2.11674,-1.22201 1.9e-4,-13.22949 z" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#aa5500;stroke-width:0.925064;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="path595"
+         d="m 102.21416,109.04086 -20.028223,-11.563293 0,-23.126596 20.028223,-11.563299 20.02822,11.563298 0,23.126596 z"
+         transform="matrix(0.572033,0,0,0.572033,335.316,149.961)" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.96875px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+         x="393.80368"
+         y="200.40028"
+         id="text595"><tspan
+           id="tspan595"
+           style="font-weight:bold;font-size:3.96875px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+           x="393.80368"
+           y="200.40028">I</tspan></text>
+    </g>
+  </g>
+</svg>

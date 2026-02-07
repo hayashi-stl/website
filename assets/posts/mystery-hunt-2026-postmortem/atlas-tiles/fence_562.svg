@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="88.602608"
+   height="102.30948"
+   viewBox="0 0 23.442773 27.069383"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-710.63248,-216.23371)">
+    <g
+       id="fence_562"
+       transform="translate(328.568,30.6616)">
+      <path
+         id="path576"
+         style="color:#000000;fill:#cc6600;fill-opacity:1;-inkscape-stroke:none"
+         d="m 382.32931,205.7208 9.34069,5.39265 -8.7e-4,5e-4 2.11674,1.22202 11.4568,-6.6146 8e-5,-2.44416 -11.4559,6.61408 -11.45744,-6.61467 z m -4.7e-4,-10.78463 13.57362,-7.83673 -2.11675,-1.22201 -11.4568,6.61458 z" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#aa5500;stroke-width:0.925064;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="path577"
+         d="m 102.21416,109.04086 -20.028223,-11.563293 0,-23.126596 20.028223,-11.563299 20.02822,11.563298 0,23.126596 z"
+         transform="matrix(0.572033,0,0,0.572033,335.316,149.961)" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.96875px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+         x="393.80368"
+         y="200.40028"
+         id="text577"><tspan
+           id="tspan577"
+           style="font-weight:bold;font-size:3.96875px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+           x="393.80368"
+           y="200.40028">puzzle</tspan></text>
+    </g>
+  </g>
+</svg>

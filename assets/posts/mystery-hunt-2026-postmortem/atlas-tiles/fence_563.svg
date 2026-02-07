@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="88.602608"
+   height="102.30948"
+   viewBox="0 0 23.442773 27.069383"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-848.11348,-216.23321)">
+    <g
+       id="fence_563"
+       transform="translate(466.049,30.6611)">
+      <path
+         id="path592"
+         style="color:#000000;fill:#cc6600;fill-opacity:1;-inkscape-stroke:none"
+         d="m 382.32931,205.72176 9.33999,5.39246 2.11675,1.22203 2.11637,-1.2219 9.34041,-5.3927 8e-5,-2.44416 -11.45724,6.61485 -11.45673,-6.61447 z m 9.33978,-18.62192 13.57373,7.83692 7e-5,-2.44416 -11.45698,-6.61492 z" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#aa5500;stroke-width:0.925064;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="path593"
+         d="m 102.21416,109.04086 -20.028223,-11.563293 0,-23.126596 20.028223,-11.563299 20.02822,11.563298 0,23.126596 z"
+         transform="matrix(0.572033,0,0,0.572033,335.316,149.961)" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.96875px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+         x="393.80368"
+         y="200.40028"
+         id="text593"><tspan
+           id="tspan593"
+           style="font-weight:bold;font-size:3.96875px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+           x="393.80368"
+           y="200.40028">solving</tspan></text>
+    </g>
+  </g>
+</svg>

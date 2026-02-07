@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="88.602608"
+   height="102.30948"
+   viewBox="0 0 23.442773 27.069383"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-687.71848,-216.23371)">
+    <g
+       id="fence_451"
+       transform="translate(305.654,30.6616)">
+      <path
+         id="path574"
+         style="color:#000000;fill:#cc6600;fill-opacity:1;-inkscape-stroke:none"
+         d="m 393.78587,212.33597 9.34051,-5.39295 v 0.001 l 2.11667,-1.22215 V 192.4927 l -2.11667,-1.22215 v 13.22814 l -11.45718,6.6151 z m -9.34,-5.39191 v -15.67347 l -2.11667,1.22215 v 13.22917 z" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#aa5500;stroke-width:0.925064;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="path575"
+         d="m 102.21416,109.04086 -20.028223,-11.563293 0,-23.126596 20.028223,-11.563299 20.02822,11.563298 0,23.126596 z"
+         transform="matrix(0.572033,0,0,0.572033,335.316,149.961)" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.96875px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+         x="393.80368"
+         y="200.40028"
+         id="text575"><tspan
+           id="tspan575"
+           style="font-weight:bold;font-size:3.96875px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+           x="393.80368"
+           y="200.40028">best</tspan></text>
+    </g>
+  </g>
+</svg>

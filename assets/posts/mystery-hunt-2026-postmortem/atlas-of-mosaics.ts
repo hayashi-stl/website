@@ -12,9 +12,26 @@ function map_map_values<K, V1, V2>(map: Map<K, V1>, fn: (k: K, v: V1) => V2): Ma
 }
 
 const ATLAS_GRID = new Map(Object.entries<R2[]>({
-    "test1": [[2, 0], [4, 0], [1, 1], [3, 1], [0, 2], [2, 2], [0, 0]],
-    "test2": [[5, 1], [4, 2], [5, 3]],
-    "test3": [[6, 0], [8, 0], [10, 0], [7, 1], [9, 1], [11, 1]],
+    "bite": [[3.0, 1.0], [5.0, 1.0], [2.0, 2.0], [4.0, 2.0], [1.0, 3.0], [3.0, 3.0], [1.0, 1.0], [0.0, 0.0], [0.0, 2.0], [5.0, 3.0], [0.0, 4.0],
+        [2.0, 4.0], [4.0, 4.0], [6.0, 4.0], [7.0, 3.0], [1.0, 5.0], [3.0, 5.0], [5.0, 5.0], [2.0, 6.0], [4.0, 6.0], [6.0, 6.0], [3.0, 7.0]],
+    "case": [[6.0, 0.0], [8.0, 0.0], [10.0, 0.0], [7.0, 1.0], [9.0, 1.0], [11.0, 1.0], [2.0, 0.0], [4.0, 0.0], [12.0, 0.0], [14.0, 0.0], [16.0, 0.0],
+        [13.0, 1.0], [15.0, 1.0], [6.0, 2.0], [8.0, 2.0], [10.0, 2.0]],
+    "fence-middle": [[12.0, 2.0], [14.0, 2.0], [16.0, 2.0], [9.0, 3.0], [11.0, 3.0], [13.0, 3.0], [15.0, 3.0], [8.0, 4.0], [10.0, 4.0], [12.0, 4.0],
+        [14.0, 4.0], [16.0, 4.0], [7.0, 5.0], [9.0, 5.0], [11.0, 5.0], [8.0, 6.0], [10.0, 6.0], [9.0, 7.0], [11.0, 7.0]],
+    "fence-6": [[13.0, 5.0], [15.0, 5.0], [12.0, 6.0], [14.0, 6.0], [16.0, 6.0], [13.0, 7.0], [15.0, 7.0]],
+    "tortured-half": [[0.0, 6.0], [1.0, 7.0], [5.0, 7.0], [7.0, 7.0], [0.0, 8.0], [2.0, 8.0], [4.0, 8.0], [6.0, 8.0], [8.0, 8.0], [10.0, 8.0], [12.0, 8.0],
+        [14.0, 8.0], [16.0, 8.0], [1.0, 9.0], [3.0, 9.0], [5.0, 9.0], [7.0, 9.0], [9.0, 9.0], [11.0, 9.0], [13.0, 9.0], [15.0, 9.0], [0.0, 10.0], [2.0, 10.0],
+        [4.0, 10.0], [6.0, 10.0], [8.0, 10.0], [10.0, 10.0], [12.0, 10.0], [14.0, 10.0], [16.0, 10.0], [1.0, 11.0], [3.0, 11.0], [5.0, 11.0], [7.0, 11.0],
+        [9.0, 11.0], [11.0, 11.0], [13.0, 11.0], [15.0, 11.0], [0.0, 12.0], [2.0, 12.0], [4.0, 12.0], [6.0, 12.0], [8.0, 12.0], [10.0, 12.0], [12.0, 12.0],
+        [14.0, 12.0], [16.0, 12.0], [1.0, 13.0], [3.0, 13.0], [5.0, 13.0], [7.0, 13.0], [13.0, 13.0], [15.0, 13.0], [2.0, 14.0], [4.0, 14.0], [6.0, 14.0],
+        [8.0, 14.0], [10.0, 14.0], [12.0, 14.0], [14.0, 14.0], [16.0, 14.0]],
+    "tortured-zero": [[9.0, 13.0], [11.0, 13.0]],
+    "tortured-one": [[0.0, 14.0], [1.0, 15.0], [3.0, 15.0], [5.0, 15.0], [7.0, 15.0], [9.0, 15.0]],
+    "tortured-separated": [[0.0, 16.0], [2.0, 16.0], [4.0, 16.0], [6.0, 16.0], [8.0, 16.0], [1.0, 17.0], [3.0, 17.0], [5.0, 17.0], [7.0, 17.0], [9.0, 17.0],
+        [16.0, 18.0], [11.0, 19.0], [13.0, 19.0], [15.0, 19.0], [10.0, 20.0], [12.0, 20.0], [14.0, 20.0], [16.0, 20.0]],
+    "tortured-power": [[11.0, 15.0], [13.0, 15.0], [15.0, 15.0], [10.0, 16.0], [12.0, 16.0], [14.0, 16.0], [16.0, 16.0], [11.0, 17.0], [13.0, 17.0], [15.0, 17.0],
+        [0.0, 18.0], [2.0, 18.0], [4.0, 18.0], [6.0, 18.0], [8.0, 18.0], [10.0, 18.0], [12.0, 18.0], [14.0, 18.0], [1.0, 19.0], [3.0, 19.0], [5.0, 19.0],
+        [7.0, 19.0], [9.0, 19.0], [0.0, 20.0], [2.0, 20.0], [4.0, 20.0], [6.0, 20.0], [8.0, 20.0]],
 }))
 const ATLAS_GRID_INV = (() => {
     let map = new Map<string, string>();
@@ -27,36 +44,193 @@ const ATLAS_GRID_INV = (() => {
 
 // Each tile contains a file name stub and a limit.
 const TILE_INFO = new Map<string, Map<string, [filename: string, limit: number]>>(([
-    ["test1", [
-        ["tile1", ["test1_tile1", 1]],
-        ["tile2", ["test1_tile2", 1]],
-        ["tile3", ["test1_tile3", 1]],
-        ["tile4", ["test1_tile4", 1]],
-        ["tile5", ["test1_tile5", 1]],
-        ["tile6", ["test1_tile6", 1]],
-        ["tile7", ["test1_tile7", 1]],
+    ["bite", [
+        ["NW", ["bite_NW", Infinity]],
+        ["NE", ["bite_NE", Infinity]],
+        ["E", ["bite_E", Infinity]],
+        ["SE", ["bite_SE", Infinity]],
+        ["SW", ["bite_SW", Infinity]],
+        ["W", ["bite_W", Infinity]],
+        ["NW-NE", ["bite_NW-NE", Infinity]],
+        ["NE-E", ["bite_NE-E", Infinity]],
+        ["E-SE", ["bite_E-SE", Infinity]],
+        ["SE-SW", ["bite_SE-SW", Infinity]],
+        ["SW-W", ["bite_SW-W", Infinity]],
+        ["W-NW", ["bite_W-NW", Infinity]],
+        ["NW-E", ["bite_NW-E", Infinity]],
+        ["NE-SE", ["bite_NE-SE", Infinity]],
+        ["E-SW", ["bite_E-SW", Infinity]],
+        ["SE-W", ["bite_SE-W", Infinity]],
+        ["SW-NW", ["bite_SW-NW", Infinity]],
+        ["W-NE", ["bite_W-NE", Infinity]],
+        ["NW-SE", ["bite_NW-SE", Infinity]],
+        ["NE-SW", ["bite_NE-SW", Infinity]],
+        ["E-W", ["bite_E-W", Infinity]],
     ]],
-    ["test2", [
-        ["E", ["test2_E", Infinity]],
-        ["NE", ["test2_NE", Infinity]],
-        ["NW", ["test2_NW", Infinity]],
-        ["W", ["test2_W", Infinity]],
-        ["SW", ["test2_SW", Infinity]],
-        ["SE", ["test2_SE", Infinity]],
+    ["case", [
+        ["fav", ["case_fav", 1]],
+        ["hex", ["case_hex", 1]],
+        ["I", ["case_I", 2]],
+        ["invest", ["case_invest", 1]],
+        ["miss", ["case_miss", 1]],
+        ["puzzle", ["case_puzzle", 1]],
+        ["said", ["case_said", 1]],
     ]],
-    ["test3", [
-        ["This", ["test3_This", 1]],
-        ["test", ["test3_test", 1]],
-        ["sen", ["test3_sen", 1]],
-        ["tence", ["test3_tence", 1]],
+    ["fence", [
+        ["e", ["fence_e", Infinity]],
+        ["1", ["fence_1", Infinity]],
+        ["2", ["fence_2", Infinity]],
+        ["3", ["fence_3", Infinity]],
+        ["4", ["fence_4", Infinity]],
+        ["5", ["fence_5", Infinity]],
+        ["6", ["fence_6", Infinity]],
+        ["12", ["fence_12", Infinity]],
+        ["23", ["fence_23", Infinity]],
+        ["34", ["fence_34", Infinity]],
+        ["45", ["fence_45", Infinity]],
+        ["56", ["fence_56", Infinity]],
+        ["61", ["fence_61", Infinity]],
+        ["13", ["fence_13", Infinity]],
+        ["24", ["fence_24", Infinity]],
+        ["35", ["fence_35", Infinity]],
+        ["46", ["fence_46", Infinity]],
+        ["51", ["fence_51", Infinity]],
+        ["62", ["fence_62", Infinity]],
+        ["14", ["fence_14", Infinity]],
+        ["25", ["fence_25", Infinity]],
+        ["36", ["fence_36", Infinity]],
+        ["123", ["fence_123", Infinity]],
+        ["234", ["fence_234", Infinity]],
+        ["345", ["fence_345", Infinity]],
+        ["456", ["fence_456", Infinity]],
+        ["561", ["fence_561", Infinity]],
+        ["612", ["fence_612", Infinity]],
+        ["124", ["fence_124", Infinity]],
+        ["235", ["fence_235", Infinity]],
+        ["346", ["fence_346", Infinity]],
+        ["451", ["fence_451", Infinity]],
+        ["562", ["fence_562", Infinity]],
+        ["613", ["fence_613", Infinity]],
+        ["125", ["fence_125", Infinity]],
+        ["236", ["fence_236", Infinity]],
+        ["341", ["fence_341", Infinity]],
+        ["452", ["fence_452", Infinity]],
+        ["563", ["fence_563", Infinity]],
+        ["614", ["fence_614", Infinity]],
+        ["135", ["fence_135", Infinity]],
+        ["246", ["fence_246", Infinity]],
+        ["1234", ["fence_1234", Infinity]],
+        ["2345", ["fence_2345", Infinity]],
+        ["3456", ["fence_3456", Infinity]],
+        ["4561", ["fence_4561", Infinity]],
+        ["5612", ["fence_5612", Infinity]],
+        ["6123", ["fence_6123", Infinity]],
+        ["1235", ["fence_1235", Infinity]],
+        ["2346", ["fence_2346", Infinity]],
+        ["3451", ["fence_3451", Infinity]],
+        ["4562", ["fence_4562", Infinity]],
+        ["5613", ["fence_5613", Infinity]],
+        ["6124", ["fence_6124", Infinity]],
+        ["1245", ["fence_1245", Infinity]],
+        ["2356", ["fence_2356", Infinity]],
+        ["3461", ["fence_3461", Infinity]],
+        ["12345", ["fence_12345", Infinity]],
+        ["23456", ["fence_23456", Infinity]],
+        ["34561", ["fence_34561", Infinity]],
+        ["45612", ["fence_45612", Infinity]],
+        ["56123", ["fence_56123", Infinity]],
+        ["61234", ["fence_61234", Infinity]],
+        ["123456", ["fence_123456", Infinity]],
     ]],
+    ["tortured-zero", [
+        ["21", ["tortured-zero_21", 1]],
+        ["40", ["tortured-zero_40", 1]],
+    ]],
+    ["tortured-one", [
+        ["21", ["tortured-one_21", 1]],
+        ["24", ["tortured-one_24", 1]],
+        ["31", ["tortured-one_31", 1]],
+        ["3e", ["tortured-one_3e", 1]],
+        ["7c", ["tortured-one_7c", 1]],
+    ]],
+    ["tortured-separated", [
+        ["24", ["tortured-separated_24", 1]],
+        ["2a", ["tortured-separated_2a", 1]],
+        ["2f", ["tortured-separated_2f", 1]],
+        ["32", ["tortured-separated_32", 1]],
+        ["33", ["tortured-separated_33", 1]],
+        ["3b", ["tortured-separated_3b", 1]],
+        ["3c", ["tortured-separated_3c", 1]],
+        ["3e", ["tortured-separated_3e", 1]],
+        ["40", ["tortured-separated_40", 1]],
+        ["5b", ["tortured-separated_5b", 1]],
+        ["5c", ["tortured-separated_5c", 1]],
+        ["5d", ["tortured-separated_5d", 1]],
+    ]],
+    ["tortured-power", [
+        ["27", ["tortured-power_27", 1]],
+        ["28", ["tortured-power_28", 1]],
+        ["29", ["tortured-power_29", 1]],
+        ["2f", ["tortured-power_2f", 1]],
+        ["30", ["tortured-power_30", 1]],
+        ["3c", ["tortured-power_3c", 1]],
+        ["40", ["tortured-power_40", 1]],
+        ["5c", ["tortured-power_5c", 1]],
+        ["5f", ["tortured-power_5f", 1]],
+        ["7d", ["tortured-power_7d", 1]],
+    ]],
+    ["tortured-half", [
+        ["22", ["tortured-half_22", 1]],
+        ["24", ["tortured-half_24", 1]],
+        ["27", ["tortured-half_27", 1]],
+        ["2c", ["tortured-half_2c", 1]],
+        ["2f", ["tortured-half_2f", 1]],
+        ["31", ["tortured-half_31", 1]],
+        ["3c", ["tortured-half_3c", 1]],
+        ["3e", ["tortured-half_3e", 1]],
+        ["5c", ["tortured-half_5c", 1]],
+        ["5e", ["tortured-half_5e", 1]],
+        ["5f", ["tortured-half_5f", 1]],
+        ["7b", ["tortured-half_7b", 1]],
+        ["7c", ["tortured-half_7c", 1]],
+        ["7d", ["tortured-half_7d", 1]],
+    ]]
 ] as [string, [string, [string, number]][]][])
     .map(([group, tiles]) => [group, new Map(tiles)]))
 
 const PUZZLE_NAMES = new Map(Object.entries<[string, string]>({
-    "test1": ["The First Test", "Numbers"],
-    "test2": ["The Second Test", "Directions"],
-    "test3": ["The Third Test", "Words"],
+    "bite": ["Bite-Sized Logic", "Anglers (Fishing)"],
+    "case": ["The Case of the Superhero Dinner Party", "Regretful Testimony"],
+    "fence-6": ["On the Fence", "Six"],
+    "fence-middle": ["On the Fence", "Middle"],
+    "tortured-half": ["The Tortured Programmer's Department", "THE FIRST HALF <i>(Do not wrap.)</i>"],
+    "tortured-zero": ["The Tortured Programmer's Department", "TRIVIAL ZERO <i>(Do not wrap.)</i>"],
+    "tortured-one": ["The Tortured Programmer's Department", "ONE FOREVER <i>(Do not wrap.)</i>"],
+    "tortured-power": ["The Tortured Programmer's Department", "POWER OF TEN <i>(Do not wrap.)</i>"],
+    "tortured-separated": ["The Tortured Programmer's Department", "SEPARATED <i>(Do not wrap.)</i>"],
+}))
+
+const PUZZLE_TILE_GROUPS = new Map(Object.entries({
+    "bite": "bite",
+    "case": "case",
+    "fence-6": "fence",
+    "fence-middle": "fence",
+    "tortured-half": "tortured-half",
+    "tortured-zero": "tortured-zero",
+    "tortured-one": "tortured-one",
+    "tortured-power": "tortured-power",
+    "tortured-separated": "tortured-separated",
+}))
+
+const HEPTAGON_MESSAGES = new Map(Object.entries({
+    "bite": "What are you fishing for, heptagons?",
+    "case": "A recent investigation has concluded that these are heptagons, not hexagons.",
+    "fence": "There's a fence between 6 and 7. Heptagons are not hexagons.",
+    "tortured-half":      "Are you trying to invent Heptagony?",
+    "tortured-zero":      "Are you trying to invent Heptagony?",
+    "tortured-one":       "Are you trying to invent Heptagony?",
+    "tortured-power":     "Are you trying to invent Heptagony?",
+    "tortured-separated": "Are you trying to invent Heptagony?",
 }))
 
 // assumes filling's top left is [0, 0]
@@ -71,26 +245,118 @@ function adjustFilling(name: string, filling: [R2, string][]): [string, Map<stri
 }
 
 const CORRECT_FILLINGS = new Map(([
-    ["test1", [
-        [[0, 0],  "tile1"],
-        [[2, 0],  "tile2"],
-        [[4, 0],  "tile3"],
-        [[1, 1],  "tile4"],
-        [[3, 1],  "tile5"],
-        [[0, 2],  "tile6"],
-        [[2, 2],  "tile7"],
+    ["bite", [
+        [[1, 1],  "NW-E"],
+        [[3, 1],  "E-W"],
+        [[5, 1],  "W"],
+        [[2, 2],  "SW-W"],
+        [[4, 2],  "SW"],
+        [[1, 3],  "NE-E"],
+        [[3, 3],  "W-NE"],
+        [[5, 3],  "E-SE"],
+        [[0, 4],  "E"],
+        [[2, 4],  "SE-W"],
+        [[4, 4],  "E-SW"],
+        [[6, 4],  "W-NW"],
+        [[1, 5],  "SE"],
+        [[3, 5],  "NW-NE"],
+        [[5, 5],  "SE-SW"],
+        [[2, 6],  "NW-SE"],
+        [[4, 6],  "NE"],
     ]],
-    ["test2", [
-        [[1, 0],  "SW"],
-        [[0, 1],  "SE"],
-        [[1, 2],  "SE"],
+    ["case", [
+        [[0, 0],  "fav"],
+        [[9, 1],  "puzzle"],
+        [[13, 1],  "invest"],
+        [[6, 2],  "hex"],
+        [[4, 0],  "I"],
+        [[8, 0],  "said"],
+        [[12, 0],  "I"],
+        [[5, 1],  "miss"],
     ]],
-    ["test3", [
-        [[0, 0],  "This"],
-        [[1, 1],  "test"],
-        [[3, 1],  "sen"],
-        [[5, 1],  "tence"],
-    ]]
+    ["fence-middle", [
+        [[5, 0],  "61234"],
+        [[7, 0],  "61"],
+        [[9, 0],  "e"],
+        [[2, 1],  "56"],
+        [[4, 1],  "3456"],
+        [[6, 1],  "341"],
+        [[8, 1],  "561"],
+        [[1, 2],  "123"],
+        [[3, 2],  "235"],
+        [[5, 2],  "562"],
+        [[7, 2],  "563"],
+        [[9, 2],  "23456"],
+        [[0, 3],  "5612"],
+        [[2, 3],  "46"],
+        [[4, 3],  "6123"],
+        [[1, 4],  "2345"],
+        [[3, 4],  "3451"],
+        [[2, 5],  "45612"],
+        [[4, 5],  "12"],
+    ]],
+    ["fence-6", [
+        [[2, 1],  "123456"],
+        [[4, 1],  "1"],
+        [[3, 2],  "2"],
+        [[1, 2],  "3"],
+        [[0, 1],  "4"],
+        [[1, 0],  "5"],
+        [[3, 0],  "6"],
+    ]],
+    ["tortured-zero", [
+        [[0, 0],  "21"],
+        [[2, 0],  "40"],
+    ]],
+    ["tortured-one", [
+        [[0, 0],  "31"],
+        [[1, 1],  "3e"],
+        [[3, 1],  "24"],
+        [[5, 1],  "7c"],
+        [[7, 1],  "21"],
+    ]],
+    ["tortured-separated", [
+        [[2, 0],  "32"],
+        [[6, 0],  "5b"],
+        [[8, 0],  "5c"],
+        [[3, 1],  "33"],
+        [[5, 1],  "2a"],
+        [[7, 1],  "3c"],
+        [[9, 1],  "24"],
+        [[16, 2],  "40"],
+        [[16, 4],  "2f"],
+        [[14, 4],  "3b"],
+        [[12, 4],  "5d"],
+        [[11, 3],  "3e"],
+    ]],
+    ["tortured-power", [
+        [[0, 5],  "5c"],
+        [[2, 3],  "7d"],
+        [[4, 3],  "30"],
+        [[5, 4],  "28"],
+        [[13, 2],  "29"],
+        [[6, 5],  "40"],
+        [[16, 1],  "2f"],
+        [[14, 3],  "3c"],
+        [[12, 3],  "27"],
+        [[8, 5],  "5f"],
+    ]],
+    ["tortured-half", [
+        [[0, 0],  "3e"],
+        [[1, 1],  "5e"],
+        [[4, 2],  "31"],
+        [[5, 3],  "5f"],
+        [[9, 5],  "24"],
+        [[1, 5],  "7c"],
+        [[2, 8],  "5c"],
+        [[6, 8],  "7d"],
+        [[4, 8],  "7b"],
+        [[4, 6],  "27"],
+        [[6, 6],  "22"],
+        [[12, 8],  "2c"],
+        [[15, 7],  "3c"],
+        [[16, 8],  "2f"],
+    ]],
 ] as [string, [R2, string][]][]).map(([k, v]) => adjustFilling(k, v)))
 
 const FILLABLE = new Map<string, boolean>(Array.from(ATLAS_GRID.entries()).flatMap(([name, pos]) => {
@@ -158,7 +424,7 @@ const ALIGNMENT = (() => {
 })();
 
 const GRID_SIZE = 100 * SQRT_3_4;
-const OUTLINE_HALF_THICKNESS = 1.0;
+const OUTLINE_HALF_THICKNESS = 2.0;
 const GRID_OFFSET: R2 = [OUTLINE_HALF_THICKNESS, OUTLINE_HALF_THICKNESS / SQRT_3_4];
 const TOP_LEFT_CENTER_OFFSET: R2 = [0.5, 0.5 / SQRT_3_4]
 
@@ -290,7 +556,7 @@ class AtlasOfMosaics {
         this.tiles = map_map_values(TILE_INFO, (_, tiles) => map_map_values(tiles, (_, tile) => new Tile(tile[0], tile[1], 
             tileTemplate.cloneNode(true) as HTMLElement
         )));
-        this.tileSidebars = map_map_values(this.tiles, (puzzle, tiles) => {
+        this.tileSidebars = map_map_values(this.tiles, (group, tiles) => {
             let div = document.createElement("div")
             div.classList.add("tiles")
             div.setAttribute("style", "display: none");
@@ -298,7 +564,7 @@ class AtlasOfMosaics {
             for (let [name, tile] of tiles.entries()) {
                 div.appendChild(tile.div)
                 tile.div.addEventListener("pointerdown", (ev: PointerEvent) => {
-                    this.startDrag([puzzle, name], ev);
+                    this.startDrag([group, name], ev);
                 })
             }
             return div
@@ -352,6 +618,7 @@ class AtlasOfMosaics {
         let hyperbolic = document.getElementById("hyperbolic-navigation")!
         hyperbolic.addEventListener("pointerup", (ev: PointerEvent) => {
             if (this.activeTile === undefined) return;
+            note.innerHTML = HEPTAGON_MESSAGES.get(this.activeTile[0])!;
             note.setAttribute("style", "");
             window.clearTimeout(this.noteTimeout);
             this.noteTimeout = window.setTimeout(() => {
@@ -370,7 +637,7 @@ class AtlasOfMosaics {
         }
         if (this.activePuzzle !== undefined) {
             this.covers.get(this.activePuzzle)!.setAttribute("style", "");
-            this.tileSidebars.get(this.activePuzzle)!.setAttribute("style", "display: none;")
+            this.tileSidebars.get(PUZZLE_TILE_GROUPS.get(this.activePuzzle)!)!.setAttribute("style", "display: none;")
         }
         this.activePuzzle = name
         this.sidebar.setAttribute("style", name === undefined ? "display: none;" : "");
@@ -378,7 +645,7 @@ class AtlasOfMosaics {
         this.title.children[1].innerHTML = name === undefined ? "&nbsp;" : PUZZLE_NAMES.get(name)![1];
         if (this.activePuzzle !== undefined) {
             this.covers.get(this.activePuzzle)!.setAttribute("style", "display: none;");
-            this.tileSidebars.get(this.activePuzzle)!.setAttribute("style", "")
+            this.tileSidebars.get(PUZZLE_TILE_GROUPS.get(this.activePuzzle)!)!.setAttribute("style", "")
             this.title.classList.add("sticky")
         } else {
             this.title.classList.remove("sticky")
@@ -415,8 +682,11 @@ class AtlasOfMosaics {
         if (this.activeTile === undefined) return;
         let tile = this.tiles.get(this.activeTile[0])!.get(this.activeTile[1])!;
         tile.setLeft(tile.left + 1);
-        if (offset !== undefined) 
-            this.addTile(offsetToGridPos(offset), this.activeTile);
+        if (offset !== undefined) {
+            let gridPos = offsetToGridPos(offset);
+            if (FILLABLE.get(gridPos.toString()))
+                this.addTile(gridPos, this.activeTile);
+        }
         this.draggedTile.setAttribute("style", "display: none;");
         this.activeTile = undefined;
     }
@@ -433,7 +703,7 @@ class AtlasOfMosaics {
     }
 
     addTile(gridPos: R2, tileName: TileName) {
-        if (ATLAS_GRID_INV.get(gridPos.toString()) !== tileName[0]) return;
+        if (this.activePuzzle === undefined || ATLAS_GRID_INV.get(gridPos.toString()) !== this.activePuzzle) return;
         this.removeTile(gridPos, false);
         let tileData = this.tiles.get(tileName[0])!.get(tileName[1])!;
         tileData.setLeft(tileData.left - 1);
@@ -449,14 +719,18 @@ class AtlasOfMosaics {
     updateCorrect() {
         if (this.activePuzzle === undefined) {
             this.title.classList.remove("correct");
+            this.sidebar.classList.remove("correct");
             return;
         }
         let correctFilling = Array.from(CORRECT_FILLINGS.get(this.activePuzzle)!.entries());
         let correct = correctFilling.every(([pos, tile]) => this.filling.get(pos)?.[0]?.[1] === tile);
-        if (correct)
+        if (correct) {
             this.title.classList.add("correct");
-        else
+            this.sidebar.classList.add("correct");
+        } else {
             this.title.classList.remove("correct");
+            this.sidebar.classList.remove("correct");
+        }
         this.title.children[1].innerHTML = PUZZLE_NAMES.get(this.activePuzzle)![1] + (correct ? " (solved)" : "");
     }
 

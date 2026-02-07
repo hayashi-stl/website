@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="88.602608"
+   height="102.30948"
+   viewBox="0 0 23.442773 27.069383"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-733.54548,-255.98491)">
+    <g
+       id="fence_56123"
+       transform="translate(351.481,70.4128)">
+      <path
+         id="path646"
+         style="color:#000000;fill:#cc6600;fill-opacity:1;-inkscape-stroke:none"
+         d="m 382.32891,205.72131 2.11657,1.22271 1.7e-4,-7e-4 7.22351,4.17088 2.11674,1.22201 2.11638,-1.22189 9.3404,-5.39267 7e-5,-2.44418 -11.45722,6.61485 -9.34024,-5.3929 -2e-5,-10.78489 9.34042,-5.3927 11.45699,6.61491 -1.8e-4,-2.4446 -11.45675,-6.61446 -2.1168,1.22212 -7.22359,4.17055 -2.1164,1.22189 -6e-5,2.44416 -10e-5,8.34144 z" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#aa5500;stroke-width:0.925064;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="path647"
+         d="m 102.21416,109.04086 -20.028223,-11.563293 0,-23.126596 20.028223,-11.563299 20.02822,11.563298 0,23.126596 z"
+         transform="matrix(0.572033,0,0,0.572033,335.316,149.961)" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.96875px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+         x="393.80368"
+         y="200.40028"
+         id="text647"><tspan
+           id="tspan647"
+           style="font-weight:bold;font-size:3.96875px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583;paint-order:normal"
+           x="393.80368"
+           y="200.40028">torture</tspan></text>
+    </g>
+  </g>
+</svg>

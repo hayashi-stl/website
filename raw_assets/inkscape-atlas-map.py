@@ -100,9 +100,11 @@ def rename_and_print_tile_info(shapes, group = None):
     alignment = grid_alignment(hex_pos, top_left, size)
     hex_map = {tuple(int(c) for c in grid_pos_hex(pos, top_left, size)): hex for pos, hex in zip(hex_pos, hexagons)}
     rename = group != None
+    text_pos = [grid_pos(Vector2d(text.bounding_box().center), top_left, size, alignment) for text in texts]
+    text_with_pos = sorted(zip(text_pos, texts), key=lambda x: tuple(x[0])[::-1])
     print("[")
-    for text in texts:
-        pos = grid_pos(Vector2d(text.bounding_box().center), top_left, size, alignment)
+    for pos, text in text_with_pos:
+        #pos = grid_pos(Vector2d(text.bounding_box().center), top_left, size, alignment)
         split = text.get_inkex_object().get_text().split(":")
         hex = hex_map[tuple(int(c) for c in pos)]
         if not rename:
@@ -114,4 +116,6 @@ def rename_and_print_tile_info(shapes, group = None):
         print(f'    ["{split[0]}", ["{id}", {limit}]],')
     print("]")
 
-rename_and_print_tile_info(selected_shapes(), None)
+#print_map(selected_shapes())
+#print_correct_answer(selected_shapes())
+rename_and_print_tile_info(selected_shapes(), "tortured-half")
