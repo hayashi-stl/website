@@ -14,7 +14,7 @@ prop.type = (fold) ->
     fold["file_stl:type"] ? "crease-pattern"
 
 prop.convert = (fold) ->
-    fold["file_stl:convert"] ? false
+    fold["file_stl:convert"] ? true
 
 grid_regex = /^(?<type>(\w|-)+)( (?<params>.*))?$/
 box_params_regex = /^(?<partials>\d+)$/
@@ -67,6 +67,8 @@ prop.add_vertices_exact_coords = (fold, factor, grid) ->
 prop.vertices_exact_coords = (fold) ->
     coords = fold["vertices_exact:coords"]
     basis = fold["frame_exact:basis"]
+    if coords == undefined then return undefined
+
     exact = coords.map((v) ->
         v.map((c) ->
             coeffs = c.map((coeff) -> 
@@ -83,14 +85,18 @@ prop.vertices_exact_coords = (fold) ->
 
 prop.vertices_evaluated_coords = (fold, include_factor) ->
     exact = prop.vertices_exact_coords fold
-    basis = exact.basis.map (b) -> mathjs.evaluate(b)
-    factor = fold["file_stl:coord_factor"]
-    evaluated = exact.coords.map((v) ->
-        v.map((c) ->
-            result = 0.0
-            for i in [0...c.length]
-                result += basis[i] * c[i].valueOf()
-            if include_factor then result = result * factor[1] / factor[0]
-            result
-            ))
+    factor = fold["file_stl:coord_factor"] ? [1.0, 50.0]
+    evaluated = if exact == undefined
+        fold["vertices_coords"].map((v) ->
+            v.map((c) -> c * (if include_factor then 1 else factor[0] / factor[1])))
+    else
+        basis = exact.basis.map (b) -> mathjs.evaluate(b)
+        exact.coords.map((v) ->
+            v.map((c) ->
+                result = 0.0
+                for i in [0...c.length]
+                    result += basis[i] * c[i].valueOf()
+                if include_factor then result = result * factor[1] / factor[0]
+                result
+                ))
     evaluated
