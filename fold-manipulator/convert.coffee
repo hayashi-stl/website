@@ -19,10 +19,12 @@ convert.to_svg = (fold, display) ->
     assignment_map =
         B: "boundary",
         M: "mountain",
-        V: "valley"
+        V: "valley",
+        C: "cut",
     coords = prop.vertices_evaluated_coords fold, false
     ev = fold.edges_vertices
     ea = fold.edges_assignment
+    efa = fold.edges_foldAngle
     min = coords.reduce (acc, curr) -> [Math.min(acc[0], curr[0]), Math.min(acc[1], curr[1])]
     max = coords.reduce (acc, curr) -> [Math.max(acc[0], curr[0]), Math.max(acc[1], curr[1])]
     view_width = max[0] - min[0]
@@ -46,9 +48,13 @@ convert.to_svg = (fold, display) ->
                 .rule ".mountain", {stroke: "#f00"}
                 .rule ".valley", {stroke: "#00f"}
                 .rule ".boundary", {stroke: if display then "#fff" else "#000"}
+                .rule ".cut", {stroke: "#0f0"}
             for i in [0...ea.length]
-                svg.line coords[ev[i][0]][0], coords[ev[i][0]][1], coords[ev[i][1]][0], coords[ev[i][1]][1]
+                line = svg.line coords[ev[i][0]][0], coords[ev[i][0]][1], coords[ev[i][1]][0], coords[ev[i][1]][1]
                     .addClass(assignment_map[ea[i]])
+                angle = Math.abs(efa[i]) / 180.0
+                if angle != 0
+                    line.css("opacity", angle)
 
         when "flat-folded-state"
             svg.style()

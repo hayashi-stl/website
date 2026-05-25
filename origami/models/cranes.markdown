@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Origami
-permalink: /origami/models/
+title: Origami Crane Variants
+permalink: /origami/models/cranes/
 ---
   
-Models!
-
-I also have a collection of [crane variants](cranes/).
+Cranes!
 
 <div class="ori-model-display">
-{% assign models = site.pages | where_exp: "item", "item.page-type == 'ori-model'" %}
+{% assign models = site.pages | where_exp: "item", "item.page-type == 'ori-tsuru-model'" | sort: "index" %}
 {% for model in models %}
     <div>
         <div class="ori-model-title"><a href="{{ model.url | relative_url }}">{{ model.title }}</a></div>
