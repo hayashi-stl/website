@@ -4,7 +4,8 @@ page-type: ori-tsuru-model
 thumbnail: crane.jpg
 index: 18
 title: "#18: Different-Color-Wing Crane"
-japanese-title: "ツバサベッショクヅル (翼別色鶴)"
+japanese-title: "ハベッショクヅル (羽別色鶴)"
+comments-id:  "ori-tsuru-0018"
 date: 2025-07-04
 description: "The wings are a different color"
 ---

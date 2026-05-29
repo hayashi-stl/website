@@ -20,6 +20,7 @@ convert.to_svg = (fold, display) ->
         B: "boundary",
         M: "mountain",
         V: "valley",
+        F: "flat",
         C: "cut",
     coords = prop.vertices_evaluated_coords fold, false
     ev = fold.edges_vertices
@@ -47,6 +48,7 @@ convert.to_svg = (fold, display) ->
                 .rule "line", {strokeWidth: thickness}
                 .rule ".mountain", {stroke: "#f00"}
                 .rule ".valley", {stroke: "#00f"}
+                .rule ".flat", {stroke: if display then "#066" else "#0aa"}
                 .rule ".boundary", {stroke: if display then "#fff" else "#000"}
                 .rule ".cut", {stroke: "#0f0"}
             for i in [0...ea.length]

@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 19
 title: "#19: Big Crane"
 japanese-title: "デカヅル (大鶴)"
+comments-id:  "ori-tsuru-0019"
 date: 2025-07-05
 description: "This one's *big*"
 ---

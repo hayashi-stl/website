@@ -3,7 +3,7 @@ layout: page
 page-type: ori-model
 thumbnail: tadashi.jpg
 title: 正
-comments-id:  "ori-tadashi"
+comments-id: "ori-tadashi"
 date: 2025-06-18 18:38:00 -0400
 description: "A kanji made of just horizontal and vertical rectangles"
 ---

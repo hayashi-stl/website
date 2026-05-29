@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 13
 title: "#13: Crease Pattern Crane"
 japanese-title: "オリセンパターンヅル (折り線模様鶴, 折線模様鶴)"
+comments-id:  "ori-tsuru-0013"
 date: 2025-06-27
 description: "A crane that shows its crease pattern"
 ---

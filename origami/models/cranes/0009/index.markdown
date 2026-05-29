@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 9
 title: "#9: Pop-Up Crane"
 japanese-title: "トビダシヅル (飛び出し鶴, 飛出鶴)"
+comments-id:  "ori-tsuru-0009"
 date: 2025-06-20
 description: "This one pops out at you!"
 ---

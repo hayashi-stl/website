@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 15
 title: "#15: Four-Winged Crane"
 japanese-title: "シヨウヅル (四翼鶴)"
+comments-id:  "ori-tsuru-0015"
 date: 2025-07-01
 description: "A crane with four wings"
 ---

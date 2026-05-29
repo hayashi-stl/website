@@ -5,6 +5,7 @@ thumbnail: family.jpg
 index: 7
 title: "#7-8: One-Cut Crane Family"
 japanese-title: "イットウギリヅル属 (一刀切り鶴属, 一刀切鶴属)"
+comments-id:  "ori-tsuru-0007"
 date: 2025-06-20
 description: "A crane resulting from one cut"
 redirect_from:
@@ -13,11 +14,11 @@ redirect_from:
 <div class="figrow">
     <figure>
         <img style="max-width: 400px;" src="crane.jpg">
-        <figcaption>#7: One-Cut Crane</figcaption>
+        <figcaption>#7: One-Cut Crane / イットウギリヅル</figcaption>
     </figure>
     <figure>
         <img style="max-width: 400px;" src="hole.jpg">
-        <figcaption>#8: One-Cut Hole Crane</figcaption>
+        <figcaption>#8: One-Cut Hole Crane / イットウギリアナヅル</figcaption>
     </figure>
     <figure>
         {% fold %} <img style="max-width: 400px;" src="crane.fold"> {% endfold %}

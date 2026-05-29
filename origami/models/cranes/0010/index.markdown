@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 10
 title: "#10: Rainbow Crane"
 japanese-title: "ニジヅル (虹鶴)"
+comments-id:  "ori-tsuru-0010"
 date: 2025-06-22
 description: "A crane with all the colors"
 ---

@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 5
 title: "#5: Flattened Crane"
 japanese-title: "ペッタンヅル (平坦鶴)"
+comments-id:  "ori-tsuru-0005"
 date: 2025-06-19
 description: "A crane that's been squished flat"
 ---

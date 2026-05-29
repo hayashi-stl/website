@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 14
 title: "#14: Tail Front-and-Back Crane"
 japanese-title: "ゼンゴオヅル (前後尾鶴)"
+comments-id:  "ori-tsuru-0014"
 date: 2025-07-01
 description: "A crane with no head"
 ---

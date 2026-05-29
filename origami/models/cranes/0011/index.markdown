@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 11
 title: "#11: Crumpled Crane"
 japanese-title: "クシャクシャヅル (皺々鶴)"
+comments-id:  "ori-tsuru-0011"
 date: 2025-06-27
 description: "The most unelegant crane ever"
 ---

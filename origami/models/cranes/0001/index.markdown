@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 1
 title: "#1: Regular Crane"
 japanese-title: "ツウジョウヅル (通常鶴)"
+comments-id:  "ori-tsuru-0001"
 date: 2025-06-18
 description: "The traditional crane everyone knows and loves. No modifications at all."
 ---

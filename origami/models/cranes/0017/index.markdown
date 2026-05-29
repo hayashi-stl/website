@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 17
 title: "#17: Tiny Crane"
 japanese-title: "ビショウヅル (微小鶴)"
+comments-id:  "ori-tsuru-0017"
 date: 2025-07-04
 description: "A crane shown in two colors"
 ---

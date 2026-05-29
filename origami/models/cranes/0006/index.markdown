@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 6
 title: "#6: Head Front-and-Back Crane"
 japanese-title: "ゼンゴアタマヅル (前後頭鶴)"
+comments-id:  "ori-tsuru-0006"
 date: 2025-06-20
 description: "The front and back side are both heads"
 ---

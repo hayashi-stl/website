@@ -5,7 +5,8 @@ thumbnail: crane.jpg
 index: 20
 title: "#20: Orthogonal Maze Crane"
 japanese-title: "チョッコウメイロヅル (直交迷路鶴)"
-date: 2025-07-05
+comments-id:  "ori-tsuru-0020"
+date: 2025-07-06
 description: "A crane that looks more like a maze"
 ---
 <div class="figrow">

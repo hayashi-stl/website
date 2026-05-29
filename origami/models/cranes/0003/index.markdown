@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 3
 title: "#3: Small Crane"
 japanese-title: "チビヅル (小鶴)"
+comments-id:  "ori-tsuru-0003"
 date: 2025-06-19
 description: "A smaller crane"
 ---

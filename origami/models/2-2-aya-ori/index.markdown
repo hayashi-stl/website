@@ -2,7 +2,8 @@
 layout: page
 page-type: ori-model
 thumbnail: 2-2-aya-ori.jpg
-title: (2,2)-aya-ori (Twill)
+title: (2,2)-Twill
+japanese-title: (2,2)-綾織り
 comments-id:  "ori-(2,2)-aya-ori"
 date: 2025-08-17 23:19:00 -0400
 description: "A weave based on the herringbone tessellation"

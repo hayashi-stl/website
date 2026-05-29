@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 16
 title: "#16: Color Change Crane"
 japanese-title: "インサイドアウトヅル (インサイドアウト鶴)"
+comments-id:  "ori-tsuru-0016"
 date: 2025-07-02
 description: "A crane shown in two colors"
 ---

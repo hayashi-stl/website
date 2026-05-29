@@ -3,6 +3,7 @@ layout: page
 page-type: ori-model
 thumbnail: pi.jpg
 title: π
+comments-id: "ori-pi"
 date: 2025-07-05 01:16:00 -0400
 description: "A rectangular design with some shaping involved"
 ---

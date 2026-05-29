@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 12
 title: "#12: Broad-Wing Dollar Crane"
 japanese-title: "ツバサビロドルヅル (翼広米札鶴)"
+comments-id:  "ori-tsuru-0012"
 date: 2025-06-25
 description: "A crane worth $1"
 ---

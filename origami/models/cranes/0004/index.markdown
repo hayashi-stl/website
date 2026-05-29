@@ -5,6 +5,7 @@ thumbnail: crane.jpg
 index: 4
 title: "#4: Transparent Crane"
 japanese-title: "トウメイヅル (透明鶴)"
+comments-id:  "ori-tsuru-0004"
 date: 2025-06-19
 description: "A crane that you can see through"
 ---
