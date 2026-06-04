@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98112738"
-     inkscape:cx="2179.1258"
-     inkscape:cy="-775.63833"
+     inkscape:cx="2188.2989"
+     inkscape:cy="-751.17667"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -97,7 +97,10 @@
     <path
        id="path184"
        style="fill:#0000cc;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 633.13705 -229.99991 L 600.00005 -150.00014 L 640.00019 -166.56864 L 640.00019 -169.99995 L 660.00001 -169.99995 L 660.00001 -179.99986 L 679.99982 -179.99986 L 679.99982 -189.99977 L 669.99991 -189.99977 L 669.99991 -200.00019 L 660.00001 -200.00019 L 660.00001 -210.0001 L 650.0001 -210.0001 L 650.0001 -220 L 640.00019 -220 L 640.00019 -223.13676 L 633.13705 -229.99991 z " />
+       d="M 633.13705 -229.99991 L 600.00005 -150.00014 L 640.00019 -166.56864 L 640.00019 -169.99995 L 660.00001 -169.99995 L 660.00001 -179.99986 L 679.99982 -179.99986 L 679.99982 -189.99977 L 669.99991 -189.99977 L 669.99991 -200.00019 L 660.00001 -200.00019 L 660.00001 -210.0001 L 650.0001 -210.0001 L 650.0001 -220 L 640.00019 -220 L 640.00019 -223.13676 L 633.13705 -229.99991 z "
+       inkscape:export-filename="../origami/models/color-change-numbers/abstraction.svg"
+       inkscape:export-xdpi="95.9"
+       inkscape:export-ydpi="95.9" />
     <path
        style="fill:#0000cc;stroke:none;stroke-width:0.25999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
        d="m 540,-230 v 20 h -9.99998 v 20 h -10.00001 v 29.99999 l -10,1e-5 v 10 h 10 v -10.00001 L 550,-160 v -10 h 20.00002 v -10 H 590 v -10 l -10,1e-5 V -200 h -9.99998 v -10 h -10.00001 v -10 L 550,-219.99999 V -230 Z"

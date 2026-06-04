@@ -10,7 +10,7 @@ tags: game video-game puzzle
     <style type="text/css">
         emph {
             font-weight: bold;
-            color: #a0a;
+            color: #d0d;
         }
     </style>
 </specific-style>
