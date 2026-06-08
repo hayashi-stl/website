@@ -94,7 +94,7 @@
        class="UnoptimicedTransforms"
        d="m 605.24239,348.80866 -1.26861,3.57829 c -0.0146,0.0389 -0.0334,0.0756 -0.0582,0.10886 l -2.17799,2.90763 c -0.0353,0.0479 -0.0806,0.0874 -0.13296,0.11585 l -1.36798,0.72932 -1.67376,2.47849 -0.31874,2.75494 c -0.006,0.0584 -0.0249,0.11438 -0.0547,0.16484 l -1.56063,2.55873 c -0.029,0.0466 -0.067,0.0868 -0.11192,0.11828 l -1.68197,1.20061 -1.78403,3.81961 0.40444,1.43396 c 0.0257,0.0888 0.0191,0.18392 -0.017,0.26907 l -1.74031,4.11719 c -0.0212,0.0492 -0.0521,0.0934 -0.0907,0.13061 l -4.47915,4.42414 -1.25457,8.6024 0.33315,1.38183" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
        d="m 581.24004,355.66805 -11.17523,25.20773"
        id="path113"
        part="handle_line_r"
@@ -105,20 +105,20 @@
        class="UnoptimicedTransforms"
        d="m 602.4474,348.80872 -0.84363,2.37779 -1.6714,2.23442 -1.02611,0.54832 c -0.31992,0.17164 -0.59318,0.41873 -0.79593,0.72021 l -1.7802,2.63854 c -0.20022,0.29568 -0.32715,0.63538 -0.36909,0.99019 l -0.27535,2.37193 -1.0713,1.75399 -1.40107,1.00107 c -0.31234,0.22264 -0.56192,0.52266 -0.72479,0.87031 l -1.89068,4.04625 c -0.22675,0.48651 -0.2696,1.03881 -0.12309,1.55529 l 0.23351,0.82166 -1.26463,2.98733 -4.26259,4.21395 c -0.3448,0.34133 -0.56897,0.78628 -0.63861,1.26686 l -1.28472,8.80519 c -0.0418,0.28183 -0.0295,0.56976 0.0368,0.84682 l 0.20337,0.84429 h 2.9193 l -0.33646,-1.39682 1.23869,-8.48911 4.43166,-4.37911 c 0.0572,-0.0552 0.10268,-0.12153 0.13475,-0.19452 l 1.74002,-4.11669 c 0.0543,-0.12768 0.064,-0.27069 0.0259,-0.40412 l -0.38584,-1.36329 1.72747,-3.69747 1.6446,-1.1738 c 0.0661,-0.0475 0.1218,-0.10806 0.16405,-0.17774 l 1.56091,-2.5589 c 0.0462,-0.0751 0.075,-0.159 0.0853,-0.2465 l 0.31386,-2.71316 1.61197,-2.38868 1.32573,-0.70679 c 0.0785,-0.0414 0.14722,-0.0995 0.20088,-0.1702 l 2.17774,-2.90768 c 0.0366,-0.0496 0.0659,-0.10448 0.0862,-0.16266 l 1.29311,-3.64717 z m 60.08892,0 1.36591,18.67016 -0.74155,7.70516 -1.17926,2.71988 c -0.0625,0.14261 -0.0684,0.30364 -0.0146,0.45023 l 1.15583,3.19357 -1.24789,1.50834 c -0.11369,0.13709 -0.16163,0.31745 -0.13135,0.493 l 0.2176,1.2895 c 0.0246,0.14164 0.0988,0.26967 0.20841,0.36221 l 3.82235,3.2162 0.58754,1.28616 h 3.11681 l -1.18262,-2.59326 c -0.13799,-0.30161 -0.34178,-0.56854 -0.5959,-0.78142 l -2.9896,-2.51444 0.60009,-0.72273 c 0.50313,-0.60922 0.64671,-1.43995 0.37747,-2.18328 l -0.97254,-2.68717 0.86375,-1.99295 c 0.0938,-0.21509 0.15321,-0.44303 0.17576,-0.67661 l 0.75744,-7.86614 c 0.0113,-0.12493 0.0129,-0.25037 0.005,-0.37562 l -1.3542,-18.50079 z" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
        d="m 677.8188,369.25432 -99.95412,0.003"
        id="path115"
        part="handle_line"
        sodipodi:nodetypes="cc"
        us_state="ga" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Dot)"
        d="m 678.74652,355.28156 2.96466,27.42147"
        id="path116"
        part="handle_line_l"
        us_state="ga" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#aa00aa;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="fill:none;fill-rule:evenodd;stroke:#dd00dd;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="path136"
        sodipodi:type="arc"
        sodipodi:cx="575.21558"
@@ -131,7 +131,7 @@
        d="m 578.59412,369.23836 a 3.3785961,3.3705764 0 0 1 -1.47962,2.80679 3.3785961,3.3705764 0 0 1 -3.16062,0.33891"
        sodipodi:open="true" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#aa00aa;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="fill:none;fill-rule:evenodd;stroke:#dd00dd;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="path138"
        sodipodi:type="arc"
        sodipodi:cx="680.2572"
@@ -145,35 +145,35 @@
        sodipodi:open="true" />
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
        x="578.41132"
        y="375.32709"
        id="text445"><tspan
          sodipodi:role="line"
          id="tspan445"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
          x="578.41132"
          y="375.32709">β</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
        x="676.11029"
        y="375.32709"
        id="text446"><tspan
          sodipodi:role="line"
          id="tspan446"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
          x="676.11029"
          y="375.32709">α</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
        x="627.63757"
        y="367.89474"
        id="text447"><tspan
          sodipodi:role="line"
          id="tspan447"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
          x="627.63757"
          y="367.89474">d</tspan></text>
   </g>

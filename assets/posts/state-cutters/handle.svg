@@ -148,26 +148,26 @@
    id="tspan451">d</tspan> + 3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
        x="627.00244"
        y="524.27759"
        id="text103"><tspan
          sodipodi:role="line"
          id="tspan103"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
          x="627.00244"
          y="524.27759">1.5 + 1.5·tan(<tspan
    style="font-style:italic"
    id="tspan449">α</tspan>/2)</tspan></text>
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
        d="m 612.41564,523.13546 -7.76467,5e-4"
        id="path103"
        part="handle_line_l"
        us_state="ga"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
        d="m 706.9802,523.24912 h -9.62952"
        id="path104"
        part="handle_line_l"
@@ -175,24 +175,24 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
        x="682.13086"
        y="524.27759"
        id="text104"><tspan
          sodipodi:role="line"
          id="tspan104"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#aa00aa;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#dd00dd;fill-opacity:1;stroke-width:0.264583"
          x="682.13086"
          y="524.27759">1.5 + 1.5·tan(<tspan
    style="font-style:italic"
    id="tspan450">β</tspan>/2)</tspan></text>
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
        d="m 604.39567,524.39856 v 25.39821"
        id="path105"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
        d="m 706.9802,524.39856 v 25.39821"
        id="path106"
        sodipodi:nodetypes="cc" />
@@ -208,17 +208,17 @@
          x="631.40192"
          y="564.94745">3</tspan></text>
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
        d="M 697.35068,549.79677 H 612.41564"
        id="path107"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
        d="M 699.39306,575.19498 H 611.98282"
        id="path108"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 0.529166;stroke-dashoffset:0;stroke-opacity:1"
        d="M 681.68971,567.57551 H 629.68616"
        id="path109"
        sodipodi:nodetypes="cc" />

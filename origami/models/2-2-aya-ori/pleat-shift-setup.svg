@@ -168,34 +168,34 @@
        id="text1347"><tspan
          sodipodi:role="line"
          id="tspan1347"
-         style="fill:#aa00aa;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
+         style="fill:#dd00dd;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
          x="871.16882"
          y="576.75836">1/2</tspan></text>
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
        d="M 875.15541,570.00002 V 580"
        id="path1348" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 890.00001,570.00002 H 873.26612"
        id="path1349" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 877.50693,580 H 870"
        id="path1350"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 880,575.5465 V 570"
        id="path1351"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle)"
        d="M 910,572.77325 H 880"
        id="path1352"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa00aa;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#dd00dd;stroke-width:0.26;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 910,590 V 571.82823"
        id="path1353"
        sodipodi:nodetypes="cc" />
@@ -207,7 +207,7 @@
        id="text1353"><tspan
          sodipodi:role="line"
          id="tspan1353"
-         style="fill:#aa00aa;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
+         style="fill:#dd00dd;fill-opacity:1;stroke-width:0.26;stroke-dasharray:none"
          x="894.41791"
          y="576.51617">3/2</tspan></text>
   </g>
