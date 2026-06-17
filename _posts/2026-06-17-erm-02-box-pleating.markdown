@@ -3,7 +3,7 @@ layout: post
 page-type: post
 title:  "Edge River Method Part 2 of ???: Box Pleating"
 comments-id:  "Edge River Method Part 2 of ???: Box Pleating"
-date:   2026-06-08 01:30:00 -0400
+date:   2026-06-17 00:00:00 -0400
 tags: origami design erm
 ---
 <script>
