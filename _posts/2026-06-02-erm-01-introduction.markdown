@@ -6,6 +6,13 @@ comments-id:  "Edge River Method Part 1 of ???: Introduction"
 date:   2026-06-07 23:30:00 -0400
 tags: origami design erm
 ---
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: {'[+]': [['$', '$']]}
+        }
+    };
+</script>
 
 ## Fundamentals
 
@@ -94,9 +101,9 @@ infinitely dense folds, there are only 3 types of regions: lakes, rivers, and la
 </div>
 
 Let's look at what lakes, rivers, and lands do in this ideal model:
-* Lakes are regions that map directly to the abstraction and don't collapse. A point inside a lake (e.g. point $$P$$) turns into a point in the abstraction.
-* Rivers are constant-width regions that collapse onto an edge in the abstraction. A line inside a river that is parallel to the river (e.g. line $$Q$$) turns into a point in the abstraction (specifically a point on some edge). Rivers contain infinitely dense creases, each one perpendicular to the flow of the river.
-* Lands are regions that collapse onto a single point in the abstraction. An entire land (e.g. region $$R$$) turns into a point in the abstraction (specifically a vertex).
+* Lakes are regions that map directly to the abstraction and don't collapse. A point inside a lake (e.g. point $P$) turns into a point in the abstraction.
+* Rivers are constant-width regions that collapse onto an edge in the abstraction. A line inside a river that is parallel to the river (e.g. line $Q$) turns into a point in the abstraction (specifically a point on some edge). Rivers contain infinitely dense creases, each one perpendicular to the flow of the river.
+* Lands are regions that collapse onto a single point in the abstraction. An entire land (e.g. region $R$) turns into a point in the abstraction (specifically a vertex).
 
 When you make the infinitely dense crimps on the rivers and the double infinitely dense all-directional crimps on the lands required to collapse this ideal ERM map, you get
 exactly the target abstraction. If you could actually do infinitely dense crimps, then this would be the end of it. Lakes! Rivers! Lands! The fundamental regions of ERM!
@@ -126,11 +133,11 @@ Unfortunately, you usually don't get so lucky. Consider the following ERM map, w
     </figure>
     <figure>
         <img style="max-width: 800px;" src="/assets/posts/erm-01-introduction/540-erm.svg">
-        <figcaption>The ERM map. Note land $$P$$ in the middle.</figcaption>
+        <figcaption>The ERM map. Note land $P$ in the middle.</figcaption>
     </figure>
 </div>
 
-Now let's try to draw a crease pattern for this map. The outer lands and rivers are easy, but land $$P$$ looks tricky.
+Now let's try to draw a crease pattern for this map. The outer lands and rivers are easy, but land $P$ looks tricky.
 Instead of using [Origamizer](https://erikdemaine.org/papers/Origamizer_SoCG2017/paper.pdf) since I'm not Tomohiro Tachi, let's try to do it more manually.
 A first attempt is shown below[^3d]:
 
@@ -177,7 +184,7 @@ We can keep twisting and twisting these waffle walls, and they'll get smaller an
         <img style="min-width: 600px; max-width: 600px;" src="/assets/posts/erm-01-introduction/540-beauty.svg">
         <figcaption>A coloring of the faces after an infinite number of waffle wall twists, where faces of the same color end up on the same face of the abstraction,
         and faces of different colors end up on different faces of the abstraction. Every point where a solid white line turns (except the boundary and the 6 turning points
-        close to it) maps to point $$P$$ (the center point).</figcaption>
+        close to it) maps to point $P$ (the center point).</figcaption>
     </figure>
 </div>
 
@@ -200,19 +207,19 @@ Consider the following ERM map, this time of an L.
     </figure>
     <figure>
         <img style="max-width: 400px;" src="/assets/posts/erm-01-introduction/L-abstraction-consequences.svg">
-        <figcaption>The abstraction again, with forced positions for $$P'$$ and $$R'$$. The shortest distance from $$P'$$ to $$R'$$ within the abstraction is greater than 2.</figcaption>
+        <figcaption>The abstraction again, with forced positions for $P'$ and $R'$. The shortest distance from $P'$ to $R'$ within the abstraction is greater than 2.</figcaption>
     </figure>
 </div>
 
 Now let's try to make a (finite!) crease pattern based on this ERM map.
-Let's mark points $$P_1$$ and $$P_2$$, which both map to $$P$$, and do something similar for points $$Q_1$$, $$Q_2$$, $$Q$$, $$R_1$$, $$R_2$$, and $$R$$. Let's assume
-that there is only one crease strictly between $$Q_1$$ and $$Q_2$$
-(otherwise bring $$P_2$$ and its corresponding points closer to $$P_1$$. Eventually you'll meet the assumption because there's only a finite number of creases.
-Also, note that the crease has to be vertical because creases should be parallel to rivers.), and say that it goes through $$Q'$$.
-We also mark points $$P'$$ and $$R'$$ where the crease would cross through lines $$\overline{P_1P_2}$$ and $$\overline{R_1R_2}$$, respectively. Note that the distance between
-$$P'$$ and $$R'$$ on the paper is 2. However, consider where $$P'$$ and $$R'$$ would end up. Line $$\overline{P_1P'}$$ on the paper must end up perpendicular to line $$\overline{PQ}$$
-on the abstraction, and similar for $$R$$. If we restrict the entire paper to the abstraction (so no waffle walls), $$P'$$ and $$R'$$ have their positions forced, specifically to
-be inset into the abstraction compared to points $$P$$ and $$R$$. This causes the distance between $$P'$$ and $$R'$$ to stretch, which is illegal, so this ERM map won't work.
+Let $P$ be a point in the middle of a segment forming the concavity and $R$ be a point in the middle of the other segment. We mark $P'$, $Q'$ and $R'$ on the paper,
+on a line perpendicular to the river, on the segments corresponding to $P$, $Q$, and $R$, respectively. We specifically choose them so that $Q'$ does *not* map to $Q$ exactly
+(which we can do, because there's only a finite number of creases).
+Because $P'$ and $R'$ are in the middle of a river, they must map to points separated perpendicularly from their respective segments[^handwave].
+The yellow lines in the figure on the right show where they could potentially end up. Now where does $Q'$ end up? The intersection of the white dotted regions
+shows where $Q'$ could end up
+without stretching the distance between $P'$ and $R'$. However, that intersection only contains $Q$! Since we specifically said that $Q'$ does not map to $Q$, this ERM
+map won't work.
 
 As an aside, if we *do* allow waffle walls, the above ERM map will work. Here's an example crease pattern:
 <div class="figrow">
@@ -226,7 +233,7 @@ can't limit the waffle wall zone to just small areas around vertices.
 As another aside, Soichiro Uchida made a software called [Orixa](https://orixa-gilt.vercel.app/) that can compute ERM maps and crease patterns for arbitrary polyominos
 (ones with holes are split first; abstractions must be "trees"!), but assumes that waffle walls are allowed. In the output, lakes are gray, rivers are blue, and lands are green.
 
-Thankfully, this time there's an easy fix that gets rid of the waffle walls completely. The problem is that the rivers corresponding to segments $$\overline{PQ}$$ and $$\overline{QR}$$
+Thankfully, this time there's an easy fix that gets rid of the waffle walls completely. The problem is that the rivers corresponding to segments $\overline{PQ}$ and $\overline{QR}$
 touch, causing a problem with stretching the paper. If we just make them not do that, the problem goes away. Behold:
 
 <div class="figrow">
@@ -263,11 +270,11 @@ Consider the following packing challenge, involving making an L-tromino.
 </div>
 
 We want to pack the abstraction with the lakes in the specific places shown above. (Perhaps it's part of a bigger model and due to tight constraints these lake positions are
-pretty much forced.) When we draw rivers from each edge, we have a problem: there's seemingly no space for river $$\overline{QR}$$. Is this challenge impossible?
+pretty much forced.) When we draw rivers from each edge, we have a problem: there's seemingly no space for river $\overline{QR}$. Is this challenge impossible?
 
-No. Notice that river $$\overline{PQ}$$ and river $$\overline{QR}$$ here can be seen as one big river of width 2. But it doesn't particularly need to have width 2. The distance
-from $$P$$ to $$R$$ in the abstraction is $$\sqrt{2}$$, so as long as the edges of the big river stay $$\sqrt{2}$$ apart, things should be fine. But river $$\overline{PQ}$$
-and river $$\overline{QR}$$ must have width 1, so how do we resolve this?
+No. Notice that river $\overline{PQ}$ and river $\overline{QR}$ here can be seen as one big river of width 2. But it doesn't particularly need to have width 2. The distance
+from $P$ to $R$ in the abstraction is $\sqrt{2}$, so as long as the edges of the big river stay $\sqrt{2}$ apart, things should be fine. But river $\overline{PQ}$
+and river $\overline{QR}$ must have width 1, so how do we resolve this?
 
 <div class="figrow">
     <figure>
@@ -280,10 +287,10 @@ and river $$\overline{QR}$$ must have width 1, so how do we resolve this?
     </figure>
 </div>
 
-We can just make the rivers overlap! We overlap the rivers so that the shortest distance between $$P$$ and $$R$$ on the paper is $$\sqrt{2}$$, satisfied by $$P_1$$ and $$R_1$$.
+We can just make the rivers overlap! We overlap the rivers so that the shortest distance between $P$ and $R$ on the paper is $\sqrt{2}$, satisfied by $P_1$ and $R_1$.
 To understand how overlapping rivers work, let's think back to the ideal model discussed in [Lakes, Rivers, and Lands](#lakes-rivers-and-lands), with infinite creases.
 The path of the river dictates what direction the creases should go (or you could say that the creases turn the river), but at the overlap these crease directions disagree,
-except along segment $$\overline{P_1R_1}$$, which seemingly leads to a contradiction: the rivers can't turn the way that they're drawn! However, the resolution here is simple:
+except along segment $\overline{P_1R_1}$, which seemingly leads to a contradiction: the rivers can't turn the way that they're drawn! However, the resolution here is simple:
 we don't draw any creases that would go through the overlap, except the one where they agree. A region that cannot have creases through it is a *lake*.
 This simplifies to the diagram on the right, where the overlap is replaced with
 two new lakes we didn't draw in the abstraction (but those lakes will just be hidden, so it's fine). A more formal proof that the overlap simplifies to those lakes
@@ -315,14 +322,14 @@ Now for another example of the use of overlapping rivers. This pattern often sho
     </figure>
 </div>
 
-Let's say that all the lakes are fixed, and that due to the greater context, river $$\overline{RS}$$ is also fixed (for example, segment $$\overline{RS}$$ could
-just be long, and thus even if it turns, you get an annoyingly narrow peninsula). The fix, is of course, to use overlapping rivers, but you can't just push river $$\overline{QR}$$
-closer to river $$\overline{PQ}$$[^push]. Instead, you have river $$\overline{PQ}$$ and river $$\overline{QR}$$ cross, effectively switching their positions!
+Let's say that all the lakes are fixed, and that due to the greater context, river $\overline{RS}$ is also fixed (for example, segment $\overline{RS}$ could
+just be long, and thus even if it turns, you get an annoyingly narrow peninsula). The fix, is of course, to use overlapping rivers, but you can't just push river $\overline{QR}$
+closer to river $\overline{PQ}$[^push]. Instead, you have river $\overline{PQ}$ and river $\overline{QR}$ cross, effectively switching their positions!
 
 <div class="figrow">
     <figure>
         <img style="max-width: 400px;" src="/assets/posts/erm-01-introduction/7'-erm-fixed.svg">
-        <figcaption>Fixing the map with overlapping rivers. There's a peninsula between river $$\overline{QR}$$ and $$\overline{RS}$$ but it's not drawn
+        <figcaption>Fixing the map with overlapping rivers. There's a peninsula between river $\overline{QR}$ and $\overline{RS}$ but it's not drawn
         to avoid confusion.</figcaption>
     </figure>
     <figure>
@@ -336,8 +343,8 @@ and then the river that it spits out *is* allowed to touch the other concavity-f
 no agreement on crease direction.) You can even make a nice sparse crease pattern since the peninsula (not drawn) is nice and wide, but let's leave that as an exercise.[^unfair]
 
 In the case where the rivers cross instead of simply overlapping, you do have to be careful about correspondences. In the diagram above that uses a backside lake, note that
-$$O'$$ and $$O$$ map to the same point, and $$R'$$ and $$R$$ map to the same point. When river $$\overline{QR}$$ "crosses" $$\overline{PQ}$$, the result is a backside lake that
-then spits out new rivers $$\overline{O'R'}$$ (*not* $$\overline{PQ}$$) and $$\overline{O'P}$$ (*not* $$\overline{QR}$$). This is important because of the rule that rivers must go
+$O'$ and $O$ map to the same point, and $R'$ and $R$ map to the same point. When river $\overline{QR}$ "crosses" $\overline{PQ}$, the result is a backside lake that
+then spits out new rivers $\overline{O'R'}$ (*not* $\overline{PQ}$) and $\overline{O'P}$ (*not* $\overline{QR}$). This is important because of the rule that rivers must go
 to either the sea or a lake edge that ends up in the same position as the one it came out of.
 
 In summary, if two rivers form a *convexity*, you can make them overlap a bit (or even have them cross), but it forces lakes to appear.
@@ -456,10 +463,12 @@ First, let's draw horizontal lines in the folded state and see what happens.
 [^fat]: I almost wanted to call it a *fat tree* instead because it still needs to be a tree (in a sense), just with thickness.
 [^nml]: If it were up to me I'd call it a *buffer zone*. *Peninsula* is a weird name for something that usually ends up being an island.
 [^3d]: I had to manually figure out the angles and such here with the help of Blender. Wouldn't it be cool if we had something like Oriedita, but 3D?
-[^waffle]: To see why, assume that every point on the paper ends up on the abstraction with a finite number of creases, and that every point on the abstraction is mapped to. Also assume that the paper boundary gets mapped to a closed curve around abstraction point $$P$$ and has winding number 1 around $$P$$. (Otherwise you can cheat by [strip folding](https://erikdemaine.org/papers/CGTA2000/paper.pdf). Also, I wanted to avoid using the word [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance) because it can be arbitrarily big since the paper is allowed to back up.) Now consider the set $$\mathcal{P}$$ of paper points that map to abstraction point $$P$$ (the 540° vertex). $$\mathcal{P}$$ must be finite, because there are only finitely many creases (and thus faces between them), and each face between creases can contain only one paper point mapping to $$P$$. The angle around each point in $$\mathcal{P}$$ is 360°, so no point in $$\mathcal{P}$$ can cover all 540° of $$P$$ by itself. Since it is impossible to wind around point $$P$$ without leaving the abstraction or going through all 540°, the winding number of the neighborhood of each point in $$\mathcal{P}$$ around $$P$$ is 0. Now take the convex hull of all the points in $$\mathcal{P}$$ (which has winding number 1 around $$P$$), and shrink that hull until there are no more points in $$\mathcal{P}$$ inside it. Every time you cross a point $$x$$ in $$\mathcal{P}$$, the winding number stays the same (that is, 1), because the neighborhood of $$x$$ has winding number 0. But now you have a region with winding number 1 around $$P$$ and no points that map to $$P$$, which means you cut the paper, a contradiction! (Note: if $$\mathcal{P}$$ was infinite, you could have an infinite number of $$\mathcal{P}$$ crossing events and never get to that contradiction.)
-[^waffle-2]: This escapes the proof because the 540° vertex in the 3-flap is structured in such a way that you can wind around it and *skip* some faces without leaving the abstraction.  For example, if the faces are ordered $$F$$, $$G$$, $$H$$, $$I$$, $$J$$, $$K$$, you can go $$F\to G\to H\to I\to F$$ (360°) without leaving the abstraction.
-[^overlap]: First, note that $$P_1$$ on the paper maps to $$P$$ in the abstraction, $$Q_1$$ and $$Q_2$$ both map to $$Q$$, and $$R_1$$ maps to $$R$$. $$\triangle P_1Q_1R_1$$ is congruent to $$\triangle PQR$$, so no creases are allowed through it. Similarly, no creases are allowed through $$\triangle P_1Q_2R_1$$. Since $$Q_1$$ and $$Q_2$$ map to the same point, there must be a crease on the perpendicular bisector of $$\overline{Q_1Q_2}$$, which happens to be right between $$\triangle P_1Q_1R_1$$ and $$\triangle P_1Q_2R_1$$. Thus, we get the lakes.
+[^waffle]: To see why, assume that every point on the paper ends up on the abstraction with a finite number of creases, and that every point on the abstraction is mapped to. Also assume that the paper boundary gets mapped to a closed curve around abstraction point $P$ and has winding number 1 around $P$. (Otherwise you can cheat by [strip folding](https://erikdemaine.org/papers/CGTA2000/paper.pdf). Also, I wanted to avoid using the word [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance) because it can be arbitrarily big since the paper is allowed to back up.) Now consider the set $\mathcal{P}$ of paper points that map to abstraction point $P$ (the 540° vertex). $\mathcal{P}$ must be finite, because there are only finitely many creases (and thus faces between them), and each face between creases can contain only one paper point mapping to $P$. The angle around each point in $\mathcal{P}$ is 360°, so no point in $\mathcal{P}$ can cover all 540° of $P$ by itself. Since it is impossible to wind around point $P$ without leaving the abstraction or going through all 540°, the winding number of the neighborhood of each point in $\mathcal{P}$ around $P$ is 0. Now take the convex hull of all the points in $\mathcal{P}$ (which has winding number 1 around $P$), and shrink that hull until there are no more points in $\mathcal{P}$ inside it. Every time you cross a point $x$ in $\mathcal{P}$, the winding number stays the same (that is, 1), because the neighborhood of $x$ has winding number 0. But now you have a region with winding number 1 around $P$ and no points that map to $P$, which means you cut the paper, a contradiction! (Note: if $\mathcal{P}$ was infinite, you could have an infinite number of $\mathcal{P}$ crossing events and never get to that contradiction.)
+[^waffle-2]: This escapes the proof because the 540° vertex in the 3-flap is structured in such a way that you can wind around it and *skip* some faces without leaving the abstraction.  For example, if the faces are ordered $F$, $G$, $H$, $I$, $J$, $K$, you can go $F\to G\to H\to I\to F$ (360°) without leaving the abstraction.
+[^overlap]: First, note that $P_1$ on the paper maps to $P$ in the abstraction, $Q_1$ and $Q_2$ both map to $Q$, and $R_1$ maps to $R$. $\triangle P_1Q_1R_1$ is congruent to $\triangle PQR$, so no creases are allowed through it. Similarly, no creases are allowed through $\triangle P_1Q_2R_1$. Since $Q_1$ and $Q_2$ map to the same point, there must be a crease on the perpendicular bisector of $\overline{Q_1Q_2}$, which happens to be right between $\triangle P_1Q_1R_1$ and $\triangle P_1Q_2R_1$. Thus, we get the lakes.
 [^diagrammers]: Well, I don't think there's that many, especially ones that use overlapping rivers
 [^push]: Well, technically you could, but it makes things inconvenient, and you either get a narrow peninsula or lots of lakes.
 [^unfair]: I guess it's an unfair exercise, since I didn't explain how to turn an ERM map into a crease pattern.
 [^alternating]: They technically don't need to alternate, but if you don't know what you're doing you'll run into self-intersection hell.
+[^handwave]: This proof is a little handwavy (specifically the assumption that $P'$ and $R'$ must be separated perpendicularly to their respective segments) because of
+potential diagonal creases, but I haven't found a good rigorous way to do it.

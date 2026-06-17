@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="8.6874027cm"
+   height="6.8706102cm"
+   viewBox="0 0 86.874027 68.706102"
+   version="1.1"
+   id="svg8"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ns1="http://www.iki.fi/pav/software/textext/"><defs
+     id="defs2" /><metadata
+     id="metadata5"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
+     id="layer1"
+     transform="translate(-816.56293,-85.646858)"><path
+       id="path1551"
+       style="display:inline;fill:#0066ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 883.38946,104.77706 -23.38927,15.22285 -23.38926,15.22284 19.95847,18.96525 23.38927,-15.22284 23.38875,-15.22285 z" /><path
+       id="path1510"
+       style="display:inline;fill:#0066ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 863.43099,85.811814 -23.38927,15.222846 -23.38926,15.22284 19.95847,18.96525 23.38927,-15.22284 23.38875,-15.22285 z" /><g
+       transform="matrix(0.683793,-0.430557,0.00409633,0.725432,835.95483,120.95527)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf C}'$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="1.9999999908302684"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g1599"
+       ns1:jacobian_sqrt="0.7055558285010549"
+       style="stroke-width:0"><defs
+   id="id-591b0cc2-010a-4a4b-baee-178e3894cfe0"
+   style="stroke-width:0" />
+  <g
+   id="id-d61f8b3c-9b52-47e0-9a81-14e1c9f84327"
+   transform="translate(-148.711,-126.418)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-9caa1b13-cc66-4774-a2d9-e0ac108ceb0b">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g1594"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 5.796875,-1.140625 C 5.21875,-0.75 4.875,-0.53125 3.890625,-0.53125 c -1.4375,0 -2.328125,-1.5 -2.328125,-2.9375 0,-1.359375 0.8125,-2.921875 2.34375,-2.921875 0.703125,0 1.15625,0.171875 1.703125,0.515625 L 5.75,-6.6875 C 5.328125,-6.890625 4.5625,-7.03125 3.921875,-7.03125 c -1.84375,0 -3.265625,1.5625 -3.265625,3.65625 0,1.578125 1.1875,3.484375 3.265625,3.484375 0.90625,0 1.296875,-0.15625 1.9375,-0.5625 z m 0,0"
+   id="id-c811a9af-1b85-4f1f-9045-a06986c7059e" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.366125"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-bd9d7a1d-265d-42b9-9aac-8024df5c74fa" />
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-27412535-8263-446c-af3e-c2329ae83454">
+      <g
+   transform="translate(155.077,130.309)"
+   id="g1595"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="m 2.015625,-3.296875 c 0.0625,-0.109375 0.0625,-0.171875 0.0625,-0.21875 0,-0.21875 -0.1875,-0.375 -0.40625,-0.375 -0.265625,0 -0.34375,0.21875 -0.375,0.328125 L 0.375,-0.546875 c -0.015625,0.015625 -0.046875,0.09375 -0.046875,0.109375 0,0.078125 0.21875,0.15625 0.28125,0.15625 0.046875,0 0.046875,-0.015625 0.09375,-0.125 z m 0,0"
+   id="id-27c1e935-6cba-48d7-b5b9-c669338cda45" />
+      </g></g>
+  </g>
+</g><g
+       id="path1609"
+       transform="matrix(0.85361048,-0.53367742,0,0.85361048,122.90503,468.42268)"
+       style="stroke-width:1.17149"><path
+         style="color:#000000;fill:#000000;stroke-width:1.17149;-inkscape-stroke:none"
+         d="m 840,119.73633 v 0.52734 h 10 v -0.52734 z"
+         id="path1613" /><g
+         id="g1610"
+         style="stroke-width:1.17149"><g
+           id="path1610"
+           style="stroke-width:1.17149"><path
+             style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:1.17149;-inkscape-stroke:none"
+             d="m 850.46831,120 -2.28864,1.32292 v -2.64584 z"
+             id="path1611" /><path
+             style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:1.17149;-inkscape-stroke:none"
+             d="m 848.00391,118.37109 v 3.25782 L 850.82031,120 Z m 0.35156,0.61133 1.76172,1.01758 -1.76172,1.01758 z"
+             id="path1612" /></g></g></g><path
+       id="path1516"
+       style="display:inline;fill:#0052cc;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 848.3054,127.6115 v -21.17715 l 23.3892,-15.223 v 21.17715 z" /><g
+       transform="matrix(0.683793,-0.430557,0.00409633,0.725432,858.33,106.397)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf C}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="1.9999999908302684"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g1589"
+       ns1:jacobian_sqrt="0.7055558285010549"
+       style="stroke-width:0"><defs
+   id="id-a6aa4b7d-614c-407e-ba77-2513eab3cc3f"
+   style="stroke-width:0" />
+  <g
+   id="id-c9cdba0a-fdb0-484f-bb39-18bf6394428f"
+   transform="translate(-148.711,-127.734)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-e78cc9de-3a1d-4801-a530-7094e2630e43">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g3256"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 5.796875,-1.140625 C 5.21875,-0.75 4.875,-0.53125 3.890625,-0.53125 c -1.4375,0 -2.328125,-1.5 -2.328125,-2.9375 0,-1.359375 0.8125,-2.921875 2.34375,-2.921875 0.703125,0 1.15625,0.171875 1.703125,0.515625 L 5.75,-6.6875 C 5.328125,-6.890625 4.5625,-7.03125 3.921875,-7.03125 c -1.84375,0 -3.265625,1.5625 -3.265625,3.65625 0,1.578125 1.1875,3.484375 3.265625,3.484375 0.90625,0 1.296875,-0.15625 1.9375,-0.5625 z m 0,0"
+   id="id-8084b8fe-e3e3-4efa-a4ca-0b8de274a113" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.366125"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-d0dc0f7a-3bfe-4217-ab75-a7c76e6016e5" />
+  </g>
+</g><g
+       transform="matrix(0.62245733,-0.384759,0.55099754,0.459161,864.0463,128.0643)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf B}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.00000000200069"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g1619"
+       ns1:jacobian_sqrt="0.7055560861108067"
+       style="stroke-width:0"><defs
+   id="id-16c20328-00d4-4e70-91d0-43415e50980b"
+   style="stroke-width:0" />
+  <g
+   id="id-e25eb561-535c-4b16-8694-f04ba22806f3"
+   transform="translate(-148.711,-127.843)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-b994e539-8480-4300-b602-90df1ffd383b">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g4802"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 0.96875,-6.921875 V 0 h 2.625 c 1.4375,0 2.484375,-0.890625 2.484375,-1.875 0,-0.859375 -0.859375,-1.578125 -1.921875,-1.75 0.90625,-0.21875 1.65625,-0.796875 1.65625,-1.5625 0,-0.90625 -1.0625,-1.734375 -2.484375,-1.734375 z m 0.828125,3.03125 v -2.46875 h 1.25 c 1.109375,0 1.984375,0.53125 1.984375,1.1875 0,0.59375 -0.703125,1.28125 -2.078125,1.28125 z m 0,3.328125 v -2.734375 h 1.4375 c 1.0625,0 2.046875,0.609375 2.046875,1.40625 0,0.75 -0.890625,1.328125 -1.96875,1.328125 z m 0,0"
+   id="id-5cc61d0d-ae80-49e8-b173-b194d184b215" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.643469"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-dd666b28-07ca-41f4-9815-48bb61ca2bfe" />
+  </g>
+</g><g
+       transform="matrix(0.622457,-0.384759,0.550998,0.459161,833.707,108.736)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf A}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.0000000059077876"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g1635"
+       ns1:jacobian_sqrt="0.7055561055359099"
+       style="stroke-width:0"><defs
+   id="id-4987f781-ef6e-4cb5-afca-18468c8d80f5"
+   style="stroke-width:0" />
+  <g
+   id="id-89f79416-ed5b-4b1d-b605-28af992eb649"
+   transform="translate(-148.711,-127.843)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-5749728e-7515-4140-a132-0246671db48b">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g7197"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 3.765625,-6.921875 H 2.875 L 0.28125,0 H 1.015625 L 1.78125,-2.03125 H 4.6875 L 5.4375,0 H 6.359375 Z M 4.46875,-2.59375 H 2 l 0.640625,-1.796875 c 0.203125,-0.59375 0.515625,-1.4375 0.59375,-1.8125 0.03125,0.140625 0.09375,0.390625 0.328125,1.046875 z m 0,0"
+   id="id-249fd830-627a-4cf8-a4e3-e55a623b12f3" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.643469"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-0c84e4dd-46be-4b1a-b245-cf152db9dbb1" />
+  </g>
+</g></g></svg>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="8.6873636cm"
+   height="7.4589992cm"
+   viewBox="0 0 86.873636 74.589992"
+   version="1.1"
+   id="svg8"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ns1="http://www.iki.fi/pav/software/textext/"><defs
+     id="defs2" /><metadata
+     id="metadata5"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
+     id="layer1"
+     transform="translate(-444.91046,-172.96399)"><path
+       id="path2441"
+       style="display:inline;fill:#0066ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 491.77831,179.01214 -23.38912,15.22322 19.95789,18.96527 19.95835,18.96525 23.38913,-15.22278 z" /><path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 511.73644,197.97762 -23.38909,15.22307"
+       id="path2447" /><path
+       id="path2440"
+       style="display:inline;fill:#003d99;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 468.38919,194.23536 v -21.17714 l 19.95816,18.96532 v 21.17715 z" /><path
+       id="path607"
+       style="display:inline;fill:#0066ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 468.38919,194.23536 -23.38918,15.223 19.95815,18.96533 23.38919,-15.223 z" /><path
+       id="path2442"
+       style="display:inline;fill:#0052cc;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 464.95816,228.42369 v -21.17715 l 23.38919,-15.223 v 21.17715 z" /><path
+       id="path2444"
+       style="display:inline;fill:#0066ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 488.34735,213.20069 -23.38919,15.223 19.95815,18.96532 23.38919,-15.223 z" /><g
+       transform="matrix(0.51486675,0.48241217,-0.61025514,0.39508235,494.54295,192.73288)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf A}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.0"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g2481"
+       ns1:jacobian_sqrt="0.705556"
+       style="display:inline"><defs
+   id="defs2477" />
+  <g
+   id="g2480"
+   transform="translate(-148.711,-127.843)">
+    <g
+   style="fill:#000000;fill-opacity:1"
+   id="g2479">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g2478"><path
+   style="stroke:none"
+   d="M 3.765625,-6.921875 H 2.875 L 0.28125,0 H 1.015625 L 1.78125,-2.03125 H 4.6875 L 5.4375,0 H 6.359375 Z M 4.46875,-2.59375 H 2 l 0.640625,-1.796875 c 0.203125,-0.59375 0.515625,-1.4375 0.59375,-1.8125 0.03125,0.140625 0.09375,0.390625 0.328125,1.046875 z m 0,0"
+   id="path2478" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.643469"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="path2479" />
+  </g>
+</g><g
+       transform="matrix(0.514867,0.482412,-0.610255,0.395082,510.814,212.254)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf B}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.0000000054878777"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g2486"
+       ns1:jacobian_sqrt="0.705555822847491"
+       style="stroke-width:0"><defs
+   id="id-e1d6323a-7341-4a9f-a615-8dd018c60fd8"
+   style="stroke-width:0" />
+  <g
+   id="id-e48263bc-ab8e-4d6a-b86d-ee05add0dba8"
+   transform="translate(-148.711,-127.843)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-c4ab4469-6c67-4ec3-ad1f-432b442ab3b5">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g917"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 0.96875,-6.921875 V 0 h 2.625 c 1.4375,0 2.484375,-0.890625 2.484375,-1.875 0,-0.859375 -0.859375,-1.578125 -1.921875,-1.75 0.90625,-0.21875 1.65625,-0.796875 1.65625,-1.5625 0,-0.90625 -1.0625,-1.734375 -2.484375,-1.734375 z m 0.828125,3.03125 v -2.46875 h 1.25 c 1.109375,0 1.984375,0.53125 1.984375,1.1875 0,0.59375 -0.703125,1.28125 -2.078125,1.28125 z m 0,3.328125 v -2.734375 h 1.4375 c 1.0625,0 2.046875,0.609375 2.046875,1.40625 0,0.75 -0.890625,1.328125 -1.96875,1.328125 z m 0,0"
+   id="id-f7a2df74-48a5-4275-a242-75ba3c0cf5c9" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.643469"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-dd15cc4f-d090-4ebf-b285-4015fa37f009" />
+  </g>
+</g><g
+       transform="matrix(0.514867,0.482412,-0.610255,0.395082,460.869,205.314)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf C}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.0000000054878777"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g2491"
+       ns1:jacobian_sqrt="0.705555822847491"
+       style="stroke-width:0"><defs
+   id="id-eb66efbe-36a0-4382-8d14-fc3b0dcf4ce9"
+   style="stroke-width:0" />
+  <g
+   id="id-f623ec0d-cd0b-4624-b805-c9bc08c85418"
+   transform="translate(-148.711,-127.734)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-0cd2935a-d7d8-4f5d-91de-87e1353f14d3">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g8911"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 5.796875,-1.140625 C 5.21875,-0.75 4.875,-0.53125 3.890625,-0.53125 c -1.4375,0 -2.328125,-1.5 -2.328125,-2.9375 0,-1.359375 0.8125,-2.921875 2.34375,-2.921875 0.703125,0 1.15625,0.171875 1.703125,0.515625 L 5.75,-6.6875 C 5.328125,-6.890625 4.5625,-7.03125 3.921875,-7.03125 c -1.84375,0 -3.265625,1.5625 -3.265625,3.65625 0,1.578125 1.1875,3.484375 3.265625,3.484375 0.90625,0 1.296875,-0.15625 1.9375,-0.5625 z m 0,0"
+   id="id-75851a31-a1be-4db2-9f73-359a6de0d3e1" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 6.366125"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-e8bef376-0339-4dca-bf99-33f4cfacfa85" />
+  </g>
+</g><g
+       transform="matrix(0.514867,0.482412,-0.610255,0.395082,488.143,226.235)"
+       ns1:version="1.10.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="inkscape"
+       ns1:text="$\\underline{\\sf D}$"
+       ns1:preamble="/home/hayastl/.config/inkscape/extensions/textext/default_packages.tex"
+       ns1:scale="2.0000000054878777"
+       ns1:alignment="middle center"
+       ns1:stroke-to-path="0"
+       ns1:inkscapeversion="1.3.2"
+       id="g2496"
+       ns1:jacobian_sqrt="0.705555822847491"
+       style="stroke-width:0"><defs
+   id="id-e5f1c6c7-1149-4d16-9c3b-a29ec9da9b86"
+   style="stroke-width:0" />
+  <g
+   id="id-f9302909-212c-461a-b0c5-c17b93c8eff7"
+   transform="translate(-148.711,-127.843)"
+   style="stroke-width:0">
+    <g
+   style="fill:#000000;fill-opacity:1;stroke-width:0"
+   id="id-f8e6b568-c467-4563-b8c3-e2e7ee8599d3">
+      <g
+   transform="translate(148.712,134.765)"
+   id="g2148"
+   style="stroke-width:0"><path
+   style="stroke:none;stroke-width:0"
+   d="M 0.953125,-6.921875 V 0 h 2.625 C 5.28125,0 6.625,-1.515625 6.625,-3.40625 6.625,-5.328125 5.28125,-6.921875 3.5625,-6.921875 Z M 1.8125,-0.5625 v -5.796875 h 1.53125 c 1.390625,0 2.421875,1.203125 2.421875,2.953125 0,1.703125 -1.03125,2.84375 -2.421875,2.84375 z m 0,0"
+   id="id-990b56b4-4994-4aaf-8ec0-e0d0be8d263e" />
+      </g></g>
+    <path
+   style="fill:none;stroke:#000000;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+   d="M -0.0010625,-0.00115625 H 7.19425"
+   transform="matrix(1,0,0,-1,148.712,136.159)"
+   id="id-77e7c6be-38ee-499e-ba4c-fb69ade3e994" />
+  </g>
+</g></g></svg>

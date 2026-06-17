@@ -322,7 +322,7 @@
        style="color:#000000;display:inline;fill:url(#linearGradient379);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 610,-50 v 5 h 5.00012 v -5 z"
        id="path375" /><path
-       style="color:#000000;display:inline;fill:url(#linearGradient378);fill-opacity:1;stroke:none;stroke-width:0.26;stroke-dasharray:none"
+       style="color:#000000;display:inline;fill:url(#linearGradient378);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 609.99995,-45.00164 10.00034,-2.3e-5 v -4.99831 h -5.00181 z"
        id="path376" /><path
        style="color:#000000;display:inline;fill:url(#linearGradient377);stroke:none;stroke-width:0.26;stroke-dasharray:none"
@@ -331,7 +331,7 @@
        style="color:#000000;display:inline;fill:url(#linearGradient375);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 609.99992,-14.999948 h 15.00009 v -14.999947 h -15.00009 z"
        id="path371" /><path
-       style="color:#000000;display:inline;fill:url(#linearGradient374);fill-opacity:1;stroke:none;stroke-width:0.26;stroke-dasharray:none"
+       style="color:#000000;display:inline;fill:url(#linearGradient374);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="M 624.99509,-14.99979 624.99502,-45 H 610 v 15.005018 z"
        id="path372" /><path
        style="color:#000000;display:inline;fill:url(#linearGradient373);stroke:none;stroke-width:0.26;stroke-dasharray:none"
@@ -352,7 +352,7 @@
        style="color:#000000;display:inline;fill:url(#linearGradient366);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 610.00003,19.997 h 10 l 5.00489,-10.00032 h -15.00489 z"
        id="path362" /><path
-       style="color:#000000;display:inline;fill:url(#linearGradient365);fill-opacity:1;stroke:none;stroke-width:0.26;stroke-dasharray:none"
+       style="color:#000000;display:inline;fill:url(#linearGradient365);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 625.00003,19.997 -1e-4,-25.00029 H 610.00011 V 10.0016 l 9.99992,9.9954 z"
        id="path363" /><path
        style="color:#000000;display:inline;fill:url(#linearGradient364);stroke:none;stroke-width:0.26;stroke-dasharray:none"
@@ -370,7 +370,7 @@
        style="color:#000000;display:inline;fill:url(#linearGradient356);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="M 639.9999,20 V 9.9966715 h 9.99994 V 20 Z"
        id="path352" /><path
-       style="color:#000000;display:inline;fill:url(#linearGradient355);fill-opacity:1;stroke:none;stroke-width:0.26;stroke-dasharray:none"
+       style="color:#000000;display:inline;fill:url(#linearGradient355);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="M 639.99979,9.9999475 656.66667,10 660,12.5 649.99657,19.999947 Z"
        id="path353" /><path
        style="color:#000000;display:inline;fill:url(#linearGradient357);stroke:none;stroke-width:0.26;stroke-dasharray:none"
@@ -409,7 +409,7 @@
        style="color:#000000;display:inline;fill:url(#linearGradient342);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 680,-50 h -10 l -5.00489,10.000318 H 680 Z"
        id="path338" /><path
-       style="color:#000000;display:inline;fill:url(#linearGradient341);fill-opacity:1;stroke:none;stroke-width:0.26;stroke-dasharray:none"
+       style="color:#000000;display:inline;fill:url(#linearGradient341);stroke:none;stroke-width:0.26;stroke-dasharray:none"
        d="m 665,-50 10e-5,25.000292 h 14.99982 V -40.004594 L 670,-50 Z"
        id="path339" /><path
        style="color:#000000;display:inline;fill:url(#linearGradient340);stroke:none;stroke-width:0.26;stroke-dasharray:none"
@@ -486,7 +486,7 @@
          id="tspan161"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
          x="617.45813"
-         y="-27.043585">G</tspan></text><text
+         y="-27.043585">F</tspan></text><text
        xml:space="preserve"
        style="font-size:3.8456px;line-height:1.25;font-family:Counter;-inkscape-font-specification:Counter;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#ffffff;stroke-width:0.264583"
        x="615"
@@ -495,7 +495,7 @@
          id="tspan162"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
          x="615"
-         y="-46.241444">F</tspan></text><circle
+         y="-46.241444">G</tspan></text><circle
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.26;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-opacity:1"
        id="path154"
        cx="680"
