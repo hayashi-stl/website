@@ -3,7 +3,7 @@ layout: post
 page-type: post
 title:  "Edge River Method Part 1 of ???: Introduction (and some Theory)"
 comments-id:  "Edge River Method Part 1 of ???: Introduction"
-date:   2026-06-07 23:30:00 -0400
+date:   2026-06-08 00:00:00 -0400
 tags: origami design erm
 ---
 <script>

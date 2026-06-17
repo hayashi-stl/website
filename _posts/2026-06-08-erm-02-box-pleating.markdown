@@ -41,18 +41,25 @@ Let's revisit an ERM map from the previous post:
 </div>
 
 Note that all rivers collapse to either a horizontal line or a vertical line[^line] in the abstraction, because we're in orthogonal box-pleated ERM.
-We can thus color-code the rivers by target direction. Because I like to
-think of river directions by the direction the river flows (so that a *horizontal river* "crosses" a lake horizontally), we will call a river that collapses to
-a vertical line a *horizontal river* or an *X-axis river* and a river that collapses to a horizontal line a *vertical river* or a *Y-axis river*.
+We can thus color-code the rivers. There's actually two ways to color-code the rivers[^color]. We can color-code
+rivers by target edge direction, or we can color-code rivers by flow direction. In 2D, this distinction doesn't matter (you just switch the colors), but
+in 3D, it's a very important distinction. We will call a river that collapses to
+a horizontal line a *horizontal river* or an *X-axis river* and a river that collapses to a vertical line a *vertical river* or a *Y-axis river*.
+We can also name rivers by flow direction, e.g. *horizontally-flowing river / X-flowing river* and *vertically-flowing river / Y-flowing river*.
 
 <div class="figrow">
     <figure>
-        <img style="max-width: 800px;" src="/assets/posts/erm-02-box-pleating/tadashi-erm-direction.svg">
-        <figcaption>The ERM map, with river directions color-coded</figcaption>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/tadashi-erm-direction.svg">
+        <figcaption>The ERM map, with river directions color-coded by target direction. The stripes are slightly shifted to show where rivers get reflected.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/tadashi-erm-flow-direction.svg">
+        <figcaption>The ERM map, with river directions color-coded by flow direction. Technically, stripes shouldn't change color along them, but we're simplifying.</figcaption>
     </figure>
 </div>
 
-Specifically, in this graphic, yellow rivers are vertical rivers and purple rivers are horizontal rivers. By the way, in the case of a 3D abstraction (that's still orthogonal), you
+Specifically, in the graphic on the left, yellow rivers are horizontal rivers and purple rivers are vertical rivers.
+By the way, in the case of a 3D abstraction (that's still orthogonal), you
 end up with 3 different directions:
 
 <div class="figrow">
@@ -60,13 +67,20 @@ end up with 3 different directions:
         <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-abstraction.svg">
         <figcaption>A 3D abstraction.</figcaption>
     </figure>
+</div>
+<div class="figrow">
     <figure>
         <img style="max-width: 800px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm.svg">
-        <figcaption>The ERM map. Note the 3 river colors.</figcaption>
+        <figcaption>The ERM map (by target direction). Note the 3 river colors.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 800px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-flow.svg">
+        <figcaption>The ERM map (by flow).</figcaption>
     </figure>
 </div>
 
 To avoid confusion, we won't call the cyan river a vertical river (that's a Y-axis river). We'll just call it a *Z-axis river*.
+By the way, this particular ERM map doesn't work, but we'll see why later in the [3D](#3d) section.
 
 Separating rivers by direction makes some things clearer and easier to see, which we'll get into later. For now, let's review the ERM design process:
 1. Come up with an abstraction. Keep in mind that waffle walls are inevitable if there's an internal point that must be winded more than 360° around.
@@ -324,14 +338,14 @@ a lake. This is still true in box pleating. The rectangle of the perpendicular c
 </div>
 
 This, in particular, means that you cannot cross a (positive-width) river through a river that already connects two edges that go to the same place, unless you then
-proceed to cross it back.[^cross-it-back]
+proceed to cross it back.
 
 I'm not aware of any valid crossing overlaps that aren't the perpendicular cross, so let's move on to the more complicated type:
 
 ### Hugging Overlaps
 
 In a *hugging overlap*, two rivers hug each other, and then separate. In ideal ERM, the far banks of the rivers (the ones not intersecting)
-can't get closer to each other than their corresponding points are in the final model. In other words, the minimum width of the hugging overlap must not be shorter
+can't get closer to each other than their corresponding points are in the final model. In other words, the minimum width of the hugging overlap (the *hug width*) must not be shorter
 than the final distance between the two points that the far banks correspond to. The box pleating condition is more complicated, and I still don't quite know it, but
 this rule is a good starting point.
 
@@ -367,7 +381,7 @@ it is not forced. Let's take a look at an incomplete perpendicular hug and the w
     </figure>
     <figure>
         <img style="max-width: 800px;" src="/assets/posts/erm-02-box-pleating/incomplete-perp-lakes.svg">
-        <figcaption><span markdown="1">Ways to turn an incomplete perpendicular hug into lakes[^turn-incomplete]. And there's intermediate ones as well.
+        <figcaption><span markdown="1">Ways to turn an incomplete perpendicular hug into lakes. And there's intermediate ones as well.
         We let a river seem to run into a diagonal lake edge for simplicity.</span></figcaption>
     </figure>
 </div>
@@ -389,7 +403,8 @@ the standard strategy of replacing overlapping rivers with lakes isn't the best 
     </figure>
 </div>
 
-We would like to instead treat this like a river of length 3, but we can't, because it's composed of two rivers that collapse to different directions. You usually
+We would like to instead treat this like a river of length 3, but we can't, because it's composed of two rivers that *flow* in different directions
+(*flow direction*, not target direction, though this only matters in 3D). You usually
 don't have a diagonal hinge cutting through the heart of a river like that. So we'll just revert back to overlapping river notation for the parallel part of the overlap:
 
 <div class="figrow">
@@ -428,7 +443,7 @@ To see why, let's look at the correspondences for the far banks in both cases:
 
 Because of the offset caused by separating the rivers by an odd distance, the far banks don't reach their extreme points at the same time, so there's a little extra lenience there.
 This can cause a paradox where scaling a valid box-pleated ERM map by a factor of 2 or more can make it invalid. Let's look at the smallest case of a parallel hug:
-a width-1 river overlapping a width-1 river, which is valid because the distance separation is -1 and $\sqrt{1^1 + 1} \ge \sqrt{2}$.
+a width-1 river overlapping a width-1 river, which is valid because the distance separation is -1 and $\sqrt{1^2 + 1} \ge \sqrt{2}$.
 
 <div class="figrow">
     <figure>
@@ -511,7 +526,7 @@ all that comes with.
 We touched quite a bit on this step in the previous section, but here, you take those overlaps, turn them into lakes, and deal with the consequences. As a review:
 * Perpendicular cross: turns into a rectangle-shaped lake.
 * Perpendicular hug (complete or incomplete): turns into a couple of right-isosceles-triangle-shaped lakes. Incomplete ones have other patterns; don't use them.
-* Parallel hug: requires a weird Pythagorean shift, and spits out a diagonal hinge that the other side of the overlap eats up.
+* Parallel hug: requires a weird Pythagorean shift (unless it's separation -1), and spits out some number of diagonal hinges that the other side of the overlap eats up.
 
 ## Drawing the Creases
 
@@ -584,8 +599,8 @@ As an aside, if we really didn't want $\f{B}$ to just go under $\f{A}$, there's 
     </figure>
 </div>
 
-We could also try removing the crease on $\f{A}$ instead, but the (horizontal) width-0 river extending from the right of the resulting width-0 lake runs directly and immediately into
-the vertical river on the right that it forms a concavity with. But also more obviously, $\f{A}$ just straight up becomes concave, which is a big no-no.
+We could also try removing the crease on $\f{A}$ instead, but the (vertical) width-0 river extending from the right of the resulting width-0 lake runs directly and immediately into
+the horizontal river on the right that it forms a concavity with. But also more obviously, $\f{A}$ just straight up becomes concave, which is a big no-no.
 
 Anyway, let's go back to the solution where an edge in $\f{B}$ becomes a hidden edge. Once we've marked the hidden edges, another good thing to do is to fill in lands
 (including peninsulas; they're lands too) with belts. Or just rivers that go off the edge of the paper, as in this case.
@@ -593,12 +608,12 @@ Anyway, let's go back to the solution where an edge in $\f{B}$ becomes a hidden 
 <div class="figrow">
     <figure>
         <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/gamma-lands-filled.svg">
-        <figcaption>The one land in this map is filled with a river. We arbitrarily chose a horizontal river; it could be a vertical river instead.</figcaption>
+        <figcaption>The one land in this map is filled with a river. We arbitrarily chose a vertical river; it could be a horizontal river instead.</figcaption>
     </figure>
 </div>
 
-Note that you should mind what edge these new rivers map to. In this case (and for peninsulas in general), the shading on that new horizontal river suggests that it combines
-with the horizontal river coming from $\f{B}$ to form one giant length-4 river. If it was a reflection of that river instead, it would map to the same edge as that river maps to,
+Note that you should mind what edge these new rivers map to. In this case (and for peninsulas in general), the shading on that new vertical river suggests that it combines
+with the vertical river coming from $\f{B}$ to form one giant length-4 river. If it was a reflection of that river instead, it would map to the same edge as that river maps to,
 which would cause concavity-forming rivers to touch.
 
 <div class="figrow">
@@ -626,8 +641,8 @@ is a hidden edge, in which case you start with a valley 1 unit away from the edg
 
 Finally comes the hardest part, and the moment of truth: resolving the hinges. This is where things break. This is where you realize you goofed on the ERM map
 (but not in this example!). Basically, you find incomplete vertices and finish them off, making sure to not draw creases on lakes. A good rule is that there should be
-a diagonal hinge at each edge where two perpendicular rivers touch, so that in the final model, a 90° angle is properly formed.
-This is the *interfering diagonal hinge* that was mentioneed a few times before. Sometimes, creases end up being deleted.
+a diagonal hinge at each edge where two rivers *flowing* in different directions touch (again, *flow direction* here), so that in the final model, a 90° angle is properly formed.
+Sometimes, creases end up being deleted.
 (You can think of that as creases being added that cancel out creases that already exist.)
 
 <div class="figrow">
@@ -658,7 +673,7 @@ Now, this process gets weird if rivers are separated by an odd amount. Let's mak
     </figure>
     <figure>
         <img style="max-width: 180px;" src="/assets/posts/erm-02-box-pleating/long-gamma-erm-lands.svg">
-        <figcaption>Filling the peninsula with a (width 0.5) river (this time vertical).</figcaption>
+        <figcaption>Filling the peninsula with a (width 0.5) river (this time horizontal).</figcaption>
     </figure>
     <figure>
         <img style="max-width: 180px;" src="/assets/posts/erm-02-box-pleating/long-gamma-rivers.svg">
@@ -733,14 +748,330 @@ a bit, where the abstraction is made up of width-1 rectangles, and it's called *
 
 We talked about 2D a lot, but I mentioned that box-pleated ERM can also be used for 3D. I haven't done much 3D, but let's try our best.
 
+The first rule of 3D is that the distinction between target direction and flow direction becomes important, because flow direction isn't always just the opposite of target
+direction. They're still perpendicular, but now that there's 3 dimensions, there's 2 possible flow directions for a river with a given target direction. In particular:
+* If two rivers have different target directions but the same flow direction, they can be treated as one giant river with a 90° crease through it.
+* Whether a 45° diagonal crease is needed between two rivers or not depends on their flow direction.
+
+But for now, let's just get into making 3D ERM maps.
 If the abstraction can easily be flattened (and then when you fold the model, you just raise the 3D parts), then the rules of 2D apply. Let's take a look at such a case, where
 you want to extrude a square flap off a flat square:
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap.svg">
+        <figcaption>A square flap extruded from a flat square. The backside face $\f{C}'$ is hidden beind $\f{C}$.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-flattened.svg">
+        <figcaption>Two ways to flatten the flap.</figcaption>
+    </figure>
+</div>
+
+We can turn this into an ERM map, and in fact, I'll show three:
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-up.svg">
+        <figcaption>ERM map for the case where the flap is folded up</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-down.svg">
+        <figcaption>ERM map for the case where the flap is folded down</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-true-up.svg">
+        <figcaption>ERM map for the case where the flap is left sticking up. The 3rd river color is back!</figcaption>
+    </figure>
+</div>
+
+Now, we kinda want $\f{A}$ to actually be connected to $\f{B}$ around the edges of the paper here instead of having a slit,
+and this would also be good for illustration purposes, so let's extend our piece of paper
+and the ERM map.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-2.svg">
+        <figcaption>Extended ERM map. Note how $\f{A}$ is connected to $\f{B}$ around the edges, so you don't get a slit there when you actually fold the pattern.</figcaption>
+    </figure>
+</div>
+
+Now let's follow the crease pattern drawing process. First, we select hidden edges, though now we have 90° hidden edges, which eventually end up with 90° creases.
+These follow the same overlap distance rules as 180° hidden edges unless you want waffle walls, which we don't want in this pattern that can be folded flat.
+Then, we belt the lands and fill in the rivers with creases.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-edges.svg">
+        <figcaption>Hidden edges added, peninsulas belted. Diamonds on hidden edges indicate that they're 90°.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-erm-rivers.svg">
+        <figcaption>Rivers creased.</figcaption>
+    </figure>
+</div>
+
+Then, we resolve incomplete vertices. Let's first do our magic partial-erasing trick over the width-0.5 rivers (that were peninulas), and resolve easy hinges.
+At this point, we'll stop showing the ERM map since it's getting crowded.
+
+<div class="figrow">
+    <figure>
+        {% fold %} <img style="min-width: 300px; max-width: 400px;" src="/assets/posts/erm-02-box-pleating/square-flap-hinges.fold"> {% endfold %}
+        <figcaption>Easy incomplete vertices resolved. All that's left is whatever's happening at the width-0 hidden-edge lakes.</figcaption>
+    </figure>
+</div>
+
+Finally, we bring in the 90° hidden edges, which need 90° creases drawn on them. If we do this, resolve the incomplete vertices that result, and remove the hanging mountains
+at the width-0 hidden-edge lakes, we'll be done. You could also resolve it like a 2D map, in which case one of the 90° hidden edges becomes a proper edge with a valley crease
+on it, and the other one becomes a proper 0° hidden edge with no crease on it.
+
+<div class="figrow">
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/square-flap-up.fold"> {% endfold %}
+        <figcaption>Resolution with the flap folding up.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/square-flap-90.fold"> {% endfold %}
+        <figcaption>Resolution with the flap sticking up. There are 90° creases in here.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/square-flap-down.fold"> {% endfold %}
+        <figcaption>Resolution with the flap folding down.</figcaption>
+    </figure>
+</div>
+
+That's the easy case. Now it's time for the hard case, where the model can't just be folded flat. Let's take the 3D abstraction for a corner wall from way above in
+[Making the Abstraction](#making-the-abstraction)[^corner-wall], and draw an ERM map for it.
+
+(Spoiler alert: this section contains a failed attempt. If you want to skip it, go to [Planes](#planes)).
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/good-abstraction-corner-wall.svg">
+        <figcaption>The corner wall again.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-2.svg">
+        <figcaption>An ERM map for the corner wall. Pay attention to the marked points.</figcaption>
+    </figure>
+</div>
+
+Point $P$ touches rivers from all 3 directions (X-axis, Y-axis, Z-axis), which means it's a true 3D point and is not intended to be flat.
+Points $Q$, $R$, and $S$ are like this too (some of the rivers have length 0, so they're hidden). So how would we draw a crease pattern for this?
+Let's first do what we can: hidden edges, river creases, and easy-to-resolve incomplete vertices (*not* $P$, $Q$, $R$, or $S$, because they're not supposed to fold flat).
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-edges.svg">
+        <figcaption>The hidden edges.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-rivers.fold"> {% endfold %}
+        <figcaption>Filling in the river creases.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-hinges.fold"> {% endfold %}
+        <figcaption>Resolving the easy-to-resolve pair of vertices</figcaption>
+    </figure>
+</div>
+
+Now comes the harder part: actually drawing the 90° creases and then resolving the incomplete vertices that result from that. Importantly, the structures at
+$P$, $Q$, $R$, and $S$ are not intended to be flat-foldable, so don't worry if you end up with a non-flat-foldable vertex. Here, it helps to
+know a few 3D box-pleated vertices. But first, let's finish this pattern.
+
+<div class="figrow">
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-90-hinges.fold"> {% endfold %}
+        <figcaption>The hidden edges. It is at this point that we realize there's something suspicious about point $Q$.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-Q.svg">
+        <figcaption>The structure of $Q$. Oops, it doesn't close up.</figcaption>
+    </figure>
+</div>
+
+Before we could finish this pattern, point $Q$ became suspicious. Just from the creases that are there, that vertex is going to stretch the paper
+(it's winded more than 360°), which
+indicates that we probably need to move our hidden edges. Except that the hidden edges can't move. Most of them are fixed, and moving the width-0 ones won't help matters.
+The ones on the right side of $\f{F}$ and $\f{F}'$ can move to $\f{E}$ and $\f{E}'$, but that just pushes the problem.
+
+In fact, this ERM map is fundamentally flawed. We need to add a 90° hidden edge somewhere on the river flowing from $\f{F}$ to $\f{E}'$. But there's only 2 places it can go,
+and they're symmetric: the right side of $\f{F}$ or the top side of $\f{E}'$. Let's add it to the right side of $\f{F}$. Then to avoid the midpoint of $\overline{QR}$ being
+winded more than 360°, we need to add a 90° hidden edge to the right side of $\f{F}'$. But this causes vertex $Q$ to be winded more than 360°, so we're screwed.
+This abstraction is supposed to be possible without waffle walls. Luckily, there's another ERM map we can try:
+
+### Planes
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/good-abstraction-corner-wall.svg">
+        <figcaption>The corner wall again.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-3.svg">
+        <figcaption>A hopefully better ERM map.</figcaption>
+    </figure>
+</div>
+
+But we also need a different strategy so we don't run into the same problem again. To do so, we can color-code the ERM map by *planes*. All lakes and rivers
+in the XY plane get a color, all lakes and rivers in the YZ plane get a color, and all lakes and rivers in the ZX plane get a color.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-planes-partial.svg">
+        <figcaption>The ERM map partially colored by planes. Lakes and more obvious forced rivers have been colored.</figcaption>
+    </figure>
+</div>
+
+Here, red planes are XY, green planes are ZX, and blue planes are YZ[^plane-color]. Note that a river's plane is determined by its target direction and its flow direction.
+We colored in parts of rivers where it's clear that the flow direction is forced by the fact that vertices can't be winded more than 360°. For example, the part of
+the Z-axis river to the right of $\f{F}'$ is colored green due to the problem with point $Q$ mentioned above (it can't be red because that direction simply isn't allowed,
+and it can't be blue because it would cause either a waffle wall to appear or $Q$ to be winded more than 360°.). This leaves 2 tricky sections: the part of the Z-axis river
+on the lower left and the land.
+
+Let's start with the Z-axis river. It must all go to one plane.
+Now, in fact, every vertex must be winded exactly 360°, because that's how flat paper works. Points with at most 2 plane colors are probably
+already winded 360°, so let's focus
+on points with 3 plane colors, such as $R$. If we look at the current structure of $R$, it looks like this:
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-R.svg">
+        <figcaption>The structure around $R$. It's currenly only 270°.</figcaption>
+    </figure>
+</div>
+
+There's only 270° so far, which leaves 90° left to shove somewhere, and the only ways to do that would be to shove it all behind $\f{F}$ or shove it all behind $\f{E}'$.
+The choices are symmetric, so let's choose $\f{E}'$ and make sure we didn't break the structure around the midpoint of $\overline{QR}$ (yes, it only has 2 plane colors,
+but it doesn't hurt to check, and besides, I only said "probably".).
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-planes-partial-2.svg">
+        <figcaption>Filling in more of the ERM map with planes.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-QR.svg">
+        <figcaption>The structure around the midpoint of $\overline{QR}$. Yep, it's 360° as it's supposed to be.</figcaption>
+    </figure>
+</div>
+
+It works, so now we have to deal with that land, and to do so, we look at the midpoint of $\overline{PQ}$. We want a (0°) hidden edge on the river flowing from $\f{A}$ to
+$\f{B}$, and given that the flow direction of the river flowing from $\f{F}'$ is the same as the flow direction of the river flowing from $\f{A}$, this forces at least
+a 135° angle. Then there's only one way to close the vertex, which is to make the rest of the land there red. A similar argument applies at the midpoint of $\overline{PS}$.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-planes-partial-3.svg">
+        <figcaption>Filling in some of the land on the top right. Note the forced 135° angle.</figcaption>
+    </figure>
+</div>
+
+Now we just have to deal with the center point of the map. Thinking about where the rivers go, the land must be red, and the diagonal creases must go in specific
+places to prevent the center vertex from being winded more than 360°.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-planes-complete.svg">
+        <figcaption>The complete plane coloring.</figcaption>
+    </figure>
+</div>
+
+I may have went through this a little quickly, but there's a lot of visualizing that has to go into this process, and you need to think about where hidden edges
+will end up at the same time, so it's pretty involved and would take a while to explain. But now that we have a complete plane map, here's an ERM map, complete
+with filled-in lands and hidden edges.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-4.svg">
+        <figcaption>The resulting ERM map, with hidden edges marked. Looks pretty complicated.</figcaption>
+    </figure>
+</div>
+
+You might notice that there's some lakes without rivers coming out of them. In box pleating (and general finite-crease origami), there's this principle that, actually
+every point is either part of a lake or the boundary of a lake, and in box pleating specifically, whereever there's a river, there's always a perpendicular river running
+though it creating a perpendicular cross and thus a lake. These perpendicular rivers get reflected a lot.
+We don't draw the perpendicular rivers to keep the map simple. But here, these extra lakes are formed by a perpendicular hug of perpendicular rivers, so let's draw
+in the perpendicular rivers to illustrate the principle.
+
+<div class="figrow">
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-perp.svg">
+        <figcaption>Perpendicular rivers have been drawn in.</figcaption>
+    </figure>
+    <figure>
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/corner-wall-erm-perp-2.svg">
+        <figcaption>The perpendicular rivers perpendicular hug to form a couple of lakes.</figcaption>
+    </figure>
+</div>
+
+A fun fact is that the target direction of the perpendicular river is the same as the flow direction of the original river and vice versa.
+
+Anyway, now let's try turning this one into a crease pattern.
+
+<div class="figrow">
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-2-rivers.fold"> {% endfold %}
+        <figcaption>Filling in the river creases.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-2-hinges.fold"> {% endfold %}
+        <figcaption>Resolving the easy-to-resolve incomplete vertices. Sometimes creases have to flip direction.</figcaption>
+    </figure>
+    <figure>
+        {% fold %} <img style="min-width: 250px; max-width: 250px;" src="/assets/posts/erm-02-box-pleating/corner-wall-2-90.fold"> {% endfold %}
+        <figcaption>Using what we know about the structure to fill in the 90° creases.</figcaption>
+    </figure>
+</div>
+
+And we did it! Making a 3D model requires a lot of thinking about structure, and really making sure the points are winded 360°. And there's often times when you want
+a specific layer ordering but it won't work with the specific layout you have (thankfully we were lucky this time). If you're beginning with ERM, I'd recommend sticking to 2D,
+or at least to 3D models that can be folded flat.
 
 ## Profit!
 
 We've made it, the final step of the ERM design process. You made an ERM map, and it's excellent. You drew the crease pattern, and it folds flat (or into the intended 3D shape)
-with the correct layer ordering. This is the final step: you get out a real piece of paper, and actually fold the pattern. To do this, TODO
+with the correct layer ordering. This is the final step: you get out a real piece of paper, and actually fold the pattern. There are steps you can take to make the collapse
+easier, but that's a topic for another post.
 
+## Summary
+
+Now you're ready to start designing with orthogonal box-pleated ERM! This post was long and full of pretty pictures, so here's a summary of the process:
+
+1. Come up with an abstraction.
+    * All exposed lake edges should be grid-aligned.
+    * No holes.
+    * No winding vertices more than 360° unless you want waffle walls.
+2. Pack the abstraction into a map, forming lakes.
+    * The distance between two points on the paper corresponding to the same point in the abstraction should be even.
+3. Send a river from each lake edge and make sure it goes to the sea (paper boundary) or to a lake edge that will end up in the same place.
+    * Rivers are all parallel or perpendicular to each other>
+    * Draw a blockade map if you don't know how constraints are satisfied in the sea.
+4. *If two rivers form a concavity, make sure there's space between them. Use a peninsula as a reminder.*
+    * Don't forget this!
+    * 1 unit of separation is enough for a 90° concavity.
+    * For concavities with more degrees, split them and use width-0 rivers.
+    * Concavity-forming rivers can touch at a vertex.
+5. If two rivers form a convexity, they can intersect as long as distance constraints are still satisfied. If they cross, beware the river mapping!
+    * The parity rule of lakes applies here too.
+    * Perpendicular crosses become rectangle-shaped lakes.
+    * Perpendicular hugs become a couple of right-isosceles-triangle-shaped lakes.
+    * Remember the hug width rule for parallel hugs. They tend to become lakes with weird diagonal lines.
+6. Calculate the lakes for river overlaps.
+    * Do this while thinking about overlapping convexities.
+7. Draw a crease pattern.
+    * Mark hidden edges.
+    * Fill in rivers with axial creases.
+    * Resolve incomplete vertices with hinges or reverse folds. 
+    * 3D is hard and requires a lot of visualizing.
+8. Profit!
+    * Fold it!
+
+A nice exercise would be to take the 正 model at the very top and make it more efficient. It's currently on a 23 grid, but perhaps it can become a 20 grid instead.
+(19 is impossible without a belt because then there's simply not enough perimeter for everything to escape to the sea, and this doesn't seem like a model that requires
+a belt. With 20, there's enough perimeter, but you can only afford to let 2 units of perimeter go to waste, so maybe it's possible, maybe it's not.)
+
+[^color]: I was almost done with this post when a 3D map made me realize that distinguishing the 2 ways to color code rivers can actually be important. Oh well.
 [^line]: more like a thin strip, since the rivers are discretized.
 [^concavity]: There's a reason why that step is emphasized. It's the most common reason why I have to abandon a grid size and increase it.
 [^blockade]: A blockade map helps with tracking where the rivers are supposed to go so you don't accidentally cross rivers that shouldn't cross. In addition, a blockade map is basically necessary if your design requires the part in question to consist entirely of middle flaps.
@@ -748,9 +1079,9 @@ with the correct layer ordering. This is the final step: you get out a real piec
 [^box-usually]: even with Pythagorean stretches. However, partials can break this.
 [^local]: which may actually just be fine, since it's very local.
 [^perpendicular-required]: potentially, because they're not required if the backside lakes are explicitly drawn.
-[^cross-it-back]: If you try to do so in a blockade map, you will realize that you goofed.
 [^hug]: There's some space between the rivers in the left one for clarity. It's not necessary, and it's not even necessary to separate the intersection from the lake.
-[^turn-incomplete]: Of course, the horizontal river coming out of the main lake needs a backside lake (a.k.a. a perpendicular cross) somewhere in it.
 [^boundaries]: shh!
 [^RQ]: This is fine despite that segment being in the middle of a lake, because that river's going to be hidden. Rivers can correspond to segments in the middle of lakes.
 [^distance]: maybe the transition to the parallel hug may be weird, but other than that.
+[^corner-wall]: I'm aware that there's a [paper about folding mazes](https://erikdemaine.org/papers/MazeFolding_Origami5/paper.pdf). Shh!
+[^plane-color]: You may notice that I've been using the secondary colors of light for river colors (a.k.a directions), so it's only natural to use the primary colors of light for planes.
