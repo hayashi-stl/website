@@ -655,7 +655,7 @@ Sometimes, creases end up being deleted.
         <figcaption>The final crease pattern.</figcaption>
     </figure>
     <figure>
-        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/gamma-hinges-done.svg">
+        <img style="max-width: 400px;" src="/assets/posts/erm-02-box-pleating/gamma-hinges-done-2.svg">
         <figcaption>The final crease pattern for the case of the new width-0 hidden-edge lake. There's a fun square twist in there.</figcaption>
     </figure>
 </div>
