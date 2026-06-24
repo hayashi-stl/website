@@ -8,6 +8,7 @@ japanese-title: "オナガヅル (尾長鶴)"
 comments-id:  "ori-tsuru-0022"
 date: 2025-07-10
 description: "A crane whose tail is very long"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

@@ -8,6 +8,7 @@ japanese-title: "クビナガヅル (首長鶴, 頸長鶴)"
 comments-id:  "ori-tsuru-0021"
 date: 2025-07-08
 description: "A crane whose neck is very long"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

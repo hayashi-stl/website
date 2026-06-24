@@ -26,17 +26,17 @@ I made a color change model of each digit, with the following specifications:
 
 ## Grid Size
 
-Given that every point in the 7×7 square needs to be potentially reachable by a flap, we need at least enough material to do a zabuton fold (that is,
+Given that every point in the 7×7 square needs to be potentially reachable by a flap, we need at least enough material to do a blintz fold (that is,
 to bring each corner of the paper to the center.) This will give a size of $$7\times\sqrt{2}\approx 9.899$$.
 
 <div class="figrow">
     <figure>
         <img style="max-width: 400px;" src="zabuton.svg">
-        <figcaption>Zabuton fold.</figcaption>
+        <figcaption>Blintz fold.</figcaption>
     </figure>
 </div>
 
-This is nice and all, but with just a zabuton fold, each point can be reached by only 1 flap. If that flap can't make the correct part of the digit, it's
+This is nice and all, but with just a blintz fold, each point can be reached by only 1 flap. If that flap can't make the correct part of the digit, it's
 game over. And besides, you end up with a big X-shaped front-color seam reaching to the corners. X, as in "wrong answer". To create redundancy, we will
 embed the 7×7 square in the center of a bigger axis-aligned square, in fact, a 15×15 one. So each edge can reach 4 units into the central 7×7 square,
 creating some overlap while still being efficient.

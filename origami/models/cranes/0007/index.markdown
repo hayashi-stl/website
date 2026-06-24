@@ -8,6 +8,7 @@ japanese-title: "イットウギリヅル属 (一刀切り鶴属, 一刀切鶴�
 comments-id:  "ori-tsuru-0007"
 date: 2025-06-20
 description: "A crane resulting from one cut"
+tags: exotic flat
 redirect_from:
     - /origami/models/cranes/0008/
 ---

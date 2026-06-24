@@ -8,6 +8,7 @@ japanese-title: "ツバサミジカヅル (翼短鶴)"
 comments-id: "ori-tsuru-0029"
 date: 2025-07-18
 description: "A crane with short wings"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

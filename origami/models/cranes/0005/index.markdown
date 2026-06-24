@@ -8,6 +8,7 @@ japanese-title: "ペッタンヅル (平坦鶴)"
 comments-id:  "ori-tsuru-0005"
 date: 2025-06-19
 description: "A crane that's been squished flat"
+tags: traditional flat
 ---
 <div class="figrow">
     <figure>

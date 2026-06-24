@@ -8,6 +8,7 @@ japanese-title: "チビヅル (小鶴)"
 comments-id:  "ori-tsuru-0003"
 date: 2025-06-19
 description: "A smaller crane"
+tags: traditional size
 ---
 <div class="figrow">
     <figure>

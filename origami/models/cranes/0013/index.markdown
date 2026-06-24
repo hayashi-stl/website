@@ -8,6 +8,7 @@ japanese-title: "オリセンパターンヅル (折り線模様鶴, 折線模�
 comments-id:  "ori-tsuru-0013"
 date: 2025-06-27
 description: "A crane that shows its crease pattern"
+tag: traditional pattern
 ---
 <div class="figrow">
     <figure>

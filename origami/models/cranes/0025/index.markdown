@@ -8,6 +8,7 @@ japanese-title: "ハコハコビヅル (箱運び鶴, 箱運鶴)"
 comments-id:  "ori-tsuru-0025"
 date: 2025-07-14
 description: "A crane that carries a box"
+tags: traditional holding
 ---
 <div class="figrow">
     <figure>

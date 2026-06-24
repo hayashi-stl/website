@@ -8,6 +8,7 @@ japanese-title: "シヨウヅル (四翼鶴)"
 comments-id:  "ori-tsuru-0015"
 date: 2025-07-01
 description: "A crane with four wings"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

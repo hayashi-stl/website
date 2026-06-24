@@ -8,6 +8,7 @@ japanese-title: "リンカクヅル (輪郭鶴)"
 comments-id:  "ori-tsuru-0024"
 date: 2025-07-10
 description: "The boundary of a crane"
+tags: exotic outline
 ---
 <div class="figrow">
     <figure>

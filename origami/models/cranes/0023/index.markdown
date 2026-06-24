@@ -8,6 +8,7 @@ japanese-title: "ツバサナガヅル (翼長鶴)"
 comments-id:  "ori-tsuru-0023"
 date: 2025-07-10
 description: "A crane whose wings are very long"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

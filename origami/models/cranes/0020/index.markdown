@@ -8,6 +8,7 @@ japanese-title: "チョッコウメイロヅル (直交迷路鶴)"
 comments-id:  "ori-tsuru-0020"
 date: 2025-07-06
 description: "A crane that looks more like a maze"
+tags: exotic maze
 ---
 <div class="figrow">
     <figure>

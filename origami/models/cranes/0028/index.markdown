@@ -8,6 +8,7 @@ japanese-title: "オミジカヅル (尾短鶴)"
 comments-id: "ori-tsuru-0028"
 date: 2025-07-18
 description: "A crane with a stubby tail"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

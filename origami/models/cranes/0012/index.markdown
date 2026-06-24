@@ -8,6 +8,7 @@ japanese-title: "ツバサビロドルヅル (翼広米札鶴)"
 comments-id:  "ori-tsuru-0012"
 date: 2025-06-25
 description: "A crane worth $1"
+tag: traditional money body-feature
 ---
 <div class="figrow">
     <figure>

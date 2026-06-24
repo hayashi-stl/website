@@ -8,6 +8,7 @@ japanese-title: "デカヅル (大鶴)"
 comments-id:  "ori-tsuru-0019"
 date: 2025-07-05
 description: "This one's *big*"
+tags: traditional size
 ---
 <div class="figrow">
     <figure>

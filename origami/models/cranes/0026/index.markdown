@@ -8,6 +8,7 @@ japanese-title: "ポリオミノヅル (多正方形鶴)"
 comments-id:  "ori-tsuru-0026"
 date: 2025-07-18
 description: "A crane on a grid"
+tags: exotic flat square
 ---
 <div class="figrow">
     <figure>

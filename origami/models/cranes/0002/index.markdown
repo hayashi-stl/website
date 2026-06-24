@@ -8,6 +8,7 @@ japanese-title: "キラキラヅル (煌々鶴)"
 comments-id:  "ori-tsuru-0002"
 date: 2025-06-18
 description: "A traditional crane, but shiny!"
+tags: traditional material
 ---
 <div class="figrow">
     <figure>

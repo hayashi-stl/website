@@ -8,6 +8,7 @@ japanese-title: "ビショウヅル (微小鶴)"
 comments-id:  "ori-tsuru-0017"
 date: 2025-07-04
 description: "A crane shown in two colors"
+tags: traditional size
 ---
 <div class="figrow">
     <figure>

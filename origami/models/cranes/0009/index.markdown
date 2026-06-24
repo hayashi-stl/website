@@ -8,6 +8,7 @@ japanese-title: "トビダシヅル (飛び出し鶴, 飛出鶴)"
 comments-id:  "ori-tsuru-0009"
 date: 2025-06-20
 description: "This one pops out at you!"
+tags: traditional attachment
 ---
 <div class="figrow">
     <figure>

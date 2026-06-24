@@ -8,6 +8,7 @@ japanese-title: "クビミジカヅル (首短鶴, 頸短鶴)"
 comments-id:  "ori-tsuru-0027"
 date: 2025-07-18
 description: "A crane with a short neck"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>

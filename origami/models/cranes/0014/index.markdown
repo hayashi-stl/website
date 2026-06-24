@@ -8,6 +8,7 @@ japanese-title: "ゼンゴオヅル (前後尾鶴)"
 comments-id:  "ori-tsuru-0014"
 date: 2025-07-01
 description: "A crane with no head"
+tags: traditional body-feature
 ---
 <div class="figrow">
     <figure>
