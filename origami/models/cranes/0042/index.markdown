@@ -41,7 +41,8 @@ a crane. Here's the initial ERM map:
 
 However, when turning this into a crease pattern, I wasn't as good at transitions back then, so I struggled. There's a
 [hole filling algorithm](https://erikdemaine.org/papers/HoleFilling_Origami6/paper.pdf), which describes how to actually apply the perimeter theorem[^perimeter] to a crease pattern and
-fill it in, but there's only [one (1) implementation](http://jasonku.mit.edu/hole/) of it as far as I know -- oh wait, the link is dead. Make that zero (0). Applying the algorithm
+fill it in, but there's only [one (1) implementation](http://jasonku.mit.edu/hole/) of it as far as I know, but it's not the most convenient to use,
+especially when you want to try to stick with 22.5° lines. Applying the algorithm
 manually is annoying, so I just had to go by intuition. I ended up having to space the outer rivers a bit away from the inner rivers to make an intuitive transition.
 
 Then came actually folding it. The sequence I found still had some complicated collapses, so I didn't manage to collapse it cleanly, and thus, you get a wrinkly crane. Better luck
