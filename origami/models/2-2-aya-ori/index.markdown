@@ -7,6 +7,7 @@ japanese-title: (2,2)-綾織り
 comments-id:  "ori-(2,2)-aya-ori"
 date: 2025-08-17 23:19:00 -0400
 description: "A weave based on the herringbone tessellation"
+tags: weave crease-pattern
 ---
 <div class="figrow">
     <figure>

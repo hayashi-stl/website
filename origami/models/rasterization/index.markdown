@@ -7,6 +7,7 @@ japanese-title: ラスタライズ
 comments-id: "ori-rasterization"
 date: 2026-05-27 18:00:00 -0400
 description: "Illustrating rasterization with origami"
+tags: computer-graphics crease-pattern
 ---
 <div class="figrow">
     <figure>

@@ -7,6 +7,7 @@ japanese-title: インサイドアウト数字
 comments-id:  "ori-color-change-models"
 date: 2026-05-07 18:38:00 -0400
 description: "The 10 digits, made with a color change"
+tags: color-change text-character crease-pattern diagram
 ---
 <div class="figrow">
     <figure>

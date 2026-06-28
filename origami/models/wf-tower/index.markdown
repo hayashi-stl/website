@@ -7,6 +7,7 @@ japanese-title: BKT塔
 comments-id: "ori-wf-tower"
 date: 2025-07-28 00:00:00 -0400
 description: "A 3D-intensive tower inspired by the one in Whomp's Fortress"
+tags: 3D videogame crease-pattern
 ---
 <div class="figrow">
     <figure>
